@@ -1,0 +1,374 @@
+﻿@model Reco3.Controllers.SimulationJobModel
+@using DataLayer.Database
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet">   @*I got this link from Tutorials point*@
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" /> @*Download Bootstrap from Nuget Package manager*@
+    <link href="../../Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <style>
+        .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .progress-label {
+            position: absolute;
+            left: 50%;
+            top: 13px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+
+    <h2>Details</h2>
+
+    <div class="jumbotron">
+    @using (Html.BeginForm("Index", "Simulations", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-sm">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.job.SimulationJobId)
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">OwnerSss</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.job.OwnerSss, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.job.OwnerSss, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Simulationname</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.job.SimulationJobName, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.job.SimulationJobName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Created</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.job.CreationTimeStr, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.job.CreationTimeStr, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <h2>Simulation-package</h2>
+                    <br />
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="txtMessage"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="control-label col-md-1">Uploaded</label>
+                            <div class="col-md-2 text-left">
+                                <input type="text" class="form-control .bg-success" id="validationServer02" readonly="true" placeholder="UploadDate" value="@Model.job.PackageUploadedDateTimeStr">
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <input type="file" id="baseline" name="baseline" /><br />
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <button type="button" class="btn btn-default btn-sm" value="Submit" id="btnSubmit">
+                                    <span class="glyphicon glyphicon-upload"></span> Upload
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <label class="control-label col-md-1">Validated</label>
+                            <div class="col-md-2 text-left">
+                                @Html.EditorFor(model => model.job.PackageValidatedDateTimeStr, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.job.PackageValidatedDateTimeStr, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <button type="button" class="btn btn-default btn-sm" value="Validate" id="btnValidate" disabled="disabled">
+                                    <span class="glyphicon glyphicon-play"></span>Validate
+                                </button>
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <label id="ValidationErrorLabel" class="control-label"></label>
+                                <input type="button" value="Download" id="btnDownloadFailures" />
+                            </div>
+                            <div class="col-md-1 text-left">
+                                <input type="button" value="Force conversion..." id="btnIgnoreFailures" />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <label class="control-label col-md-1">Converted</label>
+                            <div class="col-md-2 text-left">
+                                @Html.EditorFor(model => model.job.PackageConvertedDateTimeStr, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.job.PackageConvertedDateTimeStr, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <button type="button" class="btn btn-default btn-sm" value="Convert" id="btnConvert" disabled="disabled">
+                                    <span class="glyphicon glyphicon-play"></span>Validate
+                                </button>
+                            </div>
+                            <div class="col-md-4 text-left">
+                                <label class="control-label">Status: Vehiclecount total:[x] converted: [x]</label>
+                                <button type="button" class="btn btn-default btn-sm" id="btnRefreshConversionStatus">
+                                    <span class="glyphicon glyphicon-refresh"></span> Refresh
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <label class="control-label col-md-1">Simulated</label>
+                            <div class="col-md-2 text-left">
+                                @Html.EditorFor(model => model.job.PackageSimulatedDateTimeStr, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.job.PackageSimulatedDateTimeStr, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <button type="button" class="btn btn-default btn-sm" value="Simulate" id="btnSimulate" disabled="disabled">
+                                    <span class="glyphicon glyphicon-play"></span>Simulate
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <hr />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="button" class="btn btn-default btn-sm" value="Save" id="btnRefreshConversionStatus" onclick="location.href = '@Url.Action("Save", "Simulations")'">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        @if (Model.job.PackageExtracted == true)
+        {
+            @:$("#btnValidate").attr("disabled", false);
+            @:$("#btnValidate").show();
+        }
+        else
+        {
+            @:$("#btnValidate").attr("disabled", true);
+            @:$("#btnValidate").hide();
+        }
+        @if (Model.job.Validation_Status == SimulationJob.ValidationStatus.ValidatedWithSuccess)
+        {
+            @:$("#btnConvert").attr("disabled", false);
+            @:$("#ValidationErrorLabel").hide();
+            @:$("#btnDownloadFailures").hide();
+            @:$("#btnConvert").show();
+        }
+        else
+        {
+            @:$("#btnConvert").attr("disabled", true);
+            @:$("#btnConvert").hide();
+            @:$("#ValidationErrorLabel").text("Validation failed with errors...");
+            @:$("#ValidationErrorLabel").show();
+            @:$("#btnDownloadFailures").show();
+            @:$("#btnIgnoreFailures").show();
+        }
+        @if (Model.job.Validation_Status == SimulationJob.ValidationStatus.Pending)
+        {
+            @:$("#ValidationErrorLabel").hide();
+            @:$("#btnDownloadFailures").hide();
+        }
+
+        @if (Model.job.PackageConverted == true)
+        {
+            @:$("#btnSimulate").attr("disabled", false);
+            @:$("#btnSimulate").show();
+        }
+        else
+        {
+            @:$("#btnSimulate").attr("disabled", true);
+            @:$("#btnSimulate").hide();
+        }
+    
+        
+        
+
+        $("#btnSubmit").click(function () {
+            var frmData = new FormData();
+            var filebase = $("#baseline").get(0);
+            var files = filebase.files;
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+            frmData.append(files[0].name, files[0]);
+            $.ajax({
+                url: '/Simulations/UploadPackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                xhrFields: { withCredentials: true },
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+
+
+
+
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                }
+            });
+        });
+
+            $("#btnDownloadFailures").click(function () {
+                var frmData = new FormData();
+                frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+
+            //I use blockUI for loading...
+            //$.blockUI({ message: '<h3>Please wait a moment...</h3>' });
+                $.ajax({
+                    url: '/Simulations/ExportValidationResult',
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+                    data: frmData,
+            }).done(function (data) {
+                //console.log(data.result);
+                //$.unblockUI();
+
+                //get the file name for download
+                if (data.fileName != "") {
+                    //use window.location.href for redirect to download action for download the file
+                    window.location.href = "@Url.RouteUrl(new
+                { Controller = "Simulations", Action = "Download"})/?file=" + data.fileName;
+                }
+            });
+            });
+
+        $("#btnValidate").click(function () {
+            var frmData = new FormData();
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+            $.ajax({
+                url: '/Simulations/ValidatePackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                }
+            });
+        });
+
+    
+        $("#btnConvert").click(function () {
+            var frmData = new FormData();
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+            $.ajax({
+                url: '/Simulations/ConvertPackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                }
+            });
+        });
+
+
+
+        $("#btnSimulate").click(function () {
+            var frmData = new FormData();
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+            $.ajax({
+                url: '/Simulations/SimulatePackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                }
+            });
+        });
+
+//End of the document ready function...
+    });
+</script>

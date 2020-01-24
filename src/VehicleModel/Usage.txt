@@ -1,0 +1,5 @@
+﻿            VehicleModel engineeringModel = new VehicleModel();
+            engineeringModel.InitializeFromXMLFile(VehicleMode.VectoEngineering, @"E:\Source\XMLStuff\vehicle_engineering_mode.xml");
+
+            VehicleModel declarationModel = new VehicleModel();
+            declarationModel.InitializeFromXMLFile(VehicleMode.VectoDeclaration, @"E:\Source\XMLStuff\vehicle_declaration_mode.xml");

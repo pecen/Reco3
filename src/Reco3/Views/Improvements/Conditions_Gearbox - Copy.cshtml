@@ -1,0 +1,295 @@
+﻿@using Reco3Common;
+@model Reco3.Controllers.Reco3ImprovementModel
+
+
+
+
+<style>
+    .table thead {
+        background-color: rgba(255,255,255,.15);
+        color: #0c0c0c;
+    }
+
+    .modal {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: #eee; /* Black w/ opacity */
+        border-radius: 0px;
+    }
+
+    .modal-header {
+        min-height: 16.42857143px;
+        padding: 5px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .modal .modal-header .close {
+        margin-top: -15px;
+        font-weight: normal;
+        font-family: "Scania Sans Headline";
+        letter-spacing: 0.05rem;
+        text-shadow: none;
+    }
+
+    .modal .modal-header .header-title {
+        margin-top: -20px;
+        font-size: 12px;
+        font-weight: normal;
+        text-shadow: none;
+    }
+
+    .modal-content {
+        box-shadow: none;
+        border: 0px;
+        border-top: 1px;
+        border-color: rgba(0,0,0,0.03);
+        border-top-style: solid;
+        border-bottom: 1px;
+        border-bottom-color: rgba(0,0,0,0.03);
+        border-bottom-style: solid;
+    }
+
+    .modal-dialog {
+        width: 500px;
+    }
+</style>
+
+@{
+    Reco3Common.Reco3_Enums.ComponentType _dlgType = Reco3_Enums.ComponentType.ctUnknown;
+
+}
+
+
+
+<!-- Modal -->
+<!-- The Modal -->
+<div class="modal" id="dlgAddCondition">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <label class="header-title">
+                    <span class="dialog-title"></span>
+                </label>
+            </div>
+
+            <!-- Modal body >>> -->
+            <div class="modal-body">
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="col-lg-3">
+                        <label>Type</label>
+                        <input type="hidden" id="conditionId" value="">
+                    </div>
+                    <div class="col-lg-4">
+                        @Html.EnumDropDownListFor(model => model.DlgPdType, "- Please select the type of component -", // Text for the first 'default' option
+                                new { style = "height: 25px; border-radius: 3px; width: 100 %;", id = "componenttypeDlglist" }) @* A class name to assign to "select" tag *@
+                            </div>
+                        </div>
+
+                        <div class="row" style="padding-bottom: 5px;">
+                            <div class="col-lg-3">
+                                <label>PD#</label>
+                            </div>
+                            <div class="col-lg-4">
+                                @Html.DropDownListFor(Model => Model.Improvement.ComponentId, new SelectList(Enumerable.Empty<SelectListItem>(), "ComponentId", "PD"), "Select a PD", new { id = "pdListDlg" })
+                            </div>
+                        </div>
+                        <div class="row" style="padding-bottom: 5px;">
+                            <div class="col-lg-3">
+                                <div class="custom-control custom-radio">
+                                    <label class="custom-control-label" for="defaultUnchecked">Valid from</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <input id="start-date-input2" class="date-start-year form-control" style="height: 25px; border-radius: 3px; width: 120px;" type="text">
+                                <script type="text/javascript">
+                                    var $j = jQuery.noConflict();
+                                    $j('.date-start-year').datepicker({
+                                        minViewMode: 0,
+                                        format: 'yyyy-mm-dd'
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <<< Modal body -->
+
+                    <!-- Modal footer >>> -->
+                    <div class="modal-footer">
+                        <button class="btn-sm btn-default" type="button" id="btnClose" data-dismiss="modal" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                            <span class="glyphicon glyphicon-remove-circle"></span> Cancel
+                        </button>
+                        <button class="btn-sm btn-default" type="button" id="btnDelete" data-dismiss="modal" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </button>
+                        <button class="btn-sm btn-default" type="button" id="btnSaveCondition" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                            <span class="glyphicon glyphicon-floppy-saved"></span> Save
+                        </button>
+                    </div>
+                    <!-- <<< Modal footer -->
+                </div>
+    </div>
+</div>
+<!-- Modal -->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-light" style="">
+            <div class="card-body">
+                <h4 class="card-title">The conditions to enable this improvement</h4>
+                <div class="col-md-5">
+                    <p class="card-text">
+                        <button class="btn-sm btn-default" type="button" id="btnAddCondition" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-plus-sign"></span> Add...</button>
+                    </p>
+                    <table id="conditionsTable" class="table table-striped table-bordered nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">PDNo</th>
+                                <th style="width: 100px;">Valid from</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var $j = jQuery.noConflict();
+        var dataTable = $j('#conditionsTable').DataTable({
+            "proccessing": true,
+            "serverSide": true,
+            "lengthMenu": [[10, 25, 50], [10, 25, 50]],
+            "ajax": {
+                "url": "@Url.Action("GetConditions", "Improvements", new { ImprovementId = @Model.Improvement.ImprovementId })",
+                "type": "post",
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "ConditionalReco3Component.PDNumber", "title": "PDNumber"  },
+                { "data": "ValidFromShort", "title": "Valid from"  },
+                { "data": "Reco3ConditionId"}
+
+            ],
+            "columnDefs": [
+                { "width": "15%", "targets": 0 },
+                { "width": "25%", "targets": 1 },
+                {
+                    "width": "10%",
+                    "targets": 2,
+                    "data" : null,
+                    "render": function(data, type, row) {
+                        var inner = '<button class="btn-sm btn-default" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;" data-assigned-id="' + row.Reco3ConditionId + '"><span class="glyphicon glyphicon-edit"></span> Edit</button>';
+
+                        return inner;
+                    },
+                } ],
+            "pagingType": "full_numbers"
+                });
+
+        $("#componenttypeDlglist").change(function () {
+            var dID = $(this).val();
+            $.getJSON("../LoadPDsByType", { pdType: dID },
+                function (data) {
+                    var select = $("#pdListDlg");
+                    select.empty();
+                    select.append($('<option/>', {
+                        value: 0,
+                        text: "Select a PD"
+                    }));
+                    $.each(data, function (index, itemData) {
+                        select.append($('<option/>', {
+                            value: itemData.Value,
+                            text: itemData.Text
+                        }));
+                    });
+                });
+        });
+
+        $("#btnSaveCondition").click(function () {
+            var $j = jQuery.noConflict();
+            var frmData = new FormData();
+            frmData.append("improvementId", @Model.Improvement.ImprovementId);
+            frmData.append("conditionPDComponentId", $j('#pdListDlg').val());
+            frmData.append("conditionDate", $j('#start-date-input2').val());
+
+            $j.ajax({
+                url: '/Improvements/AddCondition',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $j('#dlgAddCondition').modal('hide');
+                    $j('#conditionsTable').DataTable().ajax.reload();
+                },
+                error: function (err) {
+                    $j('#dlgAddCondition').modal('hide');
+                }
+            });
+        });
+
+        $('#conditionsTable tbody').on('click', 'button', function () {
+            var $j = jQuery.noConflict();
+            $j("#conditionId").val($j(this).data('assigned-id'));
+            $j.getJSON("../GetConditionById", { conditionID: $j(this).data('assigned-id') },
+                function (data) {
+                    var $componentId = data[0].ComponentID;
+                    $j("#componenttypeDlglist").val(data[0].Component_Type);
+                    $j("#start-date-input2").val(data[0].ValidFrom);
+                    $j('.dialog-title').text("Edit condition");
+                    $j('#btnDelete').show();
+                    $.getJSON("../LoadPDsByType", { pdType: data[0].Component_Type },
+                        function (data) {
+                            var select = $("#pdListDlg");
+                            select.empty();
+                            select.append($('<option/>', {
+                                value: 0,
+                                text: "Select a PD"
+                            }));
+                            $.each(data, function (index, itemData) {
+                                select.append($('<option/>', {
+                                    value: itemData.Value,
+                                    text: itemData.Text
+                                }));
+                            });
+                            select.val($componentId);
+                            $j('#dlgAddCondition').modal();
+                        });
+                });
+        });
+
+        $("#btnAddCondition").click(function () {
+            var $j = jQuery.noConflict();
+            $j('.dialog-title').text("Add condition");
+            $j('#btnDelete').hide();
+            $j('#dlgAddCondition').modal();
+        });
+
+        $("#btnDelete").click(function () {
+            var $j = jQuery.noConflict();
+            var frmData = new FormData();
+            frmData.append("improvementId", @Model.Improvement.ImprovementId);
+            frmData.append("conditionId", $j("#conditionId").val());
+            $j.ajax({
+                url: '/Improvements/DeleteCondition',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $j('#dlgAddCondition').modal('hide');
+                    $j('#conditionsTable').DataTable().ajax.reload();
+                },
+                error: function (err) {
+                    $j('#dlgAddCondition').modal('hide');
+                }
+            });
+        });
+
+        btnDelete
+    });
+</script>

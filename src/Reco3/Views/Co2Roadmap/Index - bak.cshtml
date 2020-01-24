@@ -1,0 +1,45 @@
+﻿@model Reco3.Controllers.Co2RoadmapModel
+@{
+    ViewBag.Title = "Co2Roadmap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+
+<h2>Roadmap designer</h2>
+<div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-body">
+
+
+            <div id="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tabGeneral" data-toggle="tab">General</a></li>
+                    <li><a href="#tabFleet" data-toggle="tab">Fleet</a></li>
+                    <li><a href="#tabImprovements" data-toggle="tab">Improvements</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tabGeneral">
+                        @Html.Partial("General", Model)
+                    </div>
+
+                    <div class="tab-pane fade" id="tabImprovements">
+                        @Html.Partial("Improvements", Model)
+                    </div>
+                    <div class="tab-pane fade" id="tabFleet">
+                        @Html.Partial("Fleet", Model)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+    });
+</script>

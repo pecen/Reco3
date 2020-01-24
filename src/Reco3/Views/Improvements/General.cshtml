@@ -1,0 +1,122 @@
+﻿@using Reco3Common;
+@using Reco3.Controllers;
+@model Reco3.Controllers.Reco3ImprovementModel
+@{
+    var txtboxStyle = "";
+    if (Model.ReadOnly == false)
+    {
+        txtboxStyle = "";
+    }
+    else
+    {
+        txtboxStyle = "readonly='readonly'";
+    }
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-light" style="">
+            <div class="card-body">
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="col-sm-1">
+                        <label>Name</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input id="Improvement-alias" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="@Model.Improvement.Name">
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="col-sm-1">
+                        <label>Type</label>
+                    </div>
+                    <div class="col-md-4">
+                        @if (Model.CreatingNew == true)
+                        {
+                            @Html.EnumDropDownListFor(model => model.Improvement.ImprovedComponentType, // Model field that will be used to store user selection
+                                   "- Please select the type of component -", // Text for the first 'default' option
+                                   new { style = "height: 25px; border-radius: 3px; width: 100 %;", id = "componenttypelist" }) @* A class name to assign to "select" tag *@
+                            }
+                            else
+                            {
+                                @Model.Improvement.Reco3Component.Component_TypeStr
+                            }
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="col-sm-1">
+                        <label>Source PD#</label>
+                    </div>
+                    <div class="col-md-4">
+                        @if (Model.CreatingNew == true)
+                        {
+                            @Html.DropDownListFor(Model => Model.Improvement.ComponentId, new SelectList(Enumerable.Empty<SelectListItem>(), "ComponentId", "PD"), "Select a PD", new { id = "pdList" });
+                        }
+                        else
+                        {
+                            @Model.Improvement.Reco3Component.PDNumber;
+                        }
+                    </div>
+                </div> 
+
+                <div class="card border-light" style="">
+                    <label style="padding-left: 7px; padding-top: 7px;">Availability</label>
+                    <div class="card-body">
+                        <div class="row" style="padding-bottom: 5px;">
+                            <div class="col-lg-1">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+                                    <label class="custom-control-label" for="defaultUnchecked">General</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <input id="start-date-input" class="date-start-year form-control" style="height: 25px; border-radius: 3px; width: 120px;" type="text" @txtboxStyle value="@Model.Improvement.ValidFromShort">
+                                @if (Model.ReadOnly == false)
+                                {
+                                    <script type="text/javascript">
+                                        var $j = jQuery.noConflict();
+                                        $j('.date-start-year').datepicker({
+                                            minViewMode: 0,
+                                            format: 'yyyy-mm-dd'
+                                        });
+                                    </script>
+                                }
+                            </div>
+                        </div>
+                        <div class="row" style="padding-bottom: 5px;">
+                            <div class="col-lg-1">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" disabled="disabled" readonly='readonly'>
+                                    <label class="custom-control-label" for="defaultUnchecked" readonly='readonly'>Conditional</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#componenttypelist").change(function () {
+            var dID = $(this).val();
+            $.getJSON("../LoadPDsByType", { pdType: dID },
+                function (data) {
+                    var select = $("#pdList");
+                    select.empty();
+                    select.append($('<option/>', {
+                        value: 0,
+                        text: "Select a PD"
+                    }));
+                    $.each(data, function (index, itemData) {
+                        select.append($('<option/>', {
+                            value: itemData.Value,
+                            text: itemData.Text
+                        }));
+                    });
+                });
+        });
+    });
+</script>

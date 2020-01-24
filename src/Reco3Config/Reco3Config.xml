@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Alias>LocalWilly</Alias>
+  <OwnerSss>whecqg</OwnerSss>
+  <CreationTime>2019-10-02</CreationTime>
+  <MSMQ>
+	<HostName>RD0067441</HostName>  
+    <IP>138.106.68.140</IP>
+	  <ConversionQueue>YDMC.Batch.Conversion</ConversionQueue>
+	  <SimulationQueue>YDMC.Batch.Simulation</SimulationQueue>
+	  <HealthQueueName>YDMC.Batch.Health</HealthQueueName>
+  </MSMQ>
+  <DB>
+    <ConnectionString>Data Source=RD0067352;Initial Catalog=ElmerFudd;Integrated Security=False;user=SA_Reco3;pwd=Reco3SQL</ConnectionString>
+  </DB>
+  <BackEnd><!--For IIS and backend-->
+    <FileDropBasePathAlias>/Filedrop</FileDropBasePathAlias>
+    <FilePaths>
+      <FilePath id="ConversionArea" path="obsolete"/>
+      <FilePath id="FileDrop" path="C:\\reco3\\folderPaths\\FileDrop\\"/>
+      <FilePath id="Templates" path="C:\\reco3\\folderPaths\\Templates\\"/>
+      <FilePath id="Log" path="C:\\reco3\\folderPaths\\Logs\\"/>
+    </FilePaths>
+    <Templates>
+      <Template id="Vecto.Declaration.Vehicle" filename="VehicleTemplate.xml" />
+      <Template id="Vecto.Declaration.Signature" filename="SignatureTemplate.xml" />
+      <Template id="Vecto.Declaration.Axle" filename="AxleTemplate.xml" />
+    </Templates>
+  </BackEnd>
+  <Schemas>
+    <Schema id="Scania.Baseline" filename="C:\\reco3\\folderPaths\\Schemas\\baseline_1_1.xsd" />
+    <Schema id="Vecto.Declaration" filename="C:\\reco3\\folderPaths\\Schemas\\VectoInput.xsd" />
+  </Schemas>
+  <Integrations>
+    <Integration>
+      <Id>3DX</Id>
+      <Scope>PDComponentInfo_Prod_Full</Scope>
+      <ClientId>Iy0BxcywUXU1GdcLHfVnj8e0vvca</ClientId>
+      <ClientSecret>GhlHbwLkFJrvtf5w64kk0m5syNka</ClientSecret>
+      <Url>Reco2ComponentInfo/v1/ComponentInfo</Url>
+      <BaseUrl>https://api.integration.prod.aws.scania.com/</BaseUrl>
+    </Integration>
+  </Integrations>
+  <Client>
+	<MaxIterations>100</MaxIterations>
+	<MsSleepWhenEmptyQueue>5000</MsSleepWhenEmptyQueue>
+  </Client>  
+</Config>
+

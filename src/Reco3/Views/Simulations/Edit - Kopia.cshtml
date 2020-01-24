@@ -1,0 +1,247 @@
+﻿@model DataLayer.Database.SimulationJob
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet">   @*I got this link from Tutorials point*@
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" /> @*Download Bootstrap from Nuget Package manager*@
+    <link href="../../Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <style>
+        .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .progress-label {
+            position: absolute;
+            left: 50%;
+            top: 13px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+
+    <h2>Edit</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+
+
+    <div class="form-horizontal">
+
+        <div class="row">
+            <div class="col-sm">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.SimulationJobId)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.OwnerSss, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.OwnerSss, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.OwnerSss, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SimulationJobName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SimulationJobName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SimulationJobName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CreatedDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CreatedDateTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CreatedDateTime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Published, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Published)
+                            @Html.ValidationMessageFor(model => model.Published, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Finished, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Finished)
+                            @Html.ValidationMessageFor(model => model.Finished, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#vehicles">Vehicles</a></li>
+                    <li><a data-toggle="tab" href="#results">Results</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="vehicles" class="tab-pane fade in active">
+                        <div class="col-md-4">
+                            <h4>Vehicles</h4>
+                            <br />
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click to upload vehicles</button>
+
+                            <div class="form-group">
+
+
+
+                                <h1>
+                                    File Upload Demo
+                                </h1>
+                                <div id="FileBrowse">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <input type="file" id="Files" />
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input type="button" id="UploadBtn" class="btn btn-danger" value="Upload" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div id="progressbar-5">
+                                            <div class="progress-label">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <table class="table" id="ListofFiles">
+                                            <tr>
+                                                <th>
+                                                    Files
+                                                </th>
+                                                <th>
+                                                    Action
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="results" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+            <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+            <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+            <script>
+
+
+        $('#UploadBtn').click(function () {
+
+            var fileUpload = $("#Files").get(0);
+            var files = fileUpload.files;
+            // Create FormData object
+            var fileData = new FormData();
+            // Looping over all files and add it to FormData object
+            for (var i = 0; i < files.length; i++) {
+                fileData.append(files[i].name, files[i]);
+            }
+            fileData.append("SimulationJobId", @Model.SimulationJobId);
+            $.ajax({
+                url: '/Simulations/UploadFiles',
+                type: "POST",
+                contentType: false, // Not to set any content header
+                processData: false, // Not to process data
+                data:fileData,
+                async: false,
+                success: function (result) {
+                    if (result != "") {
+                        alert("a");
+                        $('#FileBrowse').find("*").prop("disabled", true);
+                        alert("b");
+                        LoadProgressBar(result); //calling LoadProgressBar function to load the progress bar.
+                    }
+                },
+                error: function (err) {
+                    alert("1: " + err.statusText);
+                }
+            });
+
+        });
+
+        function LoadProgressBar(result) {
+            var progressbar = $("#progressbar-5");
+            var progressLabel = $(".progress-label");
+            progressbar.show();
+            $("#progressbar-5").progressbar({
+                //value: false,
+                change: function () {
+                    progressLabel.text(
+                     progressbar.progressbar("value") + "%");  // Showing the progress increment value in progress bar
+                },
+                complete: function () {
+                    progressLabel.text("Loading Completed!");
+                    progressbar.progressbar("value", 0);  //Reinitialize the progress bar value 0
+                    progressLabel.text("");
+                    progressbar.hide(); //Hiding the progress bar
+                    var markup = "<tr><td>" + result + "</td><td><a href='#' onclick='DeleteFile(\"" + result + "\")'><span class='glyphicon glyphicon-remove red'></span></a></td></tr>"; // Binding the file name
+                    $("#ListofFiles tbody").append(markup);
+                    $('#Files').val('');
+                    $('#FileBrowse').find("*").prop("disabled", false);
+                }
+            });
+            function progress() {
+                var val = progressbar.progressbar("value") || 0;
+                progressbar.progressbar("value", val + 1);
+                if (val < 99) {
+                    setTimeout(progress, 25);
+                }
+            }
+            setTimeout(progress, 100);
+        }
+
+        function DeleteFile(FileName) {
+
+        //Write your delete logic here
+        }
+
+            </script>
+        }

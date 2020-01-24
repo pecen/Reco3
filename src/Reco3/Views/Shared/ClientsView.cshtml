@@ -1,0 +1,81 @@
+﻿@model Reco3.Controllers.ClientsStatus
+
+<div class="jumbotron">
+    <h3>Clients</h3>
+    <table class="table">
+        <tr>
+            <th>
+                Node
+            </th>
+            <th>
+                ProcId
+            </th>
+            <th>
+                CPU-Load
+            </th>
+            <th>
+                RAM-Available
+            </th>
+            <th>
+                RAM-Load
+            </th>
+            <th>
+                Sleeping
+            </th>
+            <th>
+                Clientversion
+            </th>
+            <th>
+                Last Seen
+            </th>
+        </tr>
+
+        @foreach (var item in Model.ClientHealth)
+        {
+            <tr style='background-color: @(item.IsActive() == true ? "lightgreen" : "lightgrey");'>
+                <td>
+                    @item.NodeName
+                </td>
+                <td>
+                    @item.ProcId
+                </td>
+                <td>
+                    @item.CPULoad
+                </td>
+                <td>
+                    @item.RamAvailable
+                </td>
+                <td>
+                    @item.RamLoad
+                </td>
+                <td>
+                    @(item.Sleeping == true ? "Yes" : "")
+                </td>
+                <td>
+                    @item.ClientVersion
+                </td>
+                <td>
+                    @item.TimeStamp
+                </td>
+            </tr>
+        }
+
+    </table>
+    <button type="button" class="btn btn-default btn-sm" id="btnRefreshClientsStatus">
+        <span class="glyphicon glyphicon-refresh"></span> Refresh
+    </button>
+    <span id="lblLastClientsRefresh">@Model.LastRefreshStamp
+    </span>
+</div>
+
+<script>
+    $("#btnRefreshClientsStatus").click(function () {
+        loadPartialView("@Url.Action("ClientInfo")", "clienthealth-container", true);
+        
+        
+    });
+
+    function loadClientsView() {
+        loadPartialView("@Url.Action("ClientInfo")", "clienthealth-container", true);
+    };
+</script>

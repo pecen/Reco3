@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Components";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Components</h2>
+
+<div class="jumbotron">
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="txtMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    
+
+    <p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal" data-placement="top" title="Click to add new component...">
+            Add new component
+        </button>
+    </p>
+    <table class="table table-bordered table-striped" id="componentsTable" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>PDNumber</th>
+                <th>Added</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        var dataTable = $('#componentsTable').DataTable({
+            "proccessing": true,
+            "serverSide": true,
+            "lengthMenu": [[10], [10]],
+            "ajax": {
+                "url": "@Url.Action("GetComponents", "Components")",
+                "type" : "post",
+                "dataSrc": ""
+            },
+            "columns": [
+                { "data": "PDNumber", "title": "PD#"  },
+                { "data": "DownloadedTimestamp", "title": "Added"  },
+                { "data": "Component_TypeStr", "title": "Type" },
+                { "data": "ComponentId"}
+
+            ],
+            "columnDefs": [
+                { "width": "5%", "targets": 0 },
+                { "width": "25%", "targets": 1 },
+                { "width": "25%", "targets": 2 },
+                {
+                    "width": "10%", 
+                "targets": 3,
+                "data" : null,
+                "render": function(data, type, row) {
+                    var inner = '<button data-assigned-id="' + row.ComponentId + '">Edit</button>';
+                    return inner;
+                },
+            } ],            
+            "pagingType": "full_numbers"
+        });
+        $('#componentsTable tbody').on('click', 'button', function () {
+            window.location.href = "/Components/edit/" + $(this).data('assigned-id');
+        } );
+       
+    });
+
+        
+</script>
+<!--
+    
+"columnDefs": [
+{
+"render": function(data, type, row) {
+var inner = '<div class="btn-group">' +
+    '<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' +
+        'Actions' +
+        '</button>' +
+    '<div class="dropdown-menu">' +
+        '<a class="dropdown-item btn btn-default edit" id="' +
+                            row.ComponentId +
+                            '" href="#">Edit</a>' +
+        '<a class="dropdown-item btn btn-default delete" id="' +
+                            row.ComponentId +
+                            '" href="#">Delete</a>' +
+        '</div>' +
+    '</div>';
+return inner;
+},
+"targets": -1
+}
+],
+    
+    
+    
+dataTable.on('draw',
+function() {
+$('button[data-type="delete"]').click(function() {
+var $button = $(this);
+alert($button.id);
+});
+$('button[data-type="edit"]').click(function() {
+var $button = $(this);
+alert($button.id);
+});
+});
+-->

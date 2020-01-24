@@ -1,0 +1,160 @@
+﻿@model IEnumerable<DataLayer.Database.SimulationJob>
+
+@{
+    ViewBag.Title = "Batchsimulations";
+    ViewBag.ParentMenuItem = "Simulations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .table thead {
+        background-color: rgba(255,255,255,.15);
+        color: #0c0c0c;
+    }
+</style>
+
+<div class="panel-body">
+
+    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Create new simulation</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Simulationname</label>
+                        <div class="col-md-10">
+                            @Html.Editor("SimulationJobName")
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="txtMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-body">
+                <div class="col-md-5">
+                    <p class="card-text">
+                            <button class="btn-sm btn-default" type="button" id="btnAddNewSimulation" 
+                                    style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                            <span class="glyphicon glyphicon-plus-sign"></span> Add new simulation...</button>
+                    </p>
+
+                    <table id="simulationsTable" class="table table-striped table-bordered nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">Alias</th>
+                                <th style="width: 230px;">Created</th>
+                                <th style="width: 100px;">Owner</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script>
+            $(document).ready(function () {
+                $('#parentSimulations').attr('class', 'active');
+                $('#subSimulations').attr('class', 'active');
+
+                var dataTable = $('#simulationsTable').DataTable({
+                    "proccessing": true,
+                    "serverSide": true,
+                    "lengthMenu": [[10, 25, 50], [10, 25, 50]],
+                    "ajax": {
+                        "url": "@Url.Action("GetSimulations", "Simulations")",
+                        "type" : "post",
+                        "dataSrc": ""
+                    },
+                    "columns": [
+                        { "data": "SimulationJobName", "title": "Alias"  },
+                        { "data": "CreationTimeStr", "title": "Created"  },
+                        { "data": "OwnerSss", "title": "Owner" },
+                        { "data": "SimulationJobId"}
+
+                    ],
+                    "columnDefs": [
+                        { "width": "15%", "targets": 0 },
+                        { "width": "25%", "targets": 1 },
+                        { "width": "25%", "targets": 2 },
+                        {
+                            "width": "10%",
+                            "targets": 3,
+                            "data" : null,
+                            "render": function(data, type, row) {
+                                var inner = '<button class="btn-sm btn-default" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;" data-assigned-id="' + row.SimulationJobId + '"><span class="glyphicon glyphicon-edit"></span> Edit</button>';
+                                return inner;
+                            },
+                        } ],
+                    "pagingType": "full_numbers"
+                });
+                $('#simulationsTable tbody').on('click', 'button', function () {
+                    window.location.href = "/Simulations/edit/" + $(this).data('assigned-id');
+                });
+                $("#btnAddNewSimulation").click(function () {
+                    window.location.href = "/Simulations/edit/-1";
+                });
+
+
+                
+
+
+                $("#btnSave").click(function () {
+                    var frmData = new FormData();
+                    frmData.append("SimulationName", $('#SimulationJobName').val());
+
+                    $.ajax({
+                        url: '/Simulations/AddSimulation',
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        data: frmData,
+                        success: function (data) {
+                            $('#basicExampleModal').modal('hide');
+                            window.location.href = "/simulations/edit/" + data.jobid;
+
+                        },
+                        error: function (err) {
+                            $('#myModal').modal('show');
+                            $('.modal-header').addClass('alert alert-danger');
+                            $('#txtMessage').html(err.statusText);
+                        }
+                    });
+                });
+
+                //End of the document ready function...
+            });
+        </script>

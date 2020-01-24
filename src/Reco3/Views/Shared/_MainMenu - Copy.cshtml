@@ -1,0 +1,79 @@
+﻿<div id="scania-bootstrap-docs-navigation">
+    <nav class="navbar navbar-default portal-navigation" role="navigation">
+        <!-- BEGIN TOGGLE BUTTON -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="#" data-noclick="true"><small>Menu</small></a>
+        </div>
+        <!-- BEGIN LEVEL FIRST MENU -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!-- in aparece automatico -->
+            <ul class="nav navbar-nav" id="mainMenuLevelOne">
+                <li id="mnuHome" class="active">
+                    <a onclick="clickFirstLevelMenu(this, '@Url.Action("Index", "Home")')" href="Home">
+                        Home
+                    </a>
+                </li>
+                <li id="mnuSimulations">
+                    <a onclick="clickFirstLevelMenu(this, '@Url.Action("Index", "Simulations")')" href="/Simulations">
+                        Simulations
+                    </a>
+                </li>
+                <li id="mnuProject">
+                    <a onclick="clickFirstLevelMenu(this, '')" href="#" data-toggle="collapse" data-target=".portal-nav-level-two">
+                        Project
+                    </a>
+                </li>
+                <li id="mnuAdministration">
+                    <a onclick="clickFirstLevelMenu(this, '')" href="#" data-toggle="collapse" data-target=".portal-nav-level-two">
+                        Administration
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav" id="mainMenuLevelTwo">
+                <li id="mnuDeveloperSupport">
+                    <a onclick="clickFirstLevelMenu(this, '@Url.Action("Index", "DeveloperSupport")')" href="/DeveloperSupport">
+                        Developer support
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button class="btn btn-sm btn-default" type="button" id="maximize-button">
+                        <span id="maximize-icon" class="icon-fullscreen" data-step="4" data-intro="At any time you can maximize the application."></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- BEGIN LEVEL SECOND MENU -->
+        <div class="collapse navbar-collapse portal-nav-level-two" id="menuLevelTwo">
+            <!-- quando coloca o in aparece -->
+            <!-- BEGIN LEVEL SECOND MENU [Project] -->
+            <ul class="nav navbar-nav" id="mnuProject_LevelTwo" style="">
+                <li id="ProjectsPerProperty">   <a onclick="clickSecondLevelMenu(this, '@Url.Action("ProjectsPerProperty", "Projects")')" href="#">Per property</a></li>
+            </ul>
+            <!-- END LEVEL SECOND MENU [Project] -->
+            <!-- BEGIN LEVEL SECOND MENU [Administration] -->
+            <ul class="nav navbar-nav" id="mnuAdministration_LevelTwo" style="">
+                <li id="data-Components">     <a onclick="clickSecondLevelMenu(this, '@Url.Action("Index", "Components")')" href="#">Components</a></li>
+                <li id="Projects">   <a onclick="clickSecondLevelMenu(this, '@Url.Action("Index", "Projects")')" href="#">Projects</a></li>
+                <li id="Properties">   <a onclick="clickSecondLevelMenu(this, '@Url.Action("Index", "CVVehicle")')" href="#">Vehicles</a></li>
+                <li id="COIN">   <a onclick="clickSecondLevelMenu(this, '@Url.Action("Index", "COIN")')" href="#">COIN</a></li>
+                <li id="Properties">   <a onclick="clickSecondLevelMenu(this, '@Url.Action("Index", "CVVProperties")')" href="#">Properties</a></li>
+            </ul>
+            <!-- END LEVEL SECOND MENU [Administration] -->
+</div>
+        <!-- END LEVEL SECOND MENU-->
+    </nav>
+</div>
+<script>
+        $("#maximize-button").on('click', function () {
+            $('div .dataTables_scrollHeadInner').css('width', '100%');
+            $('div .dataTables_scrollHeadInner table').css('width', '100%');
+        });
+</script>

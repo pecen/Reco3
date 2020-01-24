@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home of simulations";
+}
+<br />
+<div class="panel panel-success" id="success-panel" style="margin-left: 100px; position: absolute; margin-top: 100px; display:none">
+    <div class="panel-heading">
+        <h3 class="panel-title"><span id="successpanel_title"></span></h3>
+    </div>
+    <div class="panel-body">
+        <span id="successpanel_body"></span>
+            <br />
+            <button class="btn-sm btn-default" type="button" id="btnCloseSuccessPanel" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-lock"></span> OK</button>
+    </div>
+</div>
+
+<div class="panel panel-danger" id="failure-panel" style="margin-left: 100px; position: absolute; margin-top: 100px; display:none">
+    <div class="panel-heading">
+        <h3 class="panel-title"><span id="dangerpanel_title"></span></h3>
+    </div>
+    <div class="panel-body">
+        <span id="dangerpanel_body"></span>
+            <br />
+            <button class="btn-sm btn-default" type="button" id="btnCloseDangerPanel" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-lock"></span> OK</button>
+</div>
+</div>
+<div class="jumbotron">
+    <h1>Not authorized</h1>
+    <p class="lead">You do not appear to be authorized.</p>
+    <p>Click "Request access" if you want to apply for authorization.</p>
+    <button class="btn-sm btn-default" type="button" id="btnRequestAccess" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-lock"></span> Request access...</button>
+</div>
+
+<script>
+    $("#btnRequestAccess").click(function () {
+        var userid = "@User.Identity.Name";
+        var frmData = new FormData();
+        frmData.append("userid", userid);
+        $.ajax({
+            type: "POST",
+            contentType: false,
+            processData: false,
+            data: frmData,
+            url: "@Url.Action("RequestAccess", "Admin")",
+            success: function (data) {
+                if (data.success == true) {
+                    $("#successpanel_title").html(data.title);
+                    $("#successpanel_body").html(data.message);
+                    $("#success-panel").show(500);
+                }
+                else {
+                    $("#dangerpanel_title").html(data.title);
+                    $("#dangerpanel_body").html(data.message);                    
+                    $("#failure-panel").show(500);
+                }
+            }
+        });
+    });
+
+    $("#btnCloseDangerPanel").click(function () {
+        $("#failure-panel").hide(300);
+    });
+    $("#btnCloseSuccessPanel").click(function () {
+        $("#success-panel").hide(300);
+    });
+    
+
+</script>

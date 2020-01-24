@@ -1,0 +1,141 @@
+﻿@model Reco3.Controllers.SimulationJobModel
+@using DataLayer.Database
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "//Simulations: " + @Model.job.SimulationJobName;
+    ViewBag.ParentMenuItem = "Simulations";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+
+<div class="panel-body">
+    <div>
+        <div class="panel-body">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="txtMessage"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card border-light" style="">
+                        <div class="card-header">Simulation: @Model.job.SimulationJobName</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <div id="tabs">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tabGeneral" data-toggle="tab">General</a></li>
+                                        @if (Model.job.SimulationJobId == -1)
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            <li><a href="#tabStatus" data-toggle="tab">Status</a></li>
+                                        }
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active" id="tabGeneral">
+                                            @Html.Partial("General", Model)
+                                        </div>
+                                        <div class="tab-pane fade" id="tabStatus">
+                                            <div id="simulation-package-container"></div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <br />
+                            </p>
+                        </div><!-- /.col-lg-6 -->
+                        <div class="card-header">
+                            <button class="btn-sm btn-default" type="button" id="btnCancel" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon icon-list"></span> Back to list</button>
+                            <button class="btn-sm btn-default" type="button" id="btnSimulation" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon icon-check"></span> Save...</button>
+                        </div>
+                    </div><!-- /.row -->
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#parentSimulations').attr('class', 'active');
+        $('#subSimulations').attr('class', 'active');
+        if (@Model.job.SimulationJobId === -1) {
+        }
+        else {
+            loadPartialView("@Url.Action("SimulationPackage")", "simulation-package-container", "simulationjobid=@Model.job.SimulationJobId");
+        }
+
+        $("#btnCancel").click(function () {
+            window.location.href = document.referrer;
+        });
+
+        $("#btnUpload").click(function () {
+            var frmData = new FormData();
+            var filebase = $("#baseline-selector").get(0);
+            var files = filebase.files;
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId);
+            frmData.append(files[0].name, files[0]);
+            $.ajax({
+                url: '/Simulations/UploadBaseline',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                xhrFields: { withCredentials: true },
+                data: frmData,
+                success: function (data) {
+                    $('#idLoadingStatus').html(data.message);
+                },
+                error: function (err) {
+                    $('#idLoadingStatus').html(err.message);
+                },
+                complete: function () {
+
+                }
+            });
+        });
+
+         $("#btnSimulation").click(function () {
+             var frmData = new FormData();
+             frmData.append("SimulationName", $('#simulation-alias').val());
+             frmData.append("SimulationJobId", @Model.job.SimulationJobId);
+
+            $.ajax({
+                url: '/Simulations/SaveSimulation',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+
+                    window.location.href = "/simulations/edit/" + data.jobid;
+
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                }
+            });
+        });
+    });
+</script>

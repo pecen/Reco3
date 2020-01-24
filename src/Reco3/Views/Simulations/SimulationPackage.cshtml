@@ -1,0 +1,381 @@
+﻿@using DataLayer.Database
+@using Reco3Common
+@model Reco3.Controllers.SimulationPackageStatus
+
+<div class="modal fade" id="uploadPackageModal" tabindex="-1" role="dialog" aria-labelledby="uploadPackageModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="uploadPackageModalLabel">Upload new package</h4>
+            </div>
+
+            <div class="modal-body">
+                <label>Please refer to the documentation on how to create a package.</label>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <label>Click to select package :</label>
+                        </td>
+                        <td>
+                            <span class="btn btn-default btn-file">
+                                Browse <input type="file" id="baseline" name="baseline">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Select type of package :</label>
+                        </td>
+                        <td>
+                            <!-- Group of default radios - option 1 -->
+                            <div class="custom-control custom-radio">
+                                @Html.RadioButtonFor(model => model.job.Simulation_Mode, SimulationJob.SimulationMode.Declaration, new { id = "radioDeclarationMode" }) Declaration
+                            </div>
+
+                            <!-- Group of default radios - option 2 -->
+                            <div class="custom-control custom-radio">
+                                @Html.RadioButtonFor(model => model.job.Simulation_Mode, SimulationJob.SimulationMode.Engineering, new { id = "radioEngineeringMode" }) Engineering
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" class="btn btn-default btn-xs" id="btnSubmit">
+                                <span class="glyphicon glyphicon-upload"></span> Upload
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-light" style="">
+            <div class="card-header">Fleet improvements</div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Step</th>
+                            <th scope="col">Timestamp</th>
+                            <th scope="col">Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">Upload</td>
+                            <td>@Model.job.PackageUploadedDateTimeStr</td>
+                            <td>
+                                <button class="btn-sm btn-default" type="button" id="btnShowUploadModal" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                                    <span class="glyphicon glyphicon-upload"></span> Upload
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Validation</td>
+                            <td>@Model.job.PackageValidatedDateTimeStr</td>
+                            <td>
+                                @if (Model.job.Validation_Status == Reco3_Enums.ValidationStatus.Pending)
+                                {
+                                    <button class="btn-sm btn-default" type="button" id="btnValidate" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                                        <span class="glyphicon glyphicon-search"></span> Validate
+                                    </button>
+                                }
+                                else if (Model.job.Validation_Status == Reco3_Enums.ValidationStatus.Processing)
+                                {
+                                    <div id="divValidating"><img id="validating-image" src="~/Images/Processing.gif" alt="Validating..." /></div>
+                                }
+                                else if (Model.job.Validation_Status == Reco3_Enums.ValidationStatus.ValidatedWithSuccess)
+                                {
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                    <label>Validated with success!</label>
+                                }
+                                else if (Model.job.Validation_Status == Reco3_Enums.ValidationStatus.ValidatedWithFailures)
+                                {
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <label id="ValidationErrorLabel" class="control-label"></label>
+                                    <input type="button" value="Download" id="btnDownloadFailures" />
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Convertion</td>
+                            <td>@Model.job.PackageConvertedDateTimeStr</td>
+                            <td>
+                                @if (Model.job.Validation_Status == Reco3_Enums.ValidationStatus.ValidatedWithSuccess)
+                                {
+                                    if (Model.job.ConvertToVehicleInput_Status == Reco3_Enums.ConvertToVehicleInputStatus.Pending)
+                                    {
+                                        <button class="btn-sm btn-default" type="button" id="btnConvert" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                                            <span class="glyphicon glyphicon-export"></span> Convert
+                                        </button>
+                                    }
+                                    else if (Model.job.ConvertToVehicleInput_Status == Reco3_Enums.ConvertToVehicleInputStatus.Processing)
+                                    {
+                                        <div id="divConverting"><img id="conversion-image" src="~/Images/Processing.gif" alt="Converting..." /></div>
+                                    }
+                                    else if (Model.job.ConvertToVehicleInput_Status == Reco3_Enums.ConvertToVehicleInputStatus.ConvertedWithFailures)
+                                    {
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                        <label>Converted with success!</label>
+                                    }
+                                    else if (Model.job.ConvertToVehicleInput_Status == Reco3_Enums.ConvertToVehicleInputStatus.ConvertedWithSuccess)
+                                    {
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                        <label>Converted with success!</label>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Simulation</td>
+                            <td>@Model.job.PackageSimulatedDateTimeStr</td>
+                            <td>
+                                @if (Model.job.PackageConverted == true)
+                                {
+                                    if (Model.job.Simulation_Status == SimulationJob.SimulationStatus.Pending)
+                                    {
+                                        <button class="btn-sm btn-default" type="button" id="btnSimulate" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                                            <span class="glyphicon glyphicon-road"></span> Simulate
+                                        </button>
+                                    }
+                                    else if (Model.job.Simulation_Status == SimulationJob.SimulationStatus.Simulating)
+                                    {
+                                        <label>Simulating (@Model.SimulatedVehicleCount / @Model.job.SimulationCount)</label>
+                                        <div id="divSimulating"><img id="simulating-image" src="~/Images/Processing.gif" alt="Simulating..." /></div>
+
+                                    }
+                                    else if (Model.job.Simulation_Status == SimulationJob.SimulationStatus.SimulatedWithFailures)
+                                    {
+                                        <input type="button" value="Simulate" id="btnSimulate" width="50px" disabled="true" />
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                        <label>Simulated with failures!</label>
+                                    }
+                                    else if (Model.job.Simulation_Status == SimulationJob.SimulationStatus.SimulatedWithSuccess)
+                                    {
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                        <label>Simulated with success!</label>
+
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<button class="btn-sm btn-default" type="button" id="btnRefreshSimulationJobsStatus" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon icon-refresh"></span> Refresh</button>
+
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+
+
+
+        $("#btnRefreshSimulationJobsStatus").click(function() {
+            loadPartialView("@Url.Action("SimulationPackage")",
+                "simulation-package-container",
+                "simulationjobid=@Model.job.SimulationJobId", false);
+
+        });
+
+        $("#btnShowUploadModal").click(function () {
+            $('#uploadPackageModal').modal('show');
+            $('.modal-header').addClass('alert alert-info');
+        });
+
+
+        $("#btnSubmit").click(function () {
+            $('#uploadPackageModal').modal('hide');
+            startLoading();
+            var frmData = new FormData();
+            var filebase = $("#baseline").get(0);
+            var files = filebase.files;
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+            if ($("#radioDeclarationMode").checked==true)
+                frmData.append("SimulationMode", "DeclarationMode")
+            else
+                frmData.append("SimulationMode", "EngineeringMode")
+            frmData.append(files[0].name, files[0]);
+            $.ajax({
+                url: '/Simulations/UploadPackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                xhrFields: { withCredentials: true },
+                data: frmData,
+                success: function (data) {
+                    hideErrorMessage();
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                        loadPartialView("@Url.Action("SimulationPackage")",
+                            "simulation-package-container",
+                            "simulationjobid=@Model.job.SimulationJobId", false);
+
+
+
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                },
+                complete: function () {
+                    stopLoading();
+                }
+            });
+        });
+
+            $("#btnDownloadFailures").click(function () {
+                var frmData = new FormData();
+                frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+
+            //I use blockUI for loading...
+            //$.blockUI({ message: '<h3>Please wait a moment...</h3>' });
+                $.ajax({
+                    url: '/Simulations/ExportValidationResult',
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+                    data: frmData,
+            }).done(function (data) {
+                //console.log(data.result);
+                //$.unblockUI();
+
+                //get the file name for download
+                if (data.fileName != "") {
+                    //use window.location.href for redirect to download action for download the file
+                    window.location.href = "@Url.RouteUrl(new
+                { Controller = "Simulations", Action = "Download"})/?file=" + data.fileName;
+                }
+            });
+            });
+
+        $("#btnValidate").click(function () {
+            startLoading();
+            var frmData = new FormData();
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+            $.ajax({
+                url: '/Simulations/ValidatePackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                    loadPartialView("@Url.Action("SimulationPackage")",
+                        "simulation-package-container",
+                        "simulationjobid=@Model.job.SimulationJobId", false);
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                },
+                complete: function () {
+                    stopLoading();
+                }
+            });
+        });
+
+
+        $("#btnConvert").click(function () {
+            startLoading();
+            var frmData = new FormData();
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+            $.ajax({
+                url: '/Simulations/ConvertPackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                    loadPartialView("@Url.Action("SimulationPackage")",
+                        "simulation-package-container",
+                        "simulationjobid=@Model.job.SimulationJobId", false);
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                },
+                complete: function () {
+                    stopLoading();
+                }
+            });
+        });
+
+
+
+        $("#btnSimulate").click(function () {
+            startLoading();
+            var frmData = new FormData();
+            frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+
+            $.ajax({
+                url: '/Simulations/SimulatePackage',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    $('#myModal').modal('show');
+                    $('#txtMessage').html(data.message);
+                    if (data.success) {
+                        $('.modal-header').addClass('alert alert-success');
+                    } else {
+                        $('.modal-header').addClass('alert alert-info');
+                    }
+                    loadPartialView("@Url.Action("SimulationPackage")",
+                        "simulation-package-container",
+                        "simulationjobid=@Model.job.SimulationJobId", false);
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                },
+                complete: function () {
+                    stopLoading();
+                }
+            });
+        });
+    });
+
+</script>

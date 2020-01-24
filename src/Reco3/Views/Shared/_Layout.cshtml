@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @{
+        string title = @ViewBag.Title;
+
+        title = (!string.IsNullOrEmpty(@ViewBag.Title)) ? string.Format("{0}", title) : string.Empty;
+    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <noscript><meta http-equiv="refresh" content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html"></noscript>
+    <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@title</title>
+
+
+    <script src="https://static.scania.com/build/global/3.5.0/js/corporate-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+    <script src="~/Scripts/Main.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    
+
+
+    @{
+        
+        var CurrentPageName = ViewBag.CurrentPageName; // ViewContext.RouteData.Values["controller"].ToString();
+        var ParentMenuItem = ViewBag.ParentMenuItem;
+    }
+    <!--@Scripts.Render("~/bundles/bootbox")-->
+    <style>
+        .panel.panel-xs .panel-heading,
+        .panel.panel-xs .panel-body {
+            font-weight: normal;
+            padding: 5px;
+            line-height: 2.2rem;
+        }
+
+            .panel.panel-xs .panel-heading h3 {
+                padding: 0px;
+                font-size: 1.2rem;
+            }
+
+        .panel.panel-xs .panel-body {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body class="scania app">
+    <div id="divLoad" style="display: none;"><img id="loading-image" src="/images/loading.gif" alt="Loading..." /></div>
+    <c-corporate-header site-name="@title" site-url="/">
+        <nav-item location="@Url.Action("UserInfo", "Home")"><i class="icon-user"></i> @User.Identity.Name</nav-item>
+    </c-corporate-header>
+
+    <c-main-content>
+        <c-main-navigation>
+            <primary-items>
+                <nav-item location="@Url.Action("Index", "Home")" active="@(CurrentPageName == "Home" ? "true" : "false")">Home</nav-item>
+                @if ((ViewBag.Is_Reco3_Guest == true) ||
+                        (ViewBag.Is_Reco3_Simulator == true) ||
+                        (ViewBag.Is_Reco3_Administrator == true))
+                { 
+                <nav-item location="@Url.Action("Index", "Co2Roadmap")" @(ParentMenuItem == "Simulations" ? "class=active" : "") active="@(CurrentPageName == "Simulations" ? "true" : "false")" id="parentSimulations">
+                    Simulations
+                    <sub-navigation caption="Simulations">
+                        <nav-item location="@Url.Action("Index", "Co2Roadmap")" id="subCo2Roadmap">Roadmaps</nav-item>
+                        <nav-item location="@Url.Action("Index", "Improvements")" id="subImprovementsManager">Improvements manager</nav-item>
+                    </sub-navigation>
+                </nav-item>
+                }
+                @if (ViewBag.Is_Reco3_Administrator == true)
+                {
+                <nav-item location="@Url.Action("Index", "Admin")" @(ParentMenuItem == "Admin" ? "class=active" : "") active="@(CurrentPageName == "Admin" ? "true" : "false")" id="parentAdmin">
+                    Admin
+                    <sub-navigation caption="Admin">
+                        <nav-item location="@Url.Action("Coins", "Admin")" id="subCoins">Coins</nav-item>
+                        <nav-item location="@Url.Action("Index", "DeveloperSupport")" id="subStatus">Status</nav-item>
+                        <nav-item location="@Url.Action("Users", "Admin")" id="subUsers">Users</nav-item>
+                    </sub-navigation>
+                </nav-item>
+                }
+            </primary-items>
+                <secondary-items>
+                    Secondary items are optional, more information below.
+                </secondary-items>
+            </c-main-navigation>
+
+
+            <section class="light">
+                <div id="errorMessage-div" class="alert alert-danger alert-dismissable fade in" style="margin: 15px; display: none">
+                    <span class="icon icon-warning-sign icon-large"></span>&nbsp;
+                    <strong id="errorMessage-title"></strong>&nbsp;
+                    <span id="errorMessage-body"></span>
+                </div>
+
+
+
+                <div class="container-fluid">
+                    @ViewBag.AutherizationMessage
+                    @RenderBody()
+                </div>
+            </section>
+
+        </c-main-content>
+
+        <c-corporate-footer></c-corporate-footer>
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>

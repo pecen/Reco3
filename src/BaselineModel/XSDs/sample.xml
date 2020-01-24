@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+  <vehicle>
+    <VIN>5534685</VIN>
+    <Date>2018-12-12</Date>
+	<Model>P 280 B6x2/4NA</Model>
+    <LegislativeClass>N3</LegislativeClass>
+    <DevelopmentLevel>6</DevelopmentLevel>
+	<VehicleCategory>Rigid Truck</VehicleCategory>
+	<AxleConfiguration>6x2</AxleConfiguration>
+	<CurbMassChassis>7595</CurbMassChassis>
+	<GrossVehicleMass>27000</GrossVehicleMass>
+	<IdlingSpeed>540</IdlingSpeed>
+	<RetarderType>None</RetarderType>
+    <RetarderRatio></RetarderRatio>
+    <AngledriveType>None</AngledriveType>
+    <PTO>
+      <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+      <PTOOtherElements>none</PTOOtherElements>
+    </PTO>
+	<Components>
+      <EnginePD>2777906</EnginePD>
+      <GearBoxPD>2782239</GearBoxPD>
+      <AxleGearPD>2780012</AxleGearPD>
+      <RetarderPD></RetarderPD>
+      <ToqueConverterPD></ToqueConverterPD>
+      <Auxiliaries>
+        <Data>
+          <Fan>
+            <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+          </Fan>
+          <SteeringPump>
+            <Technology>Fixed displacement</Technology>
+          </SteeringPump>
+          <ElectricSystem>
+            <Technology>Standard technology</Technology>
+          </ElectricSystem>
+          <PneumaticSystem>
+            <Technology>Large Supply + mech. clutch + AMS</Technology>
+          </PneumaticSystem>
+          <HVAC>
+            <Technology>Default</Technology>
+          </HVAC>
+        </Data>
+      </Auxiliaries>
+      <AxleWheels>
+        <Data>
+          <Axles>
+            <Axle axleNumber="1">
+              <AxleType>VehicleNonDriven</AxleType>
+              <TwinTyres>false</TwinTyres>
+              <Steered>true</Steered>
+              <TyrePD>2722448</TyrePD>
+            </Axle>
+            <Axle axleNumber="2">
+              <AxleType>VehicleDriven</AxleType>
+              <TwinTyres>true</TwinTyres>
+              <Steered>false</Steered>
+              <TyrePD>2722437</TyrePD>
+            </Axle>
+            <Axle axleNumber="3">
+              <AxleType>VehicleDriven</AxleType>
+              <TwinTyres>true</TwinTyres>
+              <Steered>false</Steered>
+              <TyrePD>2722437</TyrePD>
+            </Axle>
+          </Axles>
+        </Data>
+      </AxleWheels>
+	</Components>
+  </vehicle>
+</vehicles>

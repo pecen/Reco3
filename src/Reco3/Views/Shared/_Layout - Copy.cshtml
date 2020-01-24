@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)">
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)">
+
+    @{
+        string title = @ViewBag.Title;
+
+        title = (!string.IsNullOrEmpty(@ViewBag.Title)) ? string.Format("{0} - ", title) : string.Empty;
+    }
+
+    <title>@title ReCO3 Application</title>
+
+    <!-- Favorites & Bookmark Icon -->
+    <link href="//static.scania.com/resources/images/compressed/logotypes/favicon.ico" rel="shortcut icon">
+
+    <!-- Scania Bootstrap CSS -->
+    <link href="//static.scania.com/build/global/1.8.0/css/scania-bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Content.css" rel="stylesheet">
+
+
+    <script src="~/Scripts/Menu.js"></script>
+    <script src="~/Scripts/Main.js"></script>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/DataTables")
+</head>
+<body class="bootstrap bootstrap-app">
+    <div id="divLoad" style="display: none;"><img id="loading-image" src="/images/loading.gif" alt="Loading..." /></div>
+<!-- BEGIN MAIN CONTENT -->
+<div class="container portal-main-container padding-top">
+    <div class="row" id="prototype-header">
+        <div class="col-md-6">
+            <span class="scania-portal-logo"></span>
+            <div class="portal-heading">ReCO<sub>3</sub> Application. like ReCo<sub>2</sub> but on steroids...</div>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-right header-links hidden-print">
+                <li><a href="@Url.Action("UserInfo", "Home")" data-noclick="true"> <i class="icon-user"></i> @User.Identity.Name</a></li>
+            </ul>
+        </div>
+    </div>
+    @Html.Partial("_MainMenu")
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="container portlet-application body-content">
+                <!-- ************************* -->
+                <div id="errorMessage-div" class="alert alert-danger alert-dismissable fade in" style="margin: 15px; display: none">
+                    <span class="icon icon-warning-sign icon-large"></span>&nbsp;
+                    <strong id="errorMessage-title"></strong>&nbsp;
+                    <span id="errorMessage-body"></span>
+                </div>
+
+                @RenderBody()
+            </div>
+        </div>
+        <footer>
+            <div class="col-xs-6">
+                <p>&copy; @DateTime.Now.Year - ReCO<sub>3</sub> Application - Scania.</p>
+            </div>
+            <div class="col-xs-6" style="text-align: right;">
+                <p>Version: 1.0.0</p>
+            </div>
+        </footer>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")
+<!-- Scania Bootstrap Javascripts -->
+<script src="https://static.scania.com/build/global/1.8.0/js/scania-bootstrap.js" type="text/javascript">
+</script>
+<script src="../../Scripts/Main.js" type="text/javascript">
+
+
+</script>
+@RenderSection("scripts", required: false)
+</body>
+</html>

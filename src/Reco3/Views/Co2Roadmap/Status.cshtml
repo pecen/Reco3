@@ -1,0 +1,220 @@
+﻿
+@using Reco3Common
+@model Reco3.Controllers.Co2RoadmapModel
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-light" style="">
+            <div class="card-header">Fleet improvements</div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.ReadOnly == false)
+                        {
+                            <h6 class="card-title">Impact of improvements is only available once the fleet has been converted and simulated.</h6>
+                        }
+                        else
+                        {
+                            foreach (var item in Model.Co2Roadmap.Roadmaps)
+                            {
+                                <tr>
+                                    <td scope="row">
+                                        @Html.DisplayFor(modelItem => item.CurrentYear)
+                                        @if (item.Protected == false)
+                                        {
+                                            if ( (item.Validated == true) && (item.Converted==false))
+                                            {
+                                                <button class="btn-convert-roadmap btn-sm btn-default" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"
+                                                        data-assigned-id="@item.RoadmapId">
+                                                    <span class="glyphicon glyphicon-random"></span> Convert
+                                                </button>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (item.Processed == true)
+                                            {
+
+                                            }
+                                            if ( (item.Validated == true) && (item.Converted==true))
+                                            {
+                                                <button class="btn-simulate-roadmap btn-sm btn-default" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"
+                                                        data-assigned-id="@item.RoadmapId">
+                                                    <span class="glyphicon glyphicon-play"></span> Simulate
+                                                </button>
+                                            }
+                                        }
+                                    </td>
+                                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.ImprovementStatus)</td>
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<!--
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-light" style="">
+            <div class="card-header">Status</div>
+            <div class="card-body">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card border-light" style="">
+                        <div class="card-header" id="headingOneb" style="font-size: 12px !important; padding: 0px;">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneb" aria-expanded="False" aria-controls="collapseOneb">
+                                2019-02-25 - Simulation
+                            </button>
+                        </div>
+                        <div id="collapseOneb" class="collapse show" aria-labelledby="headingOneb" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Operation</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Information</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">Simulation queued</td>
+                                            <td><label id="lblFleetSchemaStatus">41233 vehicles ready</label></td>
+                                            <td><label id="lblFleetSchemaInformation"></label></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Simulation</td>
+                                            <td><label id="lblFleetPDStatus">41233 Vehicles done</label></td>
+                                            <td><label id="lblFleetPDInformation"></label></td>
+                                            <td><button class="btn btn-default btn-xs" type="button" id="btnDownloadFailedPDReport" style="visibility: hidden">Download report...</button></td>
+                                            <td><button class="btn btn-default btn-xs" type="button" id="btnProceed" data-toggle="tooltip" style="visibility: hidden" data-placement="right" title="Ignore failures and proceed.">Proceed...</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card border-light" style="">
+                        <div class="card-header" id="headingOnea" style="font-size: 12px !important; padding: 0px;">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOnea" aria-expanded="False" aria-controls="collapseOnea">
+                                2019-02-24 - Validation
+                            </button>
+                        </div>
+                        <div id="collapseOnea" class="collapse show" aria-labelledby="headingOnea" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Operation</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Information</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">Schema validation</td>
+                                            <td><label id="lblFleetSchemaStatus"></label></td>
+                                            <td><label id="lblFleetSchemaInformation"></label></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">PD-references</td>
+                                            <td><label id="lblFleetPDStatus"></label></td>
+                                            <td><label id="lblFleetPDInformation"></label></td>
+                                            <td><button class="btn btn-default btn-xs" type="button" id="btnDownloadFailedPDReport" style="visibility: hidden">Download report...</button></td>
+                                            <td><button class="btn btn-default btn-xs" type="button" id="btnProceed" data-toggle="tooltip" style="visibility: hidden" data-placement="right" title="Ignore failures and proceed.">Proceed...</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Convert to Vecto-input</td>
+                                            <td><label id="lblFleetConvertStatus"></label></td>
+                                            <td><label id="lblFleetConvertInformation"></label></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    -->
+
+<script>
+    $(document).ready(function () {
+        $(".btn-convert-roadmap").click(function () {
+            var $j = jQuery.noConflict();
+            var frmData = new FormData();
+            frmData.append("roadmapid", $j(this).data('assigned-id'));
+            frmData.append("roadmapgroupid", @Model.Co2Roadmap.RoadmapGroupId);
+            $j.ajax({
+                url: '/Co2Roadmap/ConvertRoadmap',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    if (data.success == true)
+                    {
+                        $j(this).disabled = true;
+                        $j(this).style = "visible: false";
+                    }
+                },
+                error: function (err) {
+                }
+            });
+
+
+        });
+        $(".btn-simulate-roadmap").click(function () {
+            var $j = jQuery.noConflict();
+            var frmData = new FormData();
+            frmData.append("roadmapid", $j(this).data('assigned-id'));
+            frmData.append("roadmapgroupid", @Model.Co2Roadmap.RoadmapGroupId);
+            $j.ajax({
+                url: '/Co2Roadmap/SimulateRoadmap',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    if (data.success == true)
+                    {
+                        
+                        $j(this).disabled = true;
+                        $j(this).style = "visible: false";
+                    }
+                },
+                error: function (err) {
+                }
+            });
+
+
+            });
+    });
+</script>

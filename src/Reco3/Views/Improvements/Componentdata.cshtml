@@ -1,0 +1,85 @@
+﻿@using Reco3Common
+@model Reco3.Controllers.Reco3ImprovementModel
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-light" style="">
+            <div class="card-body">
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="col-sm-1">
+                        <label>Upload new xml</label>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" placeholder="Component Xml-file" aria-label="Component Xml-file" aria-describedby="basic-addon2"
+                                   id="ComponentFilename" data-toggle="tooltip" data-html="true" data-placement="bottom" style="height: 25px; border-radius: 3px;"
+                                   title="The max size for the component 2 GByte.<br/>That's approx. 1 billion characters. <br/>Leo Tolstoj's War and Peace is a 1'440 page book, containing about 600'000 words - <br/>so that might be 6 million characters - well rounded up.">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2" />
+                            </div>
+
+                            <span class="input-group-btn">
+                                <label class="btn-sm btn-default" for="component-selector" style="height: 25px; border-radius: 3px;">
+                                    <input id="component-selector" type="file" accept=".xml" style="display: none"
+                                           onchange="document.getElementById('ComponentFilename').value = this.files[0].name;">
+                                    Browse
+                                </label>
+                                <span class='label label-info' id="upload-file-info"></span>
+
+                                <button class="btn-sm btn-default" type="button" id="btnUpload" style="height: 25px; border-radius: 3px;"><span class="glyphicon glyphicon-upload"></span> Upload...</button>
+                            </span>
+                            <br />
+
+                        </div><!-- /input-group -->
+                    </div>
+                    <div class="col-md-12">
+                        <label id="idLoadingStatus"></label>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 5px;">
+                    <div class="col-sm-1">
+                        <label>Raw XML</label>
+                    </div>
+                    <div class="col-md-8">
+                        <pre lang="xml" style="white-space: pre-line">
+                        <div id="xmlPlaceHolder" style="max-height: 300px">
+                            @if (Model.Improvement.Reco3Component != null)
+                            { 
+                                @Model.Improvement.Reco3Component.XML;
+                            }
+                            </div>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<script>
+    $(document).ready(function () {
+        $("#btnUpload").click(function () {
+                var frmData = new FormData();
+                var filebase = $("#component-selector").get(0);
+                var files = filebase.files;
+                frmData.append("ImprovementId", @Model.Improvement.ImprovementId.ToString());
+                frmData.append(files[0].name, files[0]);
+                $.ajax({
+                    url: '/Improvements/UploadComponentXml',
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+                    xhrFields: { withCredentials: true },
+                    data: frmData,
+                    success: function (data) {
+                        $('#idLoadingStatus').html(data.message);
+                    },
+                    error: function (err) {
+                        $('#idLoadingStatus').html(err.message);
+                    },
+                    complete: function () {
+
+                    }
+                });
+        });
+     });
+</script>

@@ -1,0 +1,19 @@
+﻿
+1: Open a prompt from VisualStudio.... 
+2: Execute the following 2 lines
+3: move the outputs to the parent-folder
+4: recompile
+5: Coffe!
+
+xsd.exe 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\VectoInput.1.0.xsd 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\VectoDeclarationDefinitions.1.0.xsd 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\xmldsig-core-schema.xsd 
+	/c /order /namespace:Scania.vehicle.TUG.Declaration
+
+xsd.exe 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\VectoEngineeringInput.0.7.xsd 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\VectoEngineeringDefinitions.0.7.xsd 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\VectoDeclarationDefinitions.1.0.xsd 
+	E:\Source\BatchSimulation\BatchConverter\VehicleModel\XSD_2018_06_04-VECTO-3.3.0.1250_SRC\xmldsig-core-schema.xsd 
+	/c /order /namespace:Scania.vehicle.TUG.Engineering

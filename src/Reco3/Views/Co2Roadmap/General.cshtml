@@ -1,0 +1,110 @@
+﻿@using Reco3Common;
+
+@{
+    var txtboxStyle = "";
+    var txtWarningMsg = "";
+    if ((Model.ReadOnly == false) && (Model.Co2Roadmap.Protected == false))
+    {
+        txtboxStyle = "";
+    }
+    else
+    {
+        txtboxStyle = "readonly='readonly'";
+        if (Model.Co2Roadmap.Protected == false)
+        {
+            txtWarningMsg = "Editing the roadmap is only possible before the fleet has been converted.";
+        }
+        else
+        {
+            txtWarningMsg = "This roadmap is protected from further changes.";
+        }
+    }
+}
+<br />
+<h6 class="card-title">@txtWarningMsg</h6>
+
+
+
+<div class="row" style="padding-bottom: 5px;">
+    <div class="col-sm-1">
+        <label>Alias</label>
+    </div>
+    <div class="col-md-4">
+        <input id="roadmap-alias" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="@Model.Co2Roadmap.RoadmapName">
+    </div>
+</div>
+<div class="row" style="padding-bottom: 5px;">
+    <div class="col-sm-1">
+        <label>Startyear</label>
+    </div>
+    <div class="col-md-4">
+        <input id="start-date-input" class="date-start-year form-control" style="height: 25px; border-radius: 3px; width: 100px;" type="text" @txtboxStyle value="@Model.Co2Roadmap.StartYear">
+        @if (Model.ReadOnly == false)
+        {
+            <script type="text/javascript">
+                var $j = jQuery.noConflict();
+                $j('.date-start-year').datepicker({
+                    minViewMode: 2,
+                    format: 'yyyy'
+                });
+            </script>
+        }
+    </div>
+</div>
+<div class="row" style="padding-bottom: 5px;">
+    <div class="col-sm-1">
+        <label>Endyear</label>
+    </div>
+    <div class="col-md-1">
+        <input id="end-date-input" class="date-end-year form-control" style="height: 25px; border-radius: 3px; width: 100px;" type="text" @txtboxStyle value="@Model.Co2Roadmap.EndYear">
+        @if (Model.ReadOnly == false)
+        {
+            <script type="text/javascript">
+                var $j = jQuery.noConflict();
+                $j('.date-end-year').datepicker({
+                    minViewMode: 2,
+                    format: 'yyyy'
+                });
+            </script>
+        }
+    </div>
+</div>
+@if ((Model.ReadOnly == false) && (Model.Co2Roadmap.Protected == false))
+{
+    <div class="row" style="padding-bottom: 5px;">
+        <div class="col-sm-1">
+            <label>Baseline</label>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Baseline Xml-file" aria-label="Baseline Xml-file" aria-describedby="basic-addon2"
+                       id="BaselineFilename" data-toggle="tooltip" data-html="true" data-placement="bottom" style="height: 25px; border-radius: 3px;"
+                       title="The max size for the baseline 2 GByte.<br/>That's approx. 1 billion characters. <br/>Leo Tolstoj's War and Peace is a 1'440 page book, containing about 600'000 words - <br/>so that might be 6 million characters - well rounded up.">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2" />
+                </div>
+
+                <span class="input-group-btn">
+                    <label class="btn-sm btn-default" for="baseline-selector" style="height: 25px; border-radius: 3px;">
+                        <input id="baseline-selector" type="file" accept=".xml" style="display: none"
+                               onchange="document.getElementById('BaselineFilename').value = this.files[0].name;">
+                        Browse
+                    </label>
+                    <span class='label label-info' id="upload-file-info"></span>
+
+                    <button class="btn-sm btn-default" type="button" id="btnUpload" style="height: 25px; border-radius: 3px;"><span class="glyphicon glyphicon-upload"></span> Upload...</button>
+                </span>
+                <br />
+
+            </div><!-- /input-group -->
+        </div>
+        <div class="col-md-12">
+            <label id="idLoadingStatus"></label>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+    });
+</script>

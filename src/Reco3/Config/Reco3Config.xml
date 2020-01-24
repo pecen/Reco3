@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Alias>Production</Alias>
+  <OwnerSss>kjofx2</OwnerSss>
+  <CreationTime>2019-02-07</CreationTime>
+  <MSMQ>
+	<HostName>RD0064026</HostName>
+	<ConversionQueue>YDMC.Batch.Conversion</ConversionQueue>
+	<SimulationQueue>YDMC.Batch.Simulation</SimulationQueue>
+	<HealthQueueName>YDMC.Batch.Health</HealthQueueName>
+  </MSMQ>
+  <DB>
+    <ConnectionString>Data Source=RD0058994;Initial Catalog=ElmerFudd;Integrated Security=False;user=Looney;pwd=Tunes</ConnectionString>
+  </DB>
+  <BackEnd>
+	<ConversionAreaBasePath>H:\\Reco3\\ConversionArea\\</ConversionAreaBasePath>
+	<FileDropBasePathAlias>/Filedrop</FileDropBasePathAlias>
+	<FileDropBasePath>H:\\Reco3\\Filedrop\\</FileDropBasePath>
+	<TemplatesBasePath>H:\\Reco3\\Templates\\</TemplatesBasePath>
+  </BackEnd>
+  <Schemas>
+    <Baseline>E:\\Source\\Scania\\XML\\Scania.Baseline\\baseline_1_1.xsd</Baseline>
+  </Schemas>
+  <Integrations>
+    <Integration>
+      <Id>3DX</Id>
+      <Scope>PDComponentInfo_Prod_Full</Scope>
+      <ClientId>Iy0BxcywUXU1GdcLHfVnj8e0vvca</ClientId>
+      <ClientSecret>GhlHbwLkFJrvtf5w64kk0m5syNka</ClientSecret>
+      <Url>Reco2ComponentInfo/v1/ComponentInfo</Url>
+      <BaseUrl>https://api.integration.prod.aws.scania.com/</BaseUrl>
+    </Integration>
+  </Integrations>
+  <Client>
+	<MaxIterations>100</MaxIterations>
+	<MsSleepWhenEmptyQueue>5000</MsSleepWhenEmptyQueue>
+  </Client>  
+</Config>

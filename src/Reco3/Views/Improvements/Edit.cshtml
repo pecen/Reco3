@@ -1,0 +1,294 @@
+﻿@model Reco3.Controllers.Reco3ImprovementModel
+@{
+    ViewBag.Title = "Improvements";
+    ViewBag.Controller = "Improvements";
+    ViewBag.MenuSubGroup = "Co2Roadmap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css" />
+<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" rel="stylesheet">
+
+
+
+<h2>Improvement editor</h2>
+<!-- Modal HTML -->
+<style type="text/css">
+    body {
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    .modal-confirm {
+        color: #434e65;
+        width: 525px;
+    }
+
+        .modal-confirm .modal-content {
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .modal-confirm .modal-header {
+            background: #e85e6c;
+            border-bottom: none;
+            position: relative;
+            text-align: center;
+            margin: -20px -20px 0;
+            border-radius: 5px 5px 0 0;
+            padding: 35px;
+        }
+
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .modal-confirm .form-control, .modal-confirm .btn {
+            min-height: 40px;
+            border-radius: 3px;
+        }
+
+        .modal-confirm .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            text-shadow: none;
+            opacity: 0.5;
+        }
+
+            .modal-confirm .close:hover {
+                opacity: 0.8;
+            }
+
+        .modal-confirm .icon-box {
+            color: #fff;
+            width: 95px;
+            height: 95px;
+            display: inline-block;
+            border-radius: 50%;
+            z-index: 9;
+            border: 5px solid #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+            .modal-confirm .icon-box i {
+                font-size: 58px;
+                margin: -2px 0 0 -2px;
+            }
+
+        .modal-confirm.modal-dialog {
+            margin-top: 80px;
+        }
+
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: #eeb711;
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border-radius: 30px;
+            margin-top: 10px;
+            padding: 6px 20px;
+            min-width: 150px;
+            border: none;
+        }
+
+            .modal-confirm .btn:hover, .modal-confirm .btn:focus {
+                background: #eda645;
+                outline: none;
+            }
+
+    .trigger-btn {
+        display: inline-block;
+        margin: 100px auto;
+    }
+</style>
+<div id="reco3ErrorModal" class="modal fade">
+    <div class="modal-dialog modal-confirm" style="margin-top: 0px; margin-bottom: 0px; border-radius: 3px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <h4>Ooops!</h4>
+                <p><span id="reco3ErrorModal-body"></span></p>
+                <button class="btn btn-success" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="txtMessage"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card border-light" style="">
+                        @if (Model.CreatingNew == true)
+                        {
+                            <div class="card-header">Creating new improvement</div>
+                        }
+                        else
+                        {
+                            <div class="card-header">Improvement: @Model.Improvement.Name</div>
+                        }
+                        <div class="card-body">
+                            <p class="card-text">
+                                @if (Model.CreatingNew == true)
+                                {
+                                    @Html.Partial("General", Model);
+                                }
+                                else
+                                {
+                                    <div id="tabs">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tabGeneral" data-toggle="tab">General</a></li>
+                                            <li><a href="#tabComponentdata" data-toggle="tab">Componentdata</a></li>
+                                            @if (Model.HasConditions == true)
+                                            {
+                                                <li><a href="#tabConditions" data-toggle="tab">Conditions</a></li>
+                                            }
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="tabGeneral">
+                                                @Html.Partial("General", Model)
+                                            </div>
+
+                                            <div class="tab-pane fade" id="tabComponentdata">
+                                                @Html.Partial("Componentdata", Model)
+                                            </div>
+
+
+                                            @if (Model.HasConditions == true)
+                                            {
+                                                <div class="tab-pane fade" id="tabConditions">
+                                                    @if (Model.Improvement.Reco3Component.Component_Type == Reco3Common.Reco3_Enums.ComponentType.ctGearbox)
+                                                    {
+                                                        @Html.Partial("Conditions_Gearbox", Model);
+                                                    }
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                    <br />
+
+                                }
+                            </p>
+                        </div><!-- /.col-lg-6 -->
+                        <div class="card-header">
+                            <button class="btn-sm btn-default" type="button" id="btnCancel" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon icon-list"></span> Back to list</button>
+                            @if (Model.CreatingNew == false)
+                            {
+                                <button class="btn-sm btn-default" type="button" id="btnDeleteImprovement" data-dismiss="modal" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;">
+                                    <span class="glyphicon glyphicon-trash"></span> Delete
+                                </button>
+                            }
+                            @if (Model.ReadOnly == false)
+                            {
+                                <button class="btn-sm btn-default" type="button" id="btnSaveImprovement" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon icon-check"></span> Save...</button>
+                            }
+
+                        </div>
+                    </div><!-- /.row -->
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#btnSaveImprovement").click(function () {
+            var frmData = new FormData();
+            frmData.append("ImprovementId", @Model.Improvement.ImprovementId);
+            frmData.append("Alias", $('#Improvement-alias').val());
+            frmData.append("Introduction", $('#start-date-input').val());
+            frmData.append("SourceComponentId", $('#pdList').val());
+
+            $.ajax({
+                url: '/Improvements/SaveGeneral',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    window.location.href = "/Improvements/";
+                },
+                error: function (err) {
+                    $('#myModal').modal('show');
+                    $('.modal-header').addClass('alert alert-danger');
+                    $('#txtMessage').html(err.statusText);
+                }
+            });
+        });
+
+        $("#btnDeleteImprovement").click(function () {
+            var frmData = new FormData();
+            frmData.append("ImprovementId", @Model.Improvement.ImprovementId);
+
+            $.ajax({
+                url: '/Improvements/DeleteImprovement',
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data: frmData,
+                success: function (data) {
+                    if (data.success) {
+                        window.location.href = "/Improvements/";
+                    } else {
+                        var $j = jQuery.noConflict();
+                        $j('#reco3ErrorModal-body').text(data.message);
+                        $j('#reco3ErrorModal').modal();
+                    }
+
+                },
+                error: function (err) {
+                    $('#reco3ErrorModal').modal('show');
+
+                }
+            });
+        });
+
+        $("#btnCancel").click(function () {
+            window.location.href = "/Improvements/";
+        });
+    });
+</script>

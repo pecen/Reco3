@@ -1,0 +1,285 @@
+﻿@model Reco3.Controllers.AdminModel
+@{
+    ViewBag.Title = "Users";
+    ViewBag.ParentMenuItem = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var txtboxStyle = "";
+    var txtWarningMsg = "";
+    
+    {
+        //txtboxStyle = "readonly='readonly'";
+    //    if (Model.Co2Roadmap.Protected == false)
+        {
+            txtWarningMsg = "Editing the roadmap is only possible before the fleet has been converted.";
+        }
+      
+    }
+}
+
+<style>
+    .table thead {
+        background-color: rgba(255,255,255,.15);
+        color: #0c0c0c;
+    }
+
+    .bs-example {
+        margin: 20px;
+    }
+</style>
+
+<div class="panel-body">
+
+    <div id="ex1" class="modal">
+        <div class="col-md-12" id="user-form" style="border: 1px inset; border-color: lightgray; border-radius: 3px; margin-top:40px;">
+            <div style="margin-top:10px;margin-bottom:10px;">
+                <input id="user-id" type="hidden" value="-1">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Username</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input id="user-username" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Alias</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input id="user-alias" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Created</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input id="user-created" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Role</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="btn-group" data-toggle="buttons">
+                            <div class="row">
+                                <input type="radio" name="userRole" class="Toggle" style="margin-left: 15px;margin-right: 5px;" id="user-role" checked="checked" value="@Reco3Common.Security_Enums.UserRole.Role_Reco3_Pending" /><label>Pending</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="userRole" class="Toggle" style="margin-left: 15px;margin-right: 5px;" id="user-role" value="@Reco3Common.Security_Enums.UserRole.Role_Reco3_Guest" /><label>Guest</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="userRole" class="Toggle" style="margin-left: 15px;margin-right: 5px;" id="user-role" value="@Reco3Common.Security_Enums.UserRole.Role_Reco3_Simulator" /><label>Simulator</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="userRole" class="Toggle" style="margin-left: 15px;margin-right: 5px;" id="user-role" value="@Reco3Common.Security_Enums.UserRole.Role_Reco3_Administrator" /><label>Administrator</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>            
+        </div>
+        <div class="row">
+            </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-3">
+                <button class="btn-sm btn-default" type="button" id="btnEditUserdata" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-edit"></span><span class="text" id="EditSpan"> Edit</span></button>
+            </div>
+            <div class="col-lg-3">
+                <button class="btn-sm btn-default" type="button" id="btnRemoveUser" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-trash"></span> Remove</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn-sm btn-default" type="button" id="btnSaveUserdata" style="display: none;height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="txtMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:75px;">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <div>
+                    <div>
+                        <p class="card-text">
+                            <button class="btn-sm btn-default" type="button" id="btnAddNewUser" style="height: 25px; border-radius: 3px; border-width: 1px; padding-top: 2px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; border-color: #94999d;"><span class="glyphicon glyphicon-plus-sign"></span> Add new user...</button>
+                        </p>
+                        <table id="usersTable" class="table table-bordered nowrap" style="width:100%; border-radius: 3px;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 230px;">Username</th>
+                                    <th style="width: 100px;">Alias</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+     var bIsEditing = false;
+     function toggleuserform(enable) {
+         if (enable == true) {
+             $("#user-username").removeAttr('readonly');
+             bIsEditing = true;
+         }
+         else {
+             $('#user-username').attr('readonly', true);
+         }
+
+         jQuery('#btnRemoveUser').toggle('show');
+         jQuery('#btnSaveUserdata').toggle('show');
+
+         jQuery('#btnCancelEdit').toggle('show');
+
+
+        }
+
+
+        function updateuserform(userid) {
+            $('#user-id').val(userid);
+            if (userid == -1) {
+                $('#user-username').val("");
+                $('#user-alias').val("");
+                $('#user-created').val("");
+            } else {
+            $.getJSON("../Admin/GetUser", { userId: userid },
+                function (data) {
+                    var result = JSON.parse(data.data);                    
+                    $('#user-username').val(result.UserName);
+                    $('#user-alias').val(result.Alias);
+                    $('#user-created').val(result.CreatedShort);
+                    var valueSelector = "[value=" + result.RoleIdAsString + "]";
+                    $('input[name=userRole]' + valueSelector + '').prop('checked', true)
+                });
+        }
+
+    }
+    $(document).ready(function () {
+        bIsEditing = false;
+        $('#parentAdmin').attr('class', 'active');
+        $('#subUsers').attr('class', 'active');
+
+        var dataTable = $('#usersTable').DataTable({
+            "proccessing": true,
+            "serverSide": true,
+            "rowId": 'UserId',
+            "lengthMenu": [[10, 25, 50], [10, 25, 50]],
+            "ajax": {
+                "url": "@Url.Action("GetUsers", "Admin")",
+                "type": "post",
+                "dataSrc": "",
+                "error": function (xhr, error, code) {
+                    console.log(xhr);
+                    console.log(code);
+                }
+            },
+            "columns": [
+                { "data": "UserName", "title": "Username"  },
+                { "data": "Alias", "title": "Alias" }
+            ],
+            "columnDefs": [
+                { "width": "15%", "targets": 0 },
+                { "width": "25%", "targets": 1 } ],
+            "pagingType": "full_numbers"
+        });
+
+        $('#usersTable tbody').on('click', 'tr', function () {
+            if (bIsEditing == false) {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+                else {
+                    dataTable.$('tr.active').removeClass('active');
+                    $(this).addClass('active');
+                    var userId = dataTable.row(this).id();
+                    updateuserform(userId);
+                    $('#ex1').modal({
+                        fadeDuration: 250
+                    });
+
+                }
+            }
+        });
+
+
+
+        $("#btnAddNewUser").click(function () {
+            updateuserform(-1);
+            $('#ex1').modal({
+                fadeDuration: 250
+            });
+        });
+        $("#btnEditUserdata").click(function () {
+            if (bIsEditing == false) {
+                bIsEditing = true;
+                toggleuserform(true);
+                $('#EditSpan').text(" Cancel");
+            }
+            else {
+                bIsEditing = false;
+                toggleuserform(false);
+                $('#EditSpan').text(" Edit");
+            }
+
+        });
+        $("#btnCancelEdit").click(function () {
+            bIsEditing = false;
+            toggleuserform(false);
+            $('#user-id').val(-1);
+        });
+
+        $("#btnSaveUserdata").click(function () {
+            var userid = $('#user-id').val();
+            var username = $('#user-username').val();
+            var useralias = $('#user-alias').val();
+            var userrole = $('input[name=userRole]:checked').val();
+            
+            var dataToPost = {
+                UserId: userid,
+                UserName: username,
+                Alias: useralias,
+                Role: userrole
+            };
+
+            $.ajax(
+                {
+                    type: "POST",
+                    data: JSON.stringify(dataToPost),
+                    url: "@Url.Action("SaveUserModel", "Admin")",
+                    contentType: 'application/json; charset=utf-8'
+                });
+            bIsEditing = false;
+            toggleuserform(false);
+
+        });
+
+        
+
+    });
+    </script>

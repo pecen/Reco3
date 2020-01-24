@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Config">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Alias" type="xs:string" />
+        <xs:element name="OwnerSss" type="xs:string" />
+        <xs:element name="CreationTime" type="xs:date" />
+        <xs:element name="MSMQ">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="HostName" type="xs:string" />
+              <xs:element name="ConversionQueue" type="xs:string" />
+              <xs:element name="SimulationQueue" type="xs:string" />
+              <xs:element name="HealthQueueName" type="xs:string" />
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DB">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ConnectionString" type="xs:string" />
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BackEnd">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ConversionAreaBasePath" type="xs:string" />
+              <xs:element name="FileDropBasePathAlias" type="xs:string" />
+              <xs:element name="FileDropBasePath" type="xs:string" />
+              <xs:element name="TemplatesBasePath" type="xs:string" />
+              <xs:element name="Templates">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Template">
+                      <xs:complexType>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="filename" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Schemas">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Baseline" type="xs:string" />
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integrations">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Integration">
+                <xs:complexType>
+                    <xs:element name="Id" type="xs:string" />
+                    <xs:element name="Scope" type="xs:string" />
+                    <xs:element name="ClientId" type="xs:string" />
+                    <xs:element name="ClientSecret" type="xs:string" />
+                    <xs:element name="Url" type="xs:string" />
+                    <xs:element name="BaseUrl" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Client">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="MaxIterations" type="xs:unsignedByte" />
+              <xs:element name="MsSleepWhenEmptyQueue" type="xs:unsignedShort" />
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

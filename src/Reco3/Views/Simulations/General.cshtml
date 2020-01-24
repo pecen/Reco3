@@ -1,0 +1,77 @@
+﻿@using Reco3Common;
+@{
+    var txtboxStyle = "";
+    if (Model.job.SimulationJobId != -1)
+    {
+        txtboxStyle = "readonly='readonly'";
+    }
+    var txtWarningMsg = "";
+
+}
+<br />
+<h6 class="card-title">@txtWarningMsg</h6>
+
+
+
+<div class="row" style="padding-bottom: 5px;">
+    <div class="col-sm-1">
+        <label>Alias</label>
+    </div>
+    <div class="col-md-4">
+        <input id="simulation-alias" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="@Model.job.SimulationJobName">
+    </div>
+</div>
+@if (Model.job.SimulationJobId != -1)
+{
+    <div class="row" style="padding-bottom: 5px;">
+        <div class="col-sm-1">
+            <label>Created</label>
+        </div>
+        <div class="col-md-4">
+            <input id="simulation-createiondate" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="@Model.job.CreationTimeStr">
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 5px;">
+        <div class="col-sm-1">
+            <label>Owner</label>
+        </div>
+        <div class="col-md-4">
+            <input id="simulation-owner" style="height: 25px; border-radius: 3px; width: 100%;" type="text" @txtboxStyle value="@Model.job.OwnerSss">
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 5px;">
+        <div class="col-sm-1">
+            <label>Baseline</label>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Baseline Xml-file" aria-label="Baseline Xml-file" aria-describedby="basic-addon2"
+                       id="BaselineFilename" data-toggle="tooltip" data-html="true" data-placement="bottom" style="height: 25px; border-radius: 3px;"
+                       title="The max size for the baseline 2 GByte.<br/>That's approx. 1 billion characters. <br/>Leo Tolstoj's War and Peace is a 1'440 page book, containing about 600'000 words - <br/>so that might be 6 million characters - well rounded up.">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2" />
+                </div>
+
+                <span class="input-group-btn">
+                    <label class="btn-sm btn-default" for="baseline-selector" style="height: 25px; border-radius: 3px;">
+                        <input id="baseline-selector" type="file" accept=".xml" style="display: none"
+                               onchange="document.getElementById('BaselineFilename').value = this.files[0].name;">
+                        Browse
+                    </label>
+                    <span class='label label-info' id="upload-file-info"></span>
+
+                    <button class="btn-sm btn-default" type="button" id="btnUpload" style="height: 25px; border-radius: 3px;"><span class="glyphicon glyphicon-upload"></span> Upload...</button>
+                </span>
+                <br />
+
+            </div><!-- /input-group -->
+        </div>
+        <div class="col-md-12">
+            <label id="idLoadingStatus"></label>
+        </div>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+    });
+</script>

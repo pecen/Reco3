@@ -1,0 +1,347 @@
+﻿@model Reco3.Controllers.SimulationJobModel
+@using DataLayer.Database
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "//Simulations: " + @Model.job.SimulationJobName;
+}
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet">   @*I got this link from Tutorials point*@
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" /> @*Download Bootstrap from Nuget Package manager*@
+    <link href="../../Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <style>
+        .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .progress-label {
+            position: absolute;
+            left: 50%;
+            top: 13px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+
+<h2>Details</h2>
+
+<div class="jumbotron">
+    @using (Html.BeginForm("Index", "Simulations", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-sm">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.job.SimulationJobId)
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">OwnerSss</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.job.OwnerSss, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.job.OwnerSss, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Simulationname</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.job.SimulationJobName, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.job.SimulationJobName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Created</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.job.CreationTimeStr, new { htmlAttributes = new { disabled = "disabled", @readonly = "readonly", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.job.CreationTimeStr, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Simulationmode</label>
+                        <div class="col-md-10">
+                            <!-- Group of default radios - option 1 -->
+                            <div class="custom-control custom-radio">
+                                @Html.RadioButtonFor(model => model.job.Simulation_Mode, SimulationJob.SimulationMode.Declaration, new { id = "radioDeclarationMode" }) Declaration
+                            </div>
+
+                            <!-- Group of default radios - option 2 -->
+                            <div class="custom-control custom-radio">
+                                @Html.RadioButtonFor(model => model.job.Simulation_Mode, SimulationJob.SimulationMode.Engineering, new { id = "radioEngineeringMode" }) Engineering
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4"></label>
+                        <button type="button" class="btn btn-default btn-sm" id="btnLockSimulationJob">
+                            <span class="glyphicon glyphicon-lock"></span> Protect
+                        </button>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4"></label>
+                        <button type="button" class="btn btn-default btn-sm" id="btnDeleteSimulationJob">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </button>
+
+                    </div>
+                    <br />
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="txtMessage"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="vehicleModal" tabindex="-1" role="dialog" aria-labelledby="vehicleModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="vehicleModalLabel">vehicle</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4 class="modal-title" id="vehicleModalLabel">vehicle-xml</h4>
+                                    <div id="vehicleXml" class="tab-pane fade in active">
+                                        <textarea class="" id="vehicleTextArea" rows="30" style="width: 100%;"></textarea>
+                                    </div>
+                                    <h4 class="modal-title" id="vehicleModalLabel">Vsum</h4>
+                                    <div id="vehicleVsum" class="tab-pane fade">
+                                        <textarea class="" id="vsumTextArea" rows="30" style="width: 100%;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#sim_package"><b>Simulation-package</b></a></li>
+                        <li><a data-toggle="tab" href="#sim_reports"><b>Reports</b></a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="sim_package" class="tab-pane fade in active">
+                            <div id="simulation-package-container"></div>
+                        </div>
+                        <div id="sim_reports" class="tab-pane fade">
+                            <hr />
+                            <div class="col-md-1">
+                                <button type="button" class="btn btn-default btn-sm" id="btnFindByVIN">
+                                    <span class="glyphicon glyphicon-search"></span> Find vehicle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr/>
+        </div>
+    }
+    </div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        var isDeclarationMode = @Json.Encode(Model.job.IsDeclarationMode);
+
+        if (isDeclarationMode == true) {
+            document.getElementById("radioDeclarationMode").checked = true;
+            document.getElementById("radioEngineeringMode").checked = false;
+        } else {
+            document.getElementById("radioDeclarationMode").checked = false;
+            document.getElementById("radioEngineeringMode").checked = true;
+        }
+
+        document.getElementById("radioDeclarationMode").disabled = true;
+        document.getElementById("radioEngineeringMode").disabled = true;
+
+        
+
+        loadPartialView("@Url.Action("SimulationPackage")", "simulation-package-container", "simulationjobid=@Model.job.SimulationJobId");
+
+        
+        $("#btnLockSimulationJob").click(function () {
+
+            bootbox.confirm({
+                title: "Protect simulation?",
+                message: "Do you want to protect the simulation? This can only be undone by the Goat!",
+                buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> Cancel'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> Confirm'
+                    }
+                },
+                callback: function (result) {
+                    if (result === true) {
+                        startLoading();
+                        var frmData = new FormData();
+                        frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+                        $.ajax({
+                            url: '/Simulations/ProtectPackage',
+                            type: "POST",
+                            contentType: false,
+                            processData: false,
+                            xhrFields: { withCredentials: true },
+                            data: frmData,
+                            success: function (data) {
+                                hideErrorMessage();
+                                $('#myModal').modal('show');
+                                $('#txtMessage').html(data.message);
+                                if (data.success) {
+                                    $('.modal-header').addClass('alert alert-success');
+                                    window.location.href = "/simulations/";
+
+
+
+
+                                } else {
+                                    $('.modal-header').addClass('alert alert-info');
+                                }
+                            },
+                            error: function (err) {
+                                $('#myModal').modal('show');
+                                $('.modal-header').addClass('alert alert-danger');
+                                $('#txtMessage').html(err.statusText);
+                            },
+                            complete: function () {
+                                stopLoading();
+                            }
+                        });
+
+                    }
+                    
+                }
+            });
+        });
+
+        $("#btnFindByVIN").click(function () {
+
+            bootbox.prompt("Please enter the VIN to search for...", function(result) {
+                if (result === null) {
+
+                } else {
+                    startLoading();
+                    var frmData = new FormData();
+                    frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+                    frmData.append("VIN", result);
+                    $.ajax({
+                        url: '/Simulations/FindVehicleByVIN',
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        xhrFields: { withCredentials: true },
+                        data: frmData,
+                        success: function (data) {
+                            hideErrorMessage();
+                            
+                            
+                            $('#vehicleTextArea').text(data.vehiclexml);
+                            $('#vsumTextArea').text(data.vsum);
+                            $("#vehicleModal").modal('show');
+                            console.log(data.vehiclexml);
+                            
+                        },
+                        error: function (err) {
+                            $('#myModal').modal('show');
+                            $('.modal-header').addClass('alert alert-danger');
+                            $('#txtMessage').html(err.statusText);
+                        },
+                        complete: function () {
+                            stopLoading();
+                        }
+                    });                   
+                }
+            });
+        });
+
+
+        $("#btnDeleteSimulationJob").click(function () {
+
+            bootbox.confirm({
+                title: "Delete simulation?",
+                message: "Do you want to delete the entire simulation? This cannot be undone.",
+                buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> Cancel'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> Confirm'
+                    }
+                },
+                callback: function (result) {
+                    if (result === true) {
+                        startLoading();
+                        var frmData = new FormData();
+                        frmData.append("SimulationJobId", @Model.job.SimulationJobId.ToString());
+                        $.ajax({
+                            url: '/Simulations/DeletePackage',
+                            type: "POST",
+                            contentType: false,
+                            processData: false,
+                            xhrFields: { withCredentials: true },
+                            data: frmData,
+                            success: function (data) {
+                                hideErrorMessage();
+                                $('#myModal').modal('show');
+                                $('#txtMessage').html(data.message);
+                                if (data.success) {
+                                    $('.modal-header').addClass('alert alert-success');
+                                    window.location.href = "/simulations/";
+
+
+
+
+                                } else {
+                                    $('.modal-header').addClass('alert alert-info');
+                                }
+                            },
+                            error: function (err) {
+                                $('#myModal').modal('show');
+                                $('.modal-header').addClass('alert alert-danger');
+                                $('#txtMessage').html(err.statusText);
+                            },
+                            complete: function () {
+                                stopLoading();
+                            }
+                        });
+
+                    }
+                    
+                }
+            });
+
+
+            
+        });
+
+//End of the document ready function...
+    });
+</script>

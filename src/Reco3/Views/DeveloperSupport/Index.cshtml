@@ -1,0 +1,153 @@
+﻿@model Reco3.Controllers.ServerStatus
+
+@{
+    ViewBag.Title = "Status";
+    ViewBag.ParentMenuItem = "Admin";
+    ViewBag.CurrentPageName = "Status";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet">   @*I got this link from Tutorials point*@
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" /> @*Download Bootstrap from Nuget Package manager*@
+    <link href="../../Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <style>
+        .ui-widget-header {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .progress-label {
+            position: absolute;
+            left: 50%;
+            top: 13px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+
+    <h2>Development support</h2>
+
+    <div class="jumbotron">
+        <h3>Messagequeues</h3>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="txtMessage"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    Host
+                </th>
+                <th>
+                    Queue
+                </th>
+                <th>
+                    Pending messages
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Model.ConversionQueueHost
+                </td>
+                <td>
+                    @Model.ConversionQueueName
+                </td>
+                <td>
+                    <span id="lblConversionQueueCount">
+                        @Model.ConversionQueueCount
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Model.SimulationQueueHost
+                </td>
+                <td>
+                    @Model.SimulationQueueName
+                </td>
+                <td>
+                    <span id="lblSimulationQueueCount">
+                        @Model.SimulationQueueCount
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-default btn-sm" id="btnRefreshQueueStatus">
+            <span class="glyphicon glyphicon-refresh"></span> Refresh
+        </button>
+        <span id="lblLastQueueRefresh">
+        </span>
+    </div>
+
+    <div id="clienthealth-container"></div>
+
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</script>
+    <script>
+        $(document).ready(function () {
+            $('#parentAdmin').attr('class', 'active');
+            $('#subStatus').attr('class', 'active');
+
+            loadPartialView("@Url.Action("ClientInfo")", "clienthealth-container", true);
+
+            $("#btnRefreshQueueStatus").click(function () {
+                $.ajax({
+                    url: '/DeveloperSupport/GetMSMQStatus',
+                    type: "POST",
+                    data: "test",
+                    dataType: "json",
+                    contentType: false,
+                    processData: false,
+                    xhrFields: { withCredentials: true },
+                    success: function (data) {
+
+                        if (data.success) {
+
+                            $("#lblConversionQueueCount").html(data.ConversionCount);
+                            $("#lblSimulationQueueCount").html(data.SimulationCount);
+                            $("#lblLastQueueRefresh").html(data.RefreshTimeStamp);
+
+
+
+                        } else {
+                            $('.modal-header').addClass('alert alert-info');
+                            $('#myModal').modal('show');
+                            $('#txtMessage').html(data.message);
+
+
+                        }
+                    },
+                    error: function (err) {
+                        $('#myModal').modal('show');
+                        $('.modal-header').addClass('alert alert-danger');
+                        $('#txtMessage').html(err.statusText);
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
