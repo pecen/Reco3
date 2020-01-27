@@ -1,0 +1,5144 @@
+<vehicles>
+<vehicle>
+<VIN>5540072</VIN>
+<Date>2019-02-04</Date>
+<Model>R 450 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9616</CurbMassChassis>
+<GrossVehicleMass>26500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780013</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2797723</AirDragPD>
+   <AirDragModel>B3R20H2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722436</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722437</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722436</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2169929</VIN>
+<Date>2019-12-04</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8315</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2806958</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722620</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743386</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5562826</VIN>
+<Date>2019-08-20</Date>
+<Model>P 320 B4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>6716</CurbMassChassis>
+<GrossVehicleMass>21000</GrossVehicleMass>
+<IdlingSpeed>540</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777891</EnginePD>
+  <EngineStrokeVolume>09</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780030</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743625</AirDragPD>
+   <AirDragModel>B2P14L2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743370</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743371</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9265991</VIN>
+<Date>2019-11-12</Date>
+<Model>P 360 B4x2NZ</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>6980</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>540</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777892</EnginePD>
+  <EngineStrokeVolume>09</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782198</GearBoxPD>
+  <AxleGearPD>2780032</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743630</AirDragPD>
+   <AirDragModel>B2P17L0000B</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722620</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743392</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2168412</VIN>
+<Date>2019-10-20</Date>
+<Model>P 500 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>10832</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780013</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790347</AirDragPD>
+   <AirDragModel>B3P17N2500A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723100</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2723064</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723063</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9263487</VIN>
+<Date>2019-09-20</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7946</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2786590</AirDragPD>
+   <AirDragModel>A2R20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722446</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743365</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5576063</VIN>
+<Date>2019-12-04</Date>
+<Model>R 450 A6x2/2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>8509</CurbMassChassis>
+<GrossVehicleMass>24300</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2806958</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740187</AirDragPD>
+   <AirDragModel>A3R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722574</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722574</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722575</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5568751</VIN>
+<Date>2019-10-04</Date>
+<Model>P 220 B4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>6387</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>600</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777888</EnginePD>
+  <EngineStrokeVolume>07</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782202</GearBoxPD>
+  <AxleGearPD>2780030</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743623</AirDragPD>
+   <AirDragModel>B2P17L6512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Belt driven or driven via transm. - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + ESS + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722533</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722485</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5573001</VIN>
+<Date>2019-11-04</Date>
+<Model>S 450 B6x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>10311</CurbMassChassis>
+<GrossVehicleMass>29000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790363</AirDragPD>
+   <AirDragModel>B3S20N2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + ESS + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722444</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743397</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743397</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2161222</VIN>
+<Date>2019-03-27</Date>
+<Model>P 360 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>8397</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>540</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777892</EnginePD>
+  <EngineStrokeVolume>09</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780013</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790346</AirDragPD>
+   <AirDragModel>B3P17N6512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Electric</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + ESS + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723075</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723075</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2160982</VIN>
+<Date>2019-03-27</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8509</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722447</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722340</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5538868</VIN>
+<Date>2019-01-27</Date>
+<Model>S 500 A6x2/2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9052</CurbMassChassis>
+<GrossVehicleMass>24300</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740187</AirDragPD>
+   <AirDragModel>A3S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743396</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743396</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2766439</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5535570</VIN>
+<Date>2019-01-04</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8762</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722361</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5560899</VIN>
+<Date>2019-07-20</Date>
+<Model>R 520 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8235</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777908</EnginePD>
+  <EngineStrokeVolume>16</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743358</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743359</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5541851</VIN>
+<Date>2019-02-20</Date>
+<Model>S 520 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>10159</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777908</EnginePD>
+  <EngineStrokeVolume>16</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2797723</AirDragPD>
+   <AirDragModel>B3S20H0512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722552</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722552</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2158160</VIN>
+<Date>2019-01-20</Date>
+<Model>P 500 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>8217</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2794323</GearBoxPD>
+  <AxleGearPD>2780028</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD>2719139</TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743634</AirDragPD>
+   <AirDragModel>B3P17L0000A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + ESS + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722549</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743386</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722549</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9251610</VIN>
+<Date>2019-01-27</Date>
+<Model>G 410 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8055</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2790767</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2751375</AirDragPD>
+   <AirDragModel>A2G20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722606</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722606</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5544199</VIN>
+<Date>2019-03-12</Date>
+<Model>S 450 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8857</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722618</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2766437</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9257836</VIN>
+<Date>2019-05-12</Date>
+<Model>R 500 A4x2EB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8414</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782198</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722306</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722328</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9259190</VIN>
+<Date>2019-06-04</Date>
+<Model>R 500 A6x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9415</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740187</AirDragPD>
+   <AirDragModel>A3R20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722356</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2766437</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722356</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5545075</VIN>
+<Date>2019-03-12</Date>
+<Model>S 650 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9533</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777910</EnginePD>
+  <EngineStrokeVolume>16</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782200</GearBoxPD>
+  <AxleGearPD>2780010</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2797720</AirDragPD>
+   <AirDragModel>B3S20H0000A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722361</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743369</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722327</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9254688</VIN>
+<Date>2019-03-20</Date>
+<Model>S 500 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8688</CurbMassChassis>
+<GrossVehicleMass>20100</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722620</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743399</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9255435</VIN>
+<Date>2019-04-04</Date>
+<Model>G 450 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7733</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743589</AirDragPD>
+   <AirDragModel>A2G20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743364</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743399</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5556149</VIN>
+<Date>2019-06-04</Date>
+<Model>G 410 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7364</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2790767</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2751375</AirDragPD>
+   <AirDragModel>A2G20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2766438</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2766437</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9267323</VIN>
+<Date>2019-12-27</Date>
+<Model>P 370 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7445</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2806960</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780025</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2751350</AirDragPD>
+   <AirDragModel>A2P17L0000B</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722587</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2766440</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9266545</VIN>
+<Date>2019-12-04</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8349</CurbMassChassis>
+<GrossVehicleMass>18600</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2806958</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780010</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722448</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722344</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5553705</VIN>
+<Date>2019-05-20</Date>
+<Model>S 450 A4x2LA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8535</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722357</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743359</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5555129</VIN>
+<Date>2019-05-27</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7936</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722361</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722355</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9265337</VIN>
+<Date>2019-10-27</Date>
+<Model>P 450 B4x2LB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7874</CurbMassChassis>
+<GrossVehicleMass>21000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743626</AirDragPD>
+   <AirDragModel>B2P20L0000A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722306</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722328</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5569730</VIN>
+<Date>2019-10-04</Date>
+<Model>R 410 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7411</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2790767</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2786590</AirDragPD>
+   <AirDragModel>A2R20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743373</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743386</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2163016</VIN>
+<Date>2019-05-12</Date>
+<Model>P 280 B4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>10436</CurbMassChassis>
+<GrossVehicleMass>21000</GrossVehicleMass>
+<IdlingSpeed>540</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777893</EnginePD>
+  <EngineStrokeVolume>09</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782202</GearBoxPD>
+  <AxleGearPD>2780030</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790335</AirDragPD>
+   <AirDragModel>B2P17N2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723100</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2723080</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5560896</VIN>
+<Date>2019-07-20</Date>
+<Model>P 410 B4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7584</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2790767</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790335</AirDragPD>
+   <AirDragModel>B2P17N2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722547</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9263555</VIN>
+<Date>2019-09-27</Date>
+<Model>R 450 A4x2LA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8093</CurbMassChassis>
+<GrossVehicleMass>20100</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722547</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5567641</VIN>
+<Date>2019-09-27</Date>
+<Model>R 410 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7792</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2790767</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722361</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5556069</VIN>
+<Date>2019-06-04</Date>
+<Model>R 500 B6x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>10383</CurbMassChassis>
+<GrossVehicleMass>26500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780012</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2797723</AirDragPD>
+   <AirDragModel>B3R20H0512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722436</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722437</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722436</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9262428</VIN>
+<Date>2019-09-04</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8622</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722356</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2765794</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5560060</VIN>
+<Date>2019-07-12</Date>
+<Model>S 500 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7923</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722444</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743371</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5561515</VIN>
+<Date>2019-07-20</Date>
+<Model>P 320 B6x2*4NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>8486</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>540</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>false</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777891</EnginePD>
+  <EngineStrokeVolume>09</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782202</GearBoxPD>
+  <AxleGearPD>2780032</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2743634</AirDragPD>
+   <AirDragModel>B3P17L0000A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722550</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722567</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743393</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9251172</VIN>
+<Date>2019-01-20</Date>
+<Model>R 500 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8060</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722619</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743371</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5544755</VIN>
+<Date>2019-03-12</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8353</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743358</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743359</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5545352</VIN>
+<Date>2019-03-20</Date>
+<Model>S 500 A6x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9988</CurbMassChassis>
+<GrossVehicleMass>26500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780010</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740187</AirDragPD>
+   <AirDragModel>A3S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723100</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2723064</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722927</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9258377</VIN>
+<Date>2019-05-20</Date>
+<Model>R 450 A4x2LB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7965</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722547</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743388</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5549651</VIN>
+<Date>2019-04-20</Date>
+<Model>S 450 A4x2EB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8710</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780010</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722309</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722458</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2163492</VIN>
+<Date>2019-05-27</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8600</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2766447</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2766437</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2163079</VIN>
+<Date>2019-05-12</Date>
+<Model>S 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8572</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722447</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722340</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5557514</VIN>
+<Date>2019-06-20</Date>
+<Model>S 500 A4x2EB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8618</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722301</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722458</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5542726</VIN>
+<Date>2019-02-27</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8439</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722343</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722344</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9253324</VIN>
+<Date>2019-02-27</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8336</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2786590</AirDragPD>
+   <AirDragModel>A2R20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722547</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5561800</VIN>
+<Date>2019-07-27</Date>
+<Model>R 450 B6x2LB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9593</CurbMassChassis>
+<GrossVehicleMass>26500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780010</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2797723</AirDragPD>
+   <AirDragModel>B3R20H2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722327</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722328</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722327</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5538590</VIN>
+<Date>2019-01-27</Date>
+<Model>R 450 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8102</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722622</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722590</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5540210</VIN>
+<Date>2019-02-12</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8654</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722448</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722548</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>2159196</VIN>
+<Date>2019-02-12</Date>
+<Model>R 450 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9283</CurbMassChassis>
+<GrossVehicleMass>27000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780013</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2797723</AirDragPD>
+   <AirDragModel>B3R20H2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723073</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2723064</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723073</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9258133</VIN>
+<Date>2019-05-20</Date>
+<Model>S 500 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8965</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722444</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722410</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9260834</VIN>
+<Date>2019-07-12</Date>
+<Model>S 500 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8806</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2S20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722409</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722410</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5540673</VIN>
+<Date>2019-02-12</Date>
+<Model>G 500 B6x2*4NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9026</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777907</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780013</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790349</AirDragPD>
+   <AirDragModel>B3G20N0012A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722624</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722607</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722624</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9254337</VIN>
+<Date>2019-03-12</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7146</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2786590</AirDragPD>
+   <AirDragModel>A2R20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743373</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743386</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5562839</VIN>
+<Date>2019-08-20</Date>
+<Model>P 450 A4x2LB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8372</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780010</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2751345</AirDragPD>
+   <AirDragModel>A2P20L0000A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722327</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722328</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5560374</VIN>
+<Date>2019-07-12</Date>
+<Model>G 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7436</CurbMassChassis>
+<GrossVehicleMass>19500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2751375</AirDragPD>
+   <AirDragModel>A2G20N2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743370</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743371</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>5537836</VIN>
+<Date>2019-01-20</Date>
+<Model>R 450 A4x2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>7635</CurbMassChassis>
+<GrossVehicleMass>19000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.043</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780013</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743396</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743397</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+<vehicle>
+<VIN>9256163</VIN>
+<Date>2019-04-12</Date>
+<Model>R 450 A6x2/2NA</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>8900</CurbMassChassis>
+<GrossVehicleMass>24300</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>Compressed</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>331000</MaxNetPower1>
+<MaxNetPower2>80000</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777906</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2672280</GearBoxPD>
+  <AxleGearPD>2780011</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740187</AirDragPD>
+   <AirDragModel>A3R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Fixed displacement</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2743370</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743370</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743371</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+</vehicles>
