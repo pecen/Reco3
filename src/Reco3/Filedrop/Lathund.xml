@@ -1,0 +1,72 @@
+<vehicles>
+<vehicle>
+<VIN>9249474</VIN>
+<Date>2018-11-04</Date>
+<Model>R 410 B4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Rigid Truck</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8236</CurbMassChassis>
+<GrossVehicleMass>21000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<Components>
+  <Engine>
+  <EnginePD>2713401</EnginePD>
+  <EngineStrokeVolume>13</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782239</GearBoxPD>
+  <AxleGearPD>2780030</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2790355</AirDragPD>
+   <AirDragModel>B2R20N2512A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + ESS + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722533</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722534</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+</vehicles>

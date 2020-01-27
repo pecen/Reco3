@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.1.1" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehicles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="vehicle">
+          <xs:complexType>
+            <xs:all>
+			  <xs:element name="Manufacturer" type="xs:string" default="Scania" minOccurs="0"/>
+			  <xs:element name="ManufacturerAddress" type="xs:string" default="Soedertaelje" minOccurs="0"/>
+              <xs:element name="VIN" type="xs:string" />
+              <xs:element name="Model" type="xs:string" />
+			  <xs:element name="Date" type="xs:date" />
+              <xs:element name="DevelopmentLevel" type="xs:unsignedByte" />
+              <xs:element name="LegislativeClass" type="xs:string" />
+              <xs:element name="VehicleCategory" type="xs:string" />
+              <xs:element name="AxleConfiguration" type="xs:string" />
+              <xs:element name="CurbMassChassis" type="xs:string" />
+              <xs:element name="GrossVehicleMass" type="xs:string" />
+              <xs:element name="IdlingSpeed" type="xs:string" />
+              <xs:element name="RetarderType" type="xs:string" default="None"/>
+              <xs:element name="RetarderRatio" type="xs:string" default="0"/>
+              <xs:element name="AngledriveType" type="xs:string" default="None"/>
+              <xs:element name="PTO">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="PTOShaftsGearWheels" type="xs:string" default="none"/>
+                    <xs:element name="PTOOtherElements" type="xs:string" default="none"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Components">
+                <xs:complexType>
+                  <xs:all>
+				    <xs:element name="Engine">
+						<xs:complexType>
+							<xs:all>
+								<xs:element name="EnginePD" type="xs:string" default="none"/>
+								<xs:element name="EngineStrokeVolume" type="xs:string" default="none"/>
+							</xs:all>
+						</xs:complexType>
+					</xs:element>
+                    <xs:element name="GearBoxPD" type="xs:string" />
+                    <xs:element name="AxleGearPD" type="xs:string" />
+                    <xs:element name="RetarderPD" type="xs:string" />
+                    <xs:element name="TorqueConverterPD" type="xs:string" />
+					<xs:element name="AirDrag">
+						<xs:complexType>
+							<xs:all>
+								<xs:element name="AirDragPD" type="xs:string" default="none"/>
+								<xs:element name="AirDragModel" type="xs:string" default="none"/>
+							</xs:all>
+						</xs:complexType>
+					</xs:element>
+                    <xs:element name="Auxiliaries">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Data">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Fan">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Technology" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SteeringPump">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Technology" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ElectricSystem">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Technology" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="PneumaticSystem">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Technology" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="HVAC">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Technology" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AxleWheels">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Data">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Axles">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element maxOccurs="unbounded" name="Axle">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="AxleType" type="xs:string" />
+                                            <xs:element name="TwinTyres" type="xs:boolean" />
+                                            <xs:element name="Steered" type="xs:boolean" />
+                                            <xs:element name="TyrePD" type="xs:string" />
+                                          </xs:sequence>
+                                          <xs:attribute name="axleNumber" type="xs:unsignedInt" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

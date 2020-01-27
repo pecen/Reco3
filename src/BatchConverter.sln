@@ -49,9 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reco3Config", "Reco3Config\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reco3CoreServer", "Reco3CoreServer\Reco3CoreServer.csproj", "{9F998B21-FE9F-4AB7-96EA-323CC0BAF936}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86B333E5-0B78-4C77-A454-52E7E70380D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A1226A2-F905-4D7C-BE2D-1A635ABB805A}"
 	ProjectSection(SolutionItems) = preProject
-		nuget.config = nuget.config
+		CodeMap1.dgml = CodeMap1.dgml
+		commonSettings.config = commonSettings.config
 	EndProjectSection
 EndProject
 Global

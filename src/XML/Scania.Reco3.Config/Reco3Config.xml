@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Alias>Production</Alias>
+  <OwnerSss>kjofx2</OwnerSss>
+  <CreationTime>2019-02-07</CreationTime>
+  <MSMQ>
+	<HostName>RD0064026</HostName>
+    <IP>138.106.68.213</IP>
+	<ConversionQueue>YDMC.Batch.Conversion</ConversionQueue>
+	<SimulationQueue>YDMC.Batch.Simulation</SimulationQueue>
+	<HealthQueueName>YDMC.Batch.Health</HealthQueueName>
+  </MSMQ>
+  <DB>
+    <ConnectionString>Data Source=RD0058994;Initial Catalog=ElmerFudd;Integrated Security=False;user=Looney;pwd=Tunes</ConnectionString>
+  </DB>
+  <BackEnd>
+	<FileDropBasePathAlias>/Filedrop</FileDropBasePathAlias>
+    <FilePaths>
+      <FilePath id="ConversionArea" path="H:\\Reco3\\ConversionArea\\"/>
+      <FilePath id="FileDrop" path="H:\\Reco3\\Filedrop\\"/>
+      <FilePath id="Templates" path="E:\\Source\\Scania\XML\\Templates\\"/>
+      <FilePath id="Log" path="E:\\Source\\Scania\\Reco3\\logs\\"/>
+    </FilePaths>
+  <Templates>  
+    <Template id="Vecto.Declaration.Vehicle" filename="VehicleTemplate.xml" />
+    <Template id="Vecto.Declaration.Signature" filename="SignatureTemplate.xml" />
+    <Template id="Vecto.Declaration.Axle" filename="AxleTemplate.xml" />
+  </Templates>
+  </BackEnd>
+  <Schemas>
+    <Schema id="Scania.Baseline" filename="E:\\Source\\Scania\\_StagingArea\\Debug\\Schemas\\baseline_1_1.xsd" />
+    <Schema id="Vecto.Declaration" filename="E:\\Source\\Scania\\XML\\Scania.Vehicle.TUG\\VectoInput.xsd" />
+  </Schemas>
+  <Integrations>
+    <Integration id="3DX">
+      <Scope>PDComponentInfo_Prod_Full</Scope>
+      <ClientId>Iy0BxcywUXU1GdcLHfVnj8e0vvca</ClientId>
+      <ClientSecret>GhlHbwLkFJrvtf5w64kk0m5syNka</ClientSecret>
+      <Url>Reco2ComponentInfo/v1/ComponentInfo</Url>
+      <BaseUrl>https://api.integration.prod.aws.scania.com/</BaseUrl>
+    </Integration>
+	<Integration id="Teams">
+	 <BaseUrl>https://outlook.office.com/webhook/f81f0274-ee9e-4965-b7e1-f5c2bef032b3@3bc062e4-ac9d-4c17-b4dd-3aad637ff1ac/IncomingWebhook/96f2043455ce49368f64297cc000ba5b/9365594d-38c6-4c59-a2e7-9bc0ecce55d2</BaseUrl>
+	</Integration>
+  </Integrations>
+  <Client>
+	<MaxIterations>100</MaxIterations>
+	<MsSleepWhenEmptyQueue>5000</MsSleepWhenEmptyQueue>
+  </Client>  
+</Config>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:VectoInputDeclaration xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0"
+xmlns:tns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0"
+xsi:schemaLocation="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0 https://webgate.ec.europa.eu/CITnet/svn/VECTO/trunk/Share/XML/XSD/VectoInput.xsd"
+xmlns:di="http://www.w3.org/2000/09/xmldsig#"> 
+  <Vehicle id="">
+    <Manufacturer/>
+    <ManufacturerAddress/>
+    <Model/>
+    <VIN/>
+    <Date>2018-04-04T08:51:12.6814387Z</Date>
+    <LegislativeClass>N3</LegislativeClass>
+    <VehicleCategory>Tractor</VehicleCategory>
+    <AxleConfiguration>4x2</AxleConfiguration>
+    <CurbMassChassis/>
+    <GrossVehicleMass/>
+    <IdlingSpeed/>
+    <RetarderType>None</RetarderType>
+    <RetarderRatio>1</RetarderRatio>
+    <AngledriveType>None</AngledriveType>
+    <PTO>
+      <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+      <PTOOtherElements>none</PTOOtherElements>
+    </PTO>
+    <Components>
+      <Engine/>
+      <Gearbox/>
+	  <Gearbox/>
+	  <Retarder/>
+      <Axlegear/>
+      <AxleWheels>
+        <Data>
+          <Axles />            
+        </Data>
+      </AxleWheels>
+      <Auxiliaries>
+      <Data>
+        <Fan>
+          <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+        </Fan>
+        <SteeringPump>
+          <Technology>Fixed displacement</Technology>
+        </SteeringPump>
+        <ElectricSystem>
+          <Technology>Standard technology - LED headlights, all</Technology>
+        </ElectricSystem>
+        <PneumaticSystem>
+          <Technology>Large Supply + mech. clutch</Technology>
+        </PneumaticSystem>
+        <HVAC>
+          <Technology>Default</Technology>
+        </HVAC>
+      </Data>
+    </Auxiliaries>
+      <AirDrag/>
+    </Components>
+  </Vehicle>
+</tns:VectoInputDeclaration>

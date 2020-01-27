@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Alias" type="xs:string" />
+        <xs:element name="OwnerSss" type="xs:string" />
+        <xs:element name="CreationTime" type="xs:date" />
+        <xs:element name="MSMQ">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HostName" type="xs:string" />
+              <xs:element name="IP" type="xs:string" />
+              <xs:element name="ConversionQueue" type="xs:string" />
+              <xs:element name="SimulationQueue" type="xs:string" />
+              <xs:element name="HealthQueueName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ConnectionString" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BackEnd">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FileDropBasePathAlias" type="xs:string" />
+              <xs:element name="FilePaths">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="FilePath">
+                      <xs:complexType>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="path" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Templates">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Template">
+                      <xs:complexType>
+                        <xs:attribute name="id" type="xs:string" use="required" />
+                        <xs:attribute name="filename" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Schemas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Schema">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="filename" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integrations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Integration">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Scope" type="xs:string" />
+                    <xs:element minOccurs="0" name="ClientId" type="xs:string" />
+                    <xs:element minOccurs="0" name="ClientSecret" type="xs:string" />
+                    <xs:element minOccurs="0" name="Url" type="xs:string" />
+                    <xs:element name="BaseUrl" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Client">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaxIterations" type="xs:unsignedByte" />
+              <xs:element name="MsSleepWhenEmptyQueue" type="xs:unsignedShort" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
