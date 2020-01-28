@@ -197,7 +197,6 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\Co2RoadmapController.cs" />
-    <Compile Include="Controllers\ComponentsControllerController.cs" />
     <Compile Include="Controllers\CVVController.cs" />
     <Compile Include="Controllers\DeveloperSupportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
