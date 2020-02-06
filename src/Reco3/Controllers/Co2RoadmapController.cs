@@ -232,36 +232,6 @@ namespace Reco3.Controllers
                                 map.Validation_Status = Reco3_Enums.ValidationStatus.ValidatedWithSuccess;
                                 dbx.SaveChanges();
 
-                                /*
-                                try
-                                {
-                                    // Indicating that there are no available roadmaps, so lets generated them
-                                    int nRoadmapId = -1;
-                                    if (nRoadmapId == -1)
-                                    {
-                                        for (int n = map.StartYear; n <= map.EndYear; n++)
-                                        {
-                                            Roadmap oldMap = map.Roadmaps.First(x => x.CurrentYear == n);
-                                            if (oldMap == null)
-                                            {
-                                                Roadmap newMap = new Roadmap(map, n);
-                                                map.Roadmaps.Add(newMap);
-                                                dbx.SaveChanges();
-                                                if (nRoadmapId == -1)
-                                                    nRoadmapId = newMap.RoadmapId;
-                                            }
-
-                                        }
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    logger.Debug("UploadBaseline failed, failed to create roadmaps. {0}", ex.Message);
-                                    return Json(new { success = false, message = "Failed to create roadmaps for group : " + ex.Message }, JsonRequestBehavior.AllowGet);
-                                }
-                                */
-
-
                                 // Post a msmq-msg to indicate the newly uploaded file!
                                 BatchQueue.BatchQueue queue = new BatchQueue.BatchQueue();
                                 queue.IsLocalQueue = true;
