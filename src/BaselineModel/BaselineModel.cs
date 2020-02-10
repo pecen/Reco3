@@ -47,6 +47,8 @@ namespace BaselineModel
 
         public List<XmlSchemaException> ValidationErrors { get; set; }
 
+        public List<string> FailedVINs { get; set; }
+
         public BaselineModel(string strLogFilename="")
         {
             Log.Logger = new LoggerConfiguration()
@@ -106,7 +108,14 @@ namespace BaselineModel
         {
             try
             {
-                return Converter.ValidatePDs(Vehicles);
+                var result = Converter.ValidatePDs(Vehicles);
+                if(!result){
+                  FailedVINs = new List<string>();
+                  foreach(var vehicle in Converter.PDFailures.vehicle) {
+                    FailedVINs.Add(vehicle.VIN);
+                  }
+                }
+                return result;
             }
             catch (Exception ex)
             {

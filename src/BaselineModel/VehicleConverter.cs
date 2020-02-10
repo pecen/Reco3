@@ -18,7 +18,42 @@ using vehicles = Scania.Baseline.vehicles;
 
 namespace BaselineModel
 {
-    public class VehicleConverter
+  public class PDComparer : IEqualityComparer<string> {
+    const int _multiplier = 89;
+
+    public bool Equals(string x, string y) {
+      return x == y;
+    }
+
+    public int GetHashCode(string obj) {
+      // Stores the result.
+      int result = 0;
+
+      // Don't compute hash code on null object.
+      if (obj == null) {
+        return 0;
+      }
+
+      // Get length.
+      int length = obj.Length;
+
+      // Return default code for zero-length strings [valid, nothing to hash with].
+      if (length > 0) {
+        // Compute hash for strings with length greater than 1
+        char let1 = obj[0];          // First char of string we use
+        char let2 = obj[length - 1]; // Final char
+
+        // Compute hash code from two characters
+        int part1 = let1 + length;
+        result = (_multiplier * part1) + let2 + length;
+      }
+      return result;
+
+      //return obj.GetHashCode();
+    }
+  }
+
+  public class VehicleConverter
     {
         private const string RemoveNamespaces = "<?xml version='1.0' encoding='utf-8'?><xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'><xsl:output method = 'xml' indent='yes'/><xsl:template match='*'><xsl:element name='{local-name(.)}'><xsl:apply-templates select='@* | node()'/></xsl:element></xsl:template><xsl:template match ='@*'><xsl:attribute name='{local-name(.)}'><xsl:value-of select ='.'/></xsl:attribute></xsl:template></xsl:stylesheet>";
 
@@ -28,6 +63,8 @@ namespace BaselineModel
         public int CurrentYear { get; set; }
         public bool EnsureSignatureIsPresent { get; set; }
         public XNamespace CurrentNamespace { get; set; }
+        public HashSet<string> PDNumbers { get; set; }
+        //public List<string> PDDuplicates { get; set; }
 
         public Scania.Baseline.FailedPds.vehicles PDFailures { get; set; }
         
@@ -54,13 +91,18 @@ namespace BaselineModel
         {
             try
             {
-                if (((strPDNo.Length > 0) && (null != components.Find(x => x.PDNumber == strPDNo))) ||
+                //if (((strPDNo.Length > 0) && (null != components.Find(x => x.PDNumber == strPDNo))) ||
+                //    (strPDNo.Length == 0))
+                //    return true;
+
+                if ((strPDNo.Length > 0 && PDNumbers.Contains(strPDNo)) ||
                     (strPDNo.Length == 0))
                     return true;
 
-                Scania.Baseline.FailedPds.vehiclesVehiclePD pd = new Scania.Baseline.FailedPds.vehiclesVehiclePD();
-                pd.id = strPDNo;
-                pd.type = componentType.ToString();
+                vehiclesVehiclePD pd = new vehiclesVehiclePD {
+                  id = strPDNo,
+                  type = componentType.ToString()
+                };
                 failureList.Add(pd);
                 return false;
             }
@@ -71,6 +113,7 @@ namespace BaselineModel
 
             return false;
         }
+
         public bool ValidatePDs(vehicles vehicleArray)
         {
             try
@@ -80,6 +123,16 @@ namespace BaselineModel
                 List< Scania.Baseline.FailedPds.vehiclesVehicle> vehicleList = new List<Scania.Baseline.FailedPds.vehiclesVehicle>();
                 List<Reco3Component> components = DbContext.Reco3Components.ToList();
                 List<Scania.Baseline.vehiclesVehicle> vehicles = vehicleArray.vehicle.ToList();
+
+                PDNumbers = new HashSet<string>(new PDComparer());
+                //PDDuplicates = new List<string>();
+
+                foreach(var component in components) {
+                  if(!PDNumbers.Add(component.PDNumber)){
+                    //PDDuplicates.Add(component.PDNumber);
+                  }
+                }
+
                 foreach (Scania.Baseline.vehiclesVehicle vehicle in vehicles)
                 {
                     List<Scania.Baseline.FailedPds.vehiclesVehiclePD> failureList = new List<Scania.Baseline.FailedPds.vehiclesVehiclePD>();
