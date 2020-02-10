@@ -214,7 +214,7 @@ namespace Reco3.Controllers
 								dbx.SaveChanges();
 
 								// Lets validate the input
-								Reco3Config.ConfigModel Configuration = new ConfigModel(WebConfigurationManager.AppSettings["ConfigFile"]);
+								ConfigModel Configuration = new ConfigModel(WebConfigurationManager.AppSettings["ConfigFile"]);
 								map.XMLSchemaFilename = "";
 								string strVectoSchemaFilename = Configuration.Reco3Config.Schemas.ToList().Find(x => x.id == "Vecto.Declaration").filename;
 								string strConversionLogFile = string.Format("{0}{1}", Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Log").path, "BaselineModel.b.Conversion.txt");
@@ -226,7 +226,7 @@ namespace Reco3.Controllers
 									dbx.SaveChanges();
 									logger.Debug("UploadBaseline failed, due to validation-error of the baseline");
 									int count = fleet.FailedVINs.Count();
-									string vins = count > 10 ? $"Showing the first 10 failing VINs out of {count}: " : string.Empty;
+									string vins = count > 10 ? $"(Showing the first 10 failing VINs out of {count}) " : string.Empty;
 									for (int fv = 0; fv < 10; fv++)
 									{
 										if (fv == 9)
@@ -246,8 +246,10 @@ namespace Reco3.Controllers
 								dbx.SaveChanges();
 
 								// Post a msmq-msg to indicate the newly uploaded file!
-								BatchQueue.BatchQueue queue = new BatchQueue.BatchQueue();
-								queue.IsLocalQueue = true;
+								BatchQueue.BatchQueue queue = new BatchQueue.BatchQueue
+								{
+									IsLocalQueue = true
+								};
 								queue.SetRecieverEndpoint(Configuration.Reco3Config.MSMQ.HostName, Configuration.Reco3Config.MSMQ.ConversionQueue);
 
 								// Must look at this again!....
