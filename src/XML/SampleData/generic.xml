@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scania.Vehicle>
+  <Common>
+    <!--
+      Anything that applies to all formats, I.e. shared information
+    -->
+  </Common>
+  <TUG.Declaration>
+    <!--
+      <Vehicle id="VEH-2131541">
+        <Manufacturer>Scania</Manufacturer>
+        :
+        :
+      </Vehicle>
+    -->
+  </TUG.Declaration>
+  <TUG.Engineering>
+    <!--
+      <Vehicle id="VEH-2131541">
+        <Manufacturer>Scania</Manufacturer>
+        :
+        :        
+      </Vehicle>
+    -->
+  </TUG.Engineering>
+  <VTAB>
+    <!--
+      Anything that is unique for VTAB
+    -->
+  </VTAB>
+</Scania.Vehicle>

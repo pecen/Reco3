@@ -1,0 +1,101 @@
+﻿using System.Collections.Generic;
+using System.Xml.Linq;
+using TUGraz.VectoCore.Models.Simulation.Impl;
+
+namespace TUGraz.VectoAPI
+{
+	public interface IVectoApiRun
+	{
+		/**
+		 * enables/disables writing of modal data
+		 * disabled by default
+		 */
+		bool WriteModData { get; set; }
+
+		/**
+		 * enables/disables validation of the input data
+		 * can be used for speeding up the creation of all
+		 * simulation runs
+		 */
+		bool ValidateInput { get; set; }
+
+		/**
+		 * enable/disable a blocking call to RunSimulation
+		 * by default RunSimulation is blocking
+		 */
+		bool WaitFinished { get; set; }
+
+
+		/**
+		 * execut the simulation 
+		 * may throw an AggregateException if WaitFinished is true
+		 */
+		void RunSimulation();
+
+		/**
+		 * get the progress of all simulation runs. the key is unique per 
+		 * simulation job
+		 */
+		Dictionary<int, JobContainer.ProgressEntry> GetProgress();
+
+		/**
+		 * blocking wait for all simulation runs to be completed
+		 * (only useful if the call to RunSimulation has been set to
+		 * be non-blocking (see Waitfinished)
+		 * may throw an AggregateException
+		 * When running the simulation non-blocking (i.e., Waitfinished is false)
+		 * this method _has to_ be called to re-throw any excpetions
+		 * from the simulation tasks
+		 * (otherwise inspect the ProgressEntries from GetProgess)
+		 */
+		void WaitSimulationFinished();
+
+		/**
+		 * returns true if all simulation runs are completed
+		 */
+		bool IsFinished { get; }
+
+		/** 
+		 * get the XML containing the Manufacturer Report
+		 * only valid after the simulation is finished
+		 */
+		XDocument XMLManufacturerReport { get; }
+
+		/** 
+		 * get the XML containing the Customer Report
+		 * only valid after the simulation is finished
+		 */
+		XDocument XMLCustomerReport { get; }
+
+		/**
+		 * Get the entries written to the .vsum file
+		 */
+		IEnumerable<string> SumEntries { get; }
+
+		/**
+		 * get the modal data of a simulation run. the
+		 * runId is the identifier of the simulation run within 
+		 * the current job (see also the keys in GetProgess
+		 */
+		IEnumerable<string> ModData(int runId);
+	}
+}
+
+public class ProgressEntry
+{
+	public double Progress;
+
+	public double ExecTime;
+
+	public Exception Error;
+
+	public bool Canceled;
+
+	public bool Success;
+
+	public bool Done;
+
+	public string CycleName;
+
+	// ...
+}

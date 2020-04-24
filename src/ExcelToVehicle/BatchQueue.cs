@@ -22,6 +22,7 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using _3DX;
 using BaselineModel;
+using BatchConverter.Core.Enums;
 using DataLayer;
 using DataLayer.Database;
 using ExcelReader;
@@ -151,7 +152,9 @@ namespace BatchQueue
 
     public class MSMQManager
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+		private readonly string _queuePrefix = "private$\\";
+		
+		private static Logger logger = LogManager.GetCurrentClassLogger();
         public event MSMQRecievedEventHandler MSMQRecieved;
 
         public virtual bool TriggerEvent(Reco3MsgEventArgs.Reco3MsgEventType EventType, Reco3Msg msg)
@@ -196,12 +199,14 @@ namespace BatchQueue
             {
 
                 HostName = strHost;
-                QueueName = strQueue;
-                // FormatName:Direct=OS:\\
-                if (IsLocalQueue==true)
-                    Endpoint = string.Format(".\\private$\\{1}", HostName, QueueName);
-                else
-                    Endpoint = string.Format("private$\\{1}", HostName, QueueName);
+				//QueueName = strQueue;
+				QueueName = _queuePrefix + strQueue;
+
+				// FormatName:Direct=OS:\\
+				if (IsLocalQueue == true)
+					Endpoint = $".\\{QueueName}"; //string.Format(".\\private$\\{1}", HostName, QueueName);
+				else
+					Endpoint = QueueName; // string.Format("private$\\{1}", HostName, QueueName);
             }
             catch (Exception e)
             {
@@ -277,24 +282,26 @@ namespace BatchQueue
         {
             try
             {
-                // Helper.ToConsole(string.Format("=> MSMQManager.GetQueue ({0})", strQueueName));
+				// Helper.ToConsole(string.Format("=> MSMQManager.GetQueue ({0})", strQueueName));
+				//var queueList = MessageQueue.GetPrivateQueuesByMachine("RD0065329");
+				//var localQueueList = MessageQueue.GetPrivateQueuesByMachine(Environment.MachineName);
                 if ((strQueueName.Length == 0) ||
                     (Helper.ValidateIPv4(strQueueName) ==true))
                 {
-                    var machineName = Environment.MachineName;
-                    // Helper.ToConsole("=> MSMQManager.GetQueue: #1");
-                    var queues = MessageQueue.GetPrivateQueuesByMachine(strQueueName); //"138.106.68.162");
-                    foreach (var q1 in queues)
+					//var machineName = Environment.MachineName;
+															   // Helper.ToConsole("=> MSMQManager.GetQueue: #1");
+					var queues = MessageQueue.GetPrivateQueuesByMachine(strQueueName); //"138.106.68.162");
+                    foreach (var q in queues)
                     {
                         // Helper.ToConsole(string.Format("=> MSMQManager.GetQueue: #2 ({0} : {1})", q1.QueueName, Endpoint));
-                        if (0 == string.Compare(q1.QueueName, Endpoint, true))
+                        if (0 == string.Compare(q.QueueName, QueueName, true)) // Endpoint, true))
                         {
                             // Helper.ToConsole(string.Format("Found: {0}: {1}", q1.Path, q1.QueueName));
-                            q1.Formatter = new XmlMessageFormatter(new Type[] {typeof(Reco3Msg)});
+                            q.Formatter = new XmlMessageFormatter(new Type[] {typeof(Reco3Msg)});
 
                             // Helper.ToConsole("=> MSMQManager.GetQueue: #3");
-                            logger.Debug("MSMQManager:GetQueue found: {0}, {1}", q1.Path, q1.QueueName);
-                            return q1;
+                            logger.Debug("MSMQManager:GetQueue found: {0}, {1}", q.Path, q.QueueName);
+                            return q;
                         }
 
                     }
@@ -369,7 +376,7 @@ namespace BatchQueue
 
                 if (Queue != null)
                 {
-                    //int nSeconds = 5;
+                    int nSeconds = 5;
                     // Helper.ToConsole(string.Format("   MSMQManager.GetNextMsg (timeout: {0} seconds)", nSeconds));
                     System.Messaging.Message m1 = Queue.Receive(new TimeSpan(0, 0, 5));
 
@@ -831,6 +838,7 @@ namespace BatchQueue
              */
             try
             {
+                int ndx = 0;
                 
 
                 /*
@@ -901,7 +909,7 @@ namespace BatchQueue
                 queue.SendMsg(new Reco3Msg(Reco3Msg.Reco3MsgType.PendingConversion, job...VehicleExcelConversionId, job.SimulationJobId));
                 */
             }
-            catch
+            catch (Exception e)
             {
                 
             }
@@ -1009,7 +1017,7 @@ namespace BatchQueue
                 dbx.SaveChanges();
                 */
             }
-            catch 
+            catch (Exception exception)
             {
             }
             
@@ -1088,7 +1096,7 @@ namespace BatchQueue
 
                // this.simulationQueue.SendMsg(msg);
             }
-            catch
+            catch(Exception ex)
             {
 
             }
@@ -1123,17 +1131,31 @@ namespace BatchQueue
                 {
                     //fleet.CurrentRoadmap = map;
                     map.Validation_Status = ValidationStatus.ValidatedWithSuccess;
-                    // Success with validation, proceed with conversion
-                    //Configuration
-                    string strVehicleTemplateFile = string.Format("{0}{1}",
-                        Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Templates").path,
-                        Configuration.Reco3Config.BackEnd.Templates.ToList().Find(x =>x.id == "Vecto.Declaration.Vehicle").filename);
-                    string strSignatureFile = string.Format("{0}{1}",
+					// Success with validation, proceed with conversion
+					// Configuration
+					// The following commented out template is obsolete and was used up until Vecto version
+					// 3.3.1.1492. 
+					//string strVehicleTemplateFile = string.Format("{0}{1}",
+					//    Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Templates").path,
+					//    Configuration.Reco3Config.BackEnd.Templates.ToList().Find(x =>x.id == "Vecto.Declaration.Vehicle").filename);
+					string strVehicleTemplateFileA = string.Format("{0}{1}",
+						Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Templates").path,
+						Configuration.Reco3Config.BackEnd.Templates.ToList().Find(x => x.id == "Vecto.Declaration.VehicleA").filename);
+					string strVehicleTemplateFileB = string.Format("{0}{1}",
+						Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Templates").path,
+						Configuration.Reco3Config.BackEnd.Templates.ToList().Find(x => x.id == "Vecto.Declaration.VehicleB").filename);
+					string strSignatureFile = string.Format("{0}{1}",
                         Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Templates").path,
                         Configuration.Reco3Config.BackEnd.Templates.ToList().Find(x => x.id == "Vecto.Declaration.Signature").filename);
                     string strAxleTemplatefile = string.Format("{0}{1}",
                         Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Templates").path,
                         Configuration.Reco3Config.BackEnd.Templates.ToList().Find(x => x.id == "Vecto.Declaration.Axle").filename);
+
+					IDictionary<VehicleTemplates, string> vehicleTemplates = new Dictionary<VehicleTemplates, string>()
+					{
+						{ VehicleTemplates.VehicleTemplateA, strVehicleTemplateFileA },
+						{ VehicleTemplates.VehicleTemplateB, strVehicleTemplateFileB }
+					};
 
                     dbx.SaveChanges();
                     // Get the roadmap that matches our id...
@@ -1141,8 +1163,9 @@ namespace BatchQueue
                     string strFailedWinsLogFile = string.Format("{0}{1}", Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "Log").path, "FailedVins.txt");
                     string strPatchListFile = string.Format("{0}{1}", Configuration.Reco3Config.BackEnd.FilePaths.ToList().Find(x => x.id == "FileDrop").path, "PatchList.csv");
 
-                    if (true == fleet.ConvertToTUGVehicles(strVehicleTemplateFile, 
-                                                            strSignatureFile,
+					//if (true == fleet.ConvertToTUGVehicles(strVehicleTemplateFile, 
+					if (true == fleet.ConvertToTUGVehicles(vehicleTemplates,
+															strSignatureFile,
                                                             strAxleTemplatefile, 
                                                             strVectoSchemaFilename, 
                                                             true,
@@ -1413,7 +1436,7 @@ namespace BatchQueue
                         break;
                 }
             }
-            catch
+            catch (Exception exception)
             {
 
             }

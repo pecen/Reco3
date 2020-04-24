@@ -70,8 +70,9 @@ namespace Reco3.Controllers
                 string json = JsonConvert.SerializeObject(components);
                 return json;
             }
-            catch
+            catch(Exception ex)
             {
+                int n = 0;
             }
             
             return Json(new { success = false, message = "Failed to get the roadmaps!" }, JsonRequestBehavior.AllowGet).ToString();
@@ -147,7 +148,7 @@ namespace Reco3.Controllers
         {
             try
             {
-                bool folderpath = System.IO.Directory.Exists(HttpContext.Server.MapPath(strVirtualFolder));
+                bool folderpath = Directory.Exists(HttpContext.Server.MapPath(strVirtualFolder));
                 if (folderpath == true)
                 {
                     return HttpContext.Server.MapPath(strVirtualFolder);
@@ -308,7 +309,7 @@ namespace Reco3.Controllers
             }
 
 
-            //return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -318,33 +319,22 @@ namespace Reco3.Controllers
             {
                 // Post a msmq-msg to indicate the newly uploaded file!
                 BatchQueue.BatchQueue queue = new BatchQueue.BatchQueue();
-                Reco3Config.ConfigModel Configuration = new ConfigModel(WebConfigurationManager.AppSettings["ConfigFile"]);
+                ConfigModel Configuration = new ConfigModel(WebConfigurationManager.AppSettings["ConfigFile"]);
                 //ConfigModel model = new ConfigModel(System.IO.Path.Combine(HttpContext.Server.MapPath("~/Config"), "Reco3Config.xml"));
                 queue.IsLocalQueue = true;
                 queue.SetRecieverEndpoint(Configuration.Reco3Config.MSMQ.HostName, Configuration.Reco3Config.MSMQ.ConversionQueue);
-                
-                Reco3Msg msg = new Reco3Msg(Convert.ToInt32(roadmapgroupid), Convert.ToInt32(roadmapid));
-                msg.MsgType = Reco3_Enums.Reco3MsgType.QueueRoadmapSimulation;
+
+                Reco3Msg msg = new Reco3Msg(Convert.ToInt32(roadmapgroupid), Convert.ToInt32(roadmapid)) {
+                  MsgType = Reco3_Enums.Reco3MsgType.QueueRoadmapSimulation
+                };
                 queue.SendMsg(msg);
                 return Json(new { success = true, message = "Roadmap successfully updated with baseline." }, JsonRequestBehavior.AllowGet);
-
-
-                /*
-                                AgentBase ABase = new AgentBase();
-                                DatabaseContext dbx = ABase.GetContext();
-                                if (true == dbx.RMManager.SaveRoadmap(Convert.ToInt32(StartYear), Convert.ToInt32(EndYear), Alias, Convert.ToInt32(RoadmapGroupID)))
-                                    return Json(new { success = true, message = "RoadmapGroup successfully updated." }, JsonRequestBehavior.AllowGet);
-                */
-                //return Json(new { success = true, message = "Failed to save roadmapGroup. Internal error while finding the targetmap." }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-
-
-            //return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -365,7 +355,7 @@ namespace Reco3.Controllers
             }
 
 
-            //return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -394,7 +384,7 @@ namespace Reco3.Controllers
             }
             
 
-            //return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace SimulationsLib
                     return file.FullName;
                 }
             }
-            catch 
+            catch (Exception ex)
             {
             }
             return "";
@@ -175,7 +175,7 @@ namespace SimulationsLib
                 }
 
             }
-            catch 
+            catch (Exception e)
             {
             }
         }

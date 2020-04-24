@@ -37,7 +37,7 @@ namespace SimulationsLib
             {
                 Initialize(strDrivenNonDriven, strSingleOrTwin, strSteeredNonSteered, strSizeTyre, strTyreIdentifier);
             }
-            catch
+            catch(Exception ex)
             {
 
             }
@@ -55,7 +55,7 @@ namespace SimulationsLib
 
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
 
             }

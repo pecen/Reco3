@@ -39,7 +39,7 @@ namespace SimulationsLib.Agent
 
                 return firstMacAddress;
             }
-            catch
+            catch (Exception e)
             {
             }
 
@@ -62,7 +62,7 @@ namespace SimulationsLib.Agent
                 }
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
             }
 
@@ -83,7 +83,7 @@ namespace SimulationsLib.Agent
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
             }
 
@@ -104,7 +104,7 @@ namespace SimulationsLib.Agent
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
             }
 
@@ -145,7 +145,7 @@ namespace SimulationsLib.Agent
 
                 return true;
             }
-            catch 
+            catch (Exception ex)
             {
             }
 
@@ -179,7 +179,7 @@ namespace SimulationsLib.Agent
                 }
                 return job;*/
             }
-            catch 
+            catch (Exception ex)
             {
             }
 
@@ -196,8 +196,8 @@ namespace SimulationsLib.Agent
                 }*/
                 
             }
-            catch 
-            {
+            catch (Exception ex)
+                {
             }
 
             return null;
@@ -243,7 +243,7 @@ namespace SimulationsLib.Agent
                 }
 
             }
-            catch 
+            catch (Exception ex)
             {
             }
 
@@ -274,7 +274,7 @@ namespace SimulationsLib.Agent
                 }
                 */
             }
-            catch
+            catch (Exception ex)
             {
             }
 
@@ -314,7 +314,7 @@ namespace SimulationsLib.Agent
                 }
                 return true;
             }
-            catch 
+            catch (Exception ex)
             {
             }
 
@@ -382,7 +382,7 @@ namespace SimulationsLib.Agent
                 }
                 */
             }
-            catch
+            catch (Exception ex)
             {
             }
 
@@ -411,7 +411,7 @@ namespace SimulationsLib.Agent
                 return true;
                 */
             }
-            catch
+            catch (Exception ex)
             {
             }
 
@@ -448,7 +448,7 @@ namespace SimulationsLib.Agent
                 }
                 */
             }
-            catch 
+            catch (Exception ex)
             {
             }
 

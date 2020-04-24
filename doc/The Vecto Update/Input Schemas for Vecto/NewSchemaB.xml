@@ -1,0 +1,18 @@
+<tns:VectoInputDeclaration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0" schemaVersion="1.0" xsi:schemaLocation="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0 https://webgate.ec.europa.eu/CITnet/svn/VECTO/trunk/Share/XML/XSD/VectoInput.xsd" xmlns:tns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0">
+  <Vehicle id="YS2L6X20002166354">
+    <Manufacturer>Scania CV AB</Manufacturer>
+    <ManufacturerAddress>SE-151 87 Södertälje Sweden</ManufacturerAddress>
+    <Model>L 280 B6x2*4NB</Model>
+    <VIN>YS2L6X20002166354</VIN>
+    <Date>2019-08-25T22:00:00Z</Date>
+    <LegislativeClass>N3</LegislativeClass>
+    <VehicleCategory>Rigid Lorry</VehicleCategory>
+    <CurbMassChassis>8648</CurbMassChassis>
+    <GrossVehicleMass>27000</GrossVehicleMass>
+    <ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+    <MaxNetPower1>206000</MaxNetPower1>
+    <MaxNetPower2>80000</MaxNetPower2>
+    <HybridElectricHDV>true</HybridElectricHDV>
+    <DualFuelVehicle>false</DualFuelVehicle>
+  </Vehicle>
+</tns:VectoInputDeclaration>

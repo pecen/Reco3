@@ -57,11 +57,13 @@ namespace DataLayer.Manager
                 if (user != null)
                     return EnumExtensions.GetDisplayName(user.AuthorizationLevel);
             }
-            catch
+            catch(Exception ex)
             {
-                //int n = 0;
+                int n = 0;
             }
             throw new Exception("Unkown User");
+
+
         }
 
 
@@ -97,18 +99,17 @@ namespace DataLayer.Manager
                     username = userid;
                 dbuser = DbCtx.UManager.FindUser(userid);
             }
-            catch
+            catch(Exception ex)
             { }
             if (dbuser != null)
                 throw new Exception("Error! User already exist.");
-
-      dbuser = new Sec_User {
-        Created = DateTime.Now,
-        Alias = username,
-        UserName = userid,
-        AuthorizationLevel = Security_Enums.UserRole.Role_Reco3_Pending
-      };
-      DbCtx.Sec_Users.Add(dbuser);
+            
+            dbuser = new Sec_User();
+            dbuser.Created = DateTime.Now;
+            dbuser.Alias = username;
+            dbuser.UserName = userid;
+            dbuser.AuthorizationLevel = Security_Enums.UserRole.Role_Reco3_Pending;
+            DbCtx.Sec_Users.Add(dbuser);
             return (DbCtx.SaveChanges() > 0);
         }            
     }

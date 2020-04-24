@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vehicles" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Fan" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Technology" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SteeringPump" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Technology" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ElectricSystem" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Technology" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PneumaticSystem" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Technology" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HVAC" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Technology" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Axles" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Axle" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AxleType" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="TwinTyres" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element name="Steered" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+                    <xs:element name="TyrePD" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                  </xs:sequence>
+                  <xs:attribute name="axleNumber" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehicles" msdata:IsDataSet="true" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Data" />
+        <xs:element name="vehicle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VIN" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="DevelopmentLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="LegislativeClass" type="xs:string" minOccurs="0" />
+              <xs:element name="VehicleCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="AxleConfiguration" type="xs:string" minOccurs="0" />
+              <xs:element name="CurbMassChassis" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossVehicleMass" type="xs:string" minOccurs="0" />
+              <xs:element name="IdlingSpeed" type="xs:string" minOccurs="0" />
+              <xs:element name="RetarderType" type="xs:string" minOccurs="0" />
+              <xs:element name="RetarderRatio" type="xs:string" minOccurs="0" />
+              <xs:element name="AngledriveType" type="xs:string" minOccurs="0" />
+              <xs:element name="VocationalVehicle" type="xs:string" minOccurs="0" />
+              <xs:element name="SleeperCab" type="xs:string" minOccurs="0" />
+              <xs:element name="NgTankSystem" type="xs:string" minOccurs="0" />
+              <xs:element name="ZeroEmissionVehicle" type="xs:string" minOccurs="0" />
+              <xs:element name="HybridElectricHDV" type="xs:string" minOccurs="0" />
+              <xs:element name="DualFuelVehicle" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxNetPower1" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxNetPower2" type="xs:string" minOccurs="0" />
+              <xs:element name="PTO" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PTOShaftsGearWheels" type="xs:string" minOccurs="0" />
+                    <xs:element name="PTOOtherElements" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ADAS" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EngineStopStart" type="xs:string" minOccurs="0" />
+                    <xs:element name="EcoRollWithoutEngineStop" type="xs:string" minOccurs="0" />
+                    <xs:element name="EcoRollWithEngineStop" type="xs:string" minOccurs="0" />
+                    <xs:element name="PredictiveCruiseControl" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Components" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="GearBoxPD" type="xs:string" minOccurs="0" />
+                    <xs:element name="AxleGearPD" type="xs:string" minOccurs="0" />
+                    <xs:element name="RetarderPD" type="xs:string" minOccurs="0" />
+                    <xs:element name="TorqueConverterPD" type="xs:string" minOccurs="0" />
+                    <xs:element name="Engine" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="EnginePD" type="xs:string" minOccurs="0" />
+                          <xs:element name="EngineStrokeVolume" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AirDrag" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="AirDragPD" type="xs:string" minOccurs="0" />
+                          <xs:element name="AirDragModel" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Auxiliaries" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="Data" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AxleWheels" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="Data" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

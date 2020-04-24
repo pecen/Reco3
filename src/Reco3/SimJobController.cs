@@ -17,7 +17,7 @@ namespace Reco3
             {
                 return 0;
             }
-            catch 
+            catch (Exception ex)
             {
             }
             return -1;
@@ -28,7 +28,7 @@ namespace Reco3
             try
             {
             }
-            catch
+            catch(Exception ex)
             {
 
             }

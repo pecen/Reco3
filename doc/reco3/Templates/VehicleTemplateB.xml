@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:VectoInputDeclaration xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0"
+xmlns:tns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0"
+xsi:schemaLocation="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0 https://webgate.ec.europa.eu/CITnet/svn/VECTO/trunk/Share/XML/XSD/VectoInput.xsd"
+xmlns:di="http://www.w3.org/2000/09/xmldsig#"> 
+  <Vehicle id="">
+    <Manufacturer/>
+    <ManufacturerAddress/>
+    <Model/>
+    <VIN/>
+    <Date/>
+    <LegislativeClass/>
+    <VehicleCategory/>
+    <CurbMassChassis/>
+    <GrossVehicleMass/>
+	<ZeroEmissionVehicle/>
+	<MaxNetPower1/>
+	<MaxNetPower2/>
+	<HybridElectricHDV/>
+	<DualFuelVehicle/>
+  </Vehicle>
+</tns:VectoInputDeclaration>

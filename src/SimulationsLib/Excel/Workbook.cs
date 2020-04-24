@@ -55,6 +55,7 @@ namespace ExcelReader
                 sheet.ExpandRows(SharedStrings.si);
                 return sheet;
             }
+            return null;
         }
 
         public Worksheet GetWorksheetByIndex(int nSheetIndex)

@@ -118,7 +118,7 @@ namespace DataLayer.Database
                         break;
                 }
             }
-            catch 
+            catch (Exception ex)
             {
             }
         }
@@ -139,7 +139,7 @@ namespace DataLayer.Database
                     */
                 }
             }
-            catch
+            catch (Exception ex)
             {
             }
         }
@@ -159,7 +159,7 @@ namespace DataLayer.Database
                     XNamespace ns = Reco3_Defines.DeclarationNamespace;
                     return XElement.Load(xmlReader);
                 }
-                catch
+                catch (Exception ex)
                 {
                 }
 

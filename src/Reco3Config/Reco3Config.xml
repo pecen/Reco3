@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Config>
-  <Alias>LocalWilly</Alias>
-  <OwnerSss>whecqg</OwnerSss>
-  <CreationTime>2019-10-02</CreationTime>
+  <Alias>Peter</Alias>
+  <OwnerSss>pcer5p</OwnerSss>
+  <CreationTime>2019-12-02</CreationTime>
   <MSMQ>
-	<HostName>RD0067441</HostName>  
-    <IP>138.106.68.140</IP>
-	  <ConversionQueue>YDMC.Batch.Conversion</ConversionQueue>
+	<HostName>RD0065329</HostName>  
+    <IP>138.106.68.180</IP>
+    <ConversionQueue>YDMC.Batch.Conversion</ConversionQueue>
 	  <SimulationQueue>YDMC.Batch.Simulation</SimulationQueue>
 	  <HealthQueueName>YDMC.Batch.Health</HealthQueueName>
   </MSMQ>
@@ -17,19 +17,22 @@
     <FileDropBasePathAlias>/Filedrop</FileDropBasePathAlias>
     <FilePaths>
       <FilePath id="ConversionArea" path="obsolete"/>
-      <FilePath id="FileDrop" path="C:\\reco3\\folderPaths\\FileDrop\\"/>
-      <FilePath id="Templates" path="C:\\reco3\\folderPaths\\Templates\\"/>
-      <FilePath id="Log" path="C:\\reco3\\folderPaths\\Logs\\"/>
+      <FilePath id="FileDrop" path="C:\\GitRepos\\Development\\VoServices\\Reco3\\BatchConverter\\doc\\reco3\\FileDrop\\"/>
+      <FilePath id="Templates" path="C:\\GitRepos\\Development\\VoServices\\Reco3\\BatchConverter\\doc\\reco3\\Templates\\"/>
+      <FilePath id="Log" path="C:\\GitRepos\\Development\\VoServices\\Reco3\\BatchConverter\\doc\\reco3\\Logs\\"/>
     </FilePaths>
     <Templates>
       <Template id="Vecto.Declaration.Vehicle" filename="VehicleTemplate.xml" />
+      <Template id="Vecto.Declaration.VehicleA" filename="VehicleTemplateA.xml" />
+      <Template id="Vecto.Declaration.VehicleB" filename="VehicleTemplateB.xml" />
       <Template id="Vecto.Declaration.Signature" filename="SignatureTemplate.xml" />
       <Template id="Vecto.Declaration.Axle" filename="AxleTemplate.xml" />
     </Templates>
   </BackEnd>
   <Schemas>
-    <Schema id="Scania.Baseline" filename="C:\\reco3\\folderPaths\\Schemas\\baseline_1_1.xsd" />
-    <Schema id="Vecto.Declaration" filename="C:\\reco3\\folderPaths\\Schemas\\VectoInput.xsd" />
+    <Schema id="Scania.Baseline.SchemaA" filename="C:\\GitRepos\\Development\\VoServices\\Reco3\\BatchConverter\\doc\\reco3\\Schemas\\baseline_1_2_A.xsd" />
+    <Schema id="Scania.Baseline.SchemaB" filename="C:\\GitRepos\\Development\\VoServices\\Reco3\\BatchConverter\\doc\\reco3\\Schemas\\baseline_1_2_B.xsd" />
+    <Schema id="Vecto.Declaration" filename="C:\\GitRepos\\Development\\VoServices\\Reco3\\BatchConverter\\doc\\reco3\\Schemas\\VectoInput.xsd" />
   </Schemas>
   <Integrations>
     <Integration>

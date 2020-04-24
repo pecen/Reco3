@@ -27,12 +27,14 @@ namespace Scania.Simulation.Input
                     {
                         case VehicleMode.VectoDeclaration:
                             return Vecto_Vehicle_Declaration.Vehicle.id;
+                            break;
                         case VehicleMode.VectoEngineering:
                             Vehicle.TUG.Engineering.VehicleEngineeringType type = Vecto_Vehicle_Engineering.Items[0] as Vehicle.TUG.Engineering.VehicleEngineeringType;
                             return type.id;
+                            break;
                     }
                 }
-                catch 
+                catch (Exception ex)
                 {
                 }
                 return "";
@@ -52,7 +54,7 @@ namespace Scania.Simulation.Input
                             break;
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
                 }
             }
@@ -93,6 +95,7 @@ namespace Scania.Simulation.Input
                                 new XmlSerializer(typeof(Scania.Vehicle.TUG.Declaration.VectoDeclarationJobType)).Serialize(wrt, Vecto_Vehicle_Declaration, ns);
                                 return wrt.ToString();
                             }
+                            break;
                         case VehicleMode.VectoEngineering:
                             ns = new XmlSerializerNamespaces();
                             ns.Add(Reco3_Defines.PrefixEngineeringNamespace, Reco3_Defines.EngineeringNamespace);
@@ -102,10 +105,11 @@ namespace Scania.Simulation.Input
                                 new XmlSerializer(typeof(Vehicle.TUG.Engineering.VectoJobEngineeringType)).Serialize(wrt, Vecto_Vehicle_Engineering, ns);
                                 return wrt.ToString();
                             }
+                            break;
 
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
                 }
                 return "";
@@ -117,7 +121,7 @@ namespace Scania.Simulation.Input
                     XmlReader xmlReader = XmlReader.Create(new StringReader(value));
                     InitializeFromXML(Vehicle_Mode, xmlReader);
                 }
-                catch
+                catch (Exception ex)
                 {
                 }
             }

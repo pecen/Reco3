@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tns:VectoInputDeclaration xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0"
+xmlns:tns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0"
+xsi:schemaLocation="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0 https://webgate.ec.europa.eu/CITnet/svn/VECTO/trunk/Share/XML/XSD/VectoInput.xsd"
+xmlns:di="http://www.w3.org/2000/09/xmldsig#">
+  <Axle axleNumber="1">
+    <AxleType>VehicleNonDriven</AxleType>
+    <TwinTyres>false</TwinTyres>
+    <Steered>true</Steered>
+    <Tyre>
+      <Data id="WHL-5432198760-315-70-R22.5">
+        <Manufacturer>NA</Manufacturer>
+        <Model>NA</Model>
+        <CertificationNumber>e12*0815/8051*2017/05E0000*00</CertificationNumber>
+        <Date>2017-01-11T14:00:00Z</Date>
+        <AppVersion>Tyre Generation App 1.0</AppVersion>
+        <Dimension>315/70 R22.5</Dimension>
+        <RRCDeclared>0.0085</RRCDeclared>
+        <FzISO>32000</FzISO>
+      </Data>
+    </Tyre>
+  </Axle>
+</tns:VectoInputDeclaration>

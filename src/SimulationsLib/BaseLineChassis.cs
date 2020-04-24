@@ -210,7 +210,7 @@ namespace SimulationsLib
                     return serializer.Deserialize(stream) as SimulationConfiguration;
                 }
             }
-            catch
+            catch (Exception e)
             {
             }
 

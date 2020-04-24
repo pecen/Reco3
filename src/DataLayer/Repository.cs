@@ -116,8 +116,9 @@ namespace DataLayer.Database
                 
                 return data.AsQueryable();
             }
-            catch
+            catch(Exception ex)
             {
+                int n = 0;
             }
             totalRecords = 0;
             recordsFiltered = 0;

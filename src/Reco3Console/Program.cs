@@ -17,6 +17,7 @@ using TUGraz.VectoAPI;
 using TUGraz.VectoCore.OutputData.XML;
 using static Reco3Common.Reco3_Enums;
 using Reco3Config;
+using System.Text;
 
 namespace Reco3Console
 {
@@ -87,7 +88,7 @@ namespace Reco3Console
                 */
                 WriteToConsole(ConsoleColor.Gray, "2 ==============================================================");
                 simulator.MsmqHost = config.Reco3Config.MSMQ.HostName; // ConfigurationManager.AppSettings.Get("MsmqHost");
-                simulator.IsLocalQueue = false; // Convert.ToBoolean(ConfigurationManager.AppSettings.Get("IsLocalQueue"));
+				simulator.IsLocalQueue = Convert.ToBoolean(ConfigurationManager.AppSettings.Get("IsLocalQueue"));
                 simulator.MsmqHostIp = config.Reco3Config.MSMQ.IP; // ConfigurationManager.AppSettings.Get("MsmqHostIp");
                 simulator.MsmqQueueName = config.Reco3Config.MSMQ.SimulationQueue; // ConfigurationManager.AppSettings.Get("MsmqQueue");
                 simulator.MsmqHealthQueueName = config.Reco3Config.MSMQ.HealthQueueName; // ConfigurationManager.AppSettings.Get("MsmqHealthQueueName");
@@ -227,7 +228,7 @@ namespace Reco3Console
         public void UnInit()
         {
             Helper.ToConsole("=> Reco3Simulator.UnInit");
-            //bool hasAllThreadsFinished = false;
+            bool hasAllThreadsFinished = false;
             while (_worker.IsBusy)
             {
                 Thread.Sleep(1000);     
@@ -380,11 +381,11 @@ namespace Reco3Console
             {
                 // Helper.ToConsole("=> Reco3Simulator._worker_DoWork");
                 BatchQueue.BatchQueue SimulationQueue = new BatchQueue.BatchQueue();
-                
-                SimulationQueue.SetEndpoint(MsmqHost, MsmqQueueName, true, false);
+
+				SimulationQueue.SetEndpoint(MsmqHost, MsmqQueueName, true, IsLocalQueue); // false);
 
                 BatchQueue.BatchQueue HealthQueue = new BatchQueue.BatchQueue();
-                HealthQueue.SetEndpoint(MsmqHost, MsmqHealthQueueName, true, false);
+				HealthQueue.SetEndpoint(MsmqHost, MsmqHealthQueueName, true, IsLocalQueue); // false);
 
                 PingServer(HealthQueue);
 
@@ -427,7 +428,7 @@ namespace Reco3Console
                     sim.Finished = bFinished;
                 */
             }
-            catch
+            catch (Exception e)
             {
             }
         }
@@ -492,15 +493,21 @@ namespace Reco3Console
                 {
                     // Helper.ToConsole(">> Creating XML-reader...");
                     long startTick = DateTime.Now.Ticks;
-                    // Helper.ToConsole(string.Format("Start Sim: {0}", msg.VehicleId));
+					// Helper.ToConsole(string.Format("Start Sim: {0}", msg.VehicleId));
 
-                    using (XmlReader xmlReader = XmlReader.Create(new StringReader(strVehicleXML)))
-                    {
-                        Helper.ToConsole(">> Feeding Vecto,....");
-                        VSumEntry entry = Simulate(xmlReader);
-                        entry.SetSimulationId(msg.RoadmapId, DateTime.Now, msg.VehicleId);
-                        ResultList.Add(entry);
-                    }
+					// Use the following 3 lines if you want to create a Stream instead
+
+					//byte[] byteArray = Encoding.ASCII.GetBytes(strVehicleXML);
+					//MemoryStream stream = new MemoryStream(byteArray);
+
+					//using (XmlReader xmlReader = XmlReader.Create(stream))              
+					using (XmlReader xmlReader = XmlReader.Create(new StringReader(strVehicleXML)))
+					{
+						Helper.ToConsole(">> Feeding Vecto,....");
+						VSumEntry entry = Simulate(xmlReader);
+						entry.SetSimulationId(msg.RoadmapId, DateTime.Now, msg.VehicleId);
+						ResultList.Add(entry);
+					}
 
 
                     long endTick = DateTime.Now.Ticks;

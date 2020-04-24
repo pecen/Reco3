@@ -122,7 +122,7 @@ namespace DataLayer.Database
 
                 return firstMacAddress;
             }
-            catch 
+            catch (Exception e)
             {
             }
 
@@ -163,7 +163,7 @@ namespace DataLayer.Database
                     return serializer.Deserialize(xmlReader) as Reco3ClientInfo;
                 }
             }
-            catch 
+            catch (Exception e)
             {
             }
 
@@ -185,7 +185,7 @@ namespace DataLayer.Database
                 writer.Close();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
             }
 

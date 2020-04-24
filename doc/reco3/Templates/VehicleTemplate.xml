@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:VectoInputDeclaration xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0"
+xmlns:tns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0"
+xsi:schemaLocation="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0 https://webgate.ec.europa.eu/CITnet/svn/VECTO/trunk/Share/XML/XSD/VectoInput.xsd"
+xmlns:di="http://www.w3.org/2000/09/xmldsig#"> 
+  <Vehicle id="">
+    <Manufacturer/>
+    <ManufacturerAddress/>
+    <Model/>
+    <VIN/>
+    <Date/>
+    <LegislativeClass/>
+    <VehicleCategory/>
+    <AxleConfiguration/>
+    <CurbMassChassis/>
+    <GrossVehicleMass/>
+    <IdlingSpeed/>
+    <RetarderType/>
+    <RetarderRatio/>
+    <AngledriveType/>
+    <PTO>
+      <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+      <PTOOtherElements>none</PTOOtherElements>
+    </PTO>
+    <VocationalVehicle/>
+    <SleeperCab/>
+	<NgTankSystem/>
+    <ADAS>
+      <EngineStopStart/>
+      <EcoRollWithoutEngineStop/>
+      <EcoRollWithEngineStop/>
+      <PredictiveCruiseControl/>
+    </ADAS>
+	<ZeroEmissionVehicle/>
+	<HybridElectricHDV/>
+	<DualFuelVehicle/>
+	<MaxNetPower1/>
+	<MaxNetPower2/>
+    <Components>
+      <Engine>
+        <Signature>
+          <di:Reference URI="">
+            <di:Transforms>
+              <di:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithoutComments" />
+              <di:Transform Algorithm="urn: vecto: xml: 2017:canonicalization" />
+            </di:Transforms>
+            <di:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <di:DigestValue></di:DigestValue>
+          </di:Reference>
+        </Signature>
+      </Engine>
+      <Gearbox/>
+      <Retarder/>
+      <Axlegear>
+        <Signature>
+          <di:Reference URI="">
+            <di:Transforms>
+              <di:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithoutComments" />
+              <di:Transform Algorithm="urn: vecto: xml: 2017:canonicalization" />
+            </di:Transforms>
+            <di:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <di:DigestValue></di:DigestValue>
+          </di:Reference>
+        </Signature>
+      </Axlegear>
+      <AxleWheels>
+        <Data>
+          <Axles />            
+        </Data>
+      </AxleWheels>
+      <Auxiliaries>
+      <Data>
+        <Fan>
+          <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+        </Fan>
+        <SteeringPump>
+          <Technology>Fixed displacement</Technology>
+        </SteeringPump>
+        <ElectricSystem>
+          <Technology>Standard technology - LED headlights, all</Technology>
+        </ElectricSystem>
+        <PneumaticSystem>
+          <Technology>Large Supply + mech. clutch</Technology>
+        </PneumaticSystem>
+        <HVAC>
+          <Technology>Default</Technology>
+        </HVAC>
+      </Data>
+    </Auxiliaries>
+      <AirDrag>
+        <Data id="CabinR">
+          <Manufacturer>SCANIA</Manufacturer>
+          <Model>CR19H</Model>
+          <CertificationNumber>e12*0815/8051*2017/05E0000*00</CertificationNumber>
+          <Date>2017-03-24T15:00:00Z</Date>
+          <AppVersion>Vect AirDrag x.y</AppVersion>
+          <CdxA_0>6.65</CdxA_0>
+          <TransferredCdxA>6.65</TransferredCdxA>
+          <DeclaredCdxA>6.65</DeclaredCdxA>
+        </Data>
+        <Signature>
+          <di:Reference URI="">
+            <di:Transforms>
+              <di:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithoutComments" />
+              <di:Transform Algorithm="urn: vecto: xml: 2017:canonicalization" />
+            </di:Transforms>
+            <di:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <di:DigestValue></di:DigestValue>
+          </di:Reference>
+        </Signature>
+      </AirDrag>
+    </Components>
+  </Vehicle>
+</tns:VectoInputDeclaration>

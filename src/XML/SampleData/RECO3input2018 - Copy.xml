@@ -1,0 +1,51 @@
+<vehicles>
+	<vehicle>
+		<VIN>9249474</VIN>
+		<Components>
+			<EnginePD>2777907</EnginePD>
+			<GearBoxPD>2672280</GearBoxPD>
+			<AxleGearPD>2780011</AxleGearPD>
+			<RetarderPD>2714330</RetarderPD>
+			<TorqueConverterPD></TorqueConverterPD>
+			<AxleWheels>
+				<Data>
+					<Axles>
+						<Axle axleNumber="1">
+							<TyrePD>2722549</TyrePD>
+						</Axle>
+						<Axle axleNumber="2">
+							<TyrePD>2743386</TyrePD>
+						</Axle>
+					</Axles>
+				</Data>
+			</AxleWheels>
+			<AirDragPD>2790358</AirDragPD>
+		</Components>
+	</vehicle>
+	<vehicle>
+		<VIN>5516610</VIN>
+		<Components>
+			<EnginePD>2777907</EnginePD>
+			<GearBoxPD>2672280</GearBoxPD>
+			<AxleGearPD>2780038</AxleGearPD>
+			<RetarderPD>2714330</RetarderPD>
+			<TorqueConverterPD></TorqueConverterPD>
+			<AxleWheels>
+				<Data>
+					<Axles>
+						<Axle axleNumber="1">
+							<TyrePD>2766448</TyrePD>
+						</Axle>
+						<Axle axleNumber="2">
+							<TyrePD>2766431</TyrePD>
+						</Axle>
+						<Axle axleNumber="3">
+							<TyrePD>2766448</TyrePD>
+						</Axle>
+					</Axles>
+				</Data>
+			</AxleWheels>
+			<AirDragPD>2740187</AirDragPD>
+		</Components>
+	</vehicle>
+</vehicles>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driveraid.Android", "Driveraid\Driveraid.Android\Driveraid.Android.csproj", "{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driveraid", "Driveraid\Driveraid\Driveraid.csproj", "{2599E72F-B6D6-4864-AF9D-BB0C6C068293}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C17CA64-28F7-477A-A54D-C0E8C1B66AFD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2599E72F-B6D6-4864-AF9D-BB0C6C068293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2599E72F-B6D6-4864-AF9D-BB0C6C068293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2599E72F-B6D6-4864-AF9D-BB0C6C068293}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2599E72F-B6D6-4864-AF9D-BB0C6C068293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2599E72F-B6D6-4864-AF9D-BB0C6C068293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2599E72F-B6D6-4864-AF9D-BB0C6C068293}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {699E527F-06F2-44DE-8BFA-EBE934824E68}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+<vehicles>
+<vehicle>
+<VIN>9264035</VIN>
+<Date>2019-10-04</Date>
+<Model>R 580 A4x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>4x2</AxleConfiguration>
+<CurbMassChassis>8620</CurbMassChassis>
+<GrossVehicleMass>20500</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>Transmission Output Retarder</RetarderType>
+<RetarderRatio>3.261</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+</PTO>
+<VocationalVehicle>false</VocationalVehicle>
+<SleeperCab>true</SleeperCab>
+<NgTankSystem>-</NgTankSystem>
+<ADAS>
+  <EngineStopStart>false</EngineStopStart>
+  <EcoRollWithoutEngineStop>false</EcoRollWithoutEngineStop>
+  <EcoRollWithEngineStop>false</EcoRollWithEngineStop>
+  <PredictiveCruiseControl>none</PredictiveCruiseControl>
+</ADAS>
+<ZeroEmissionVehicle>false</ZeroEmissionVehicle>
+<HybridElectricHDV>false</HybridElectricHDV>
+<DualFuelVehicle>false</DualFuelVehicle>
+<MaxNetPower1>NaN</MaxNetPower1>
+<MaxNetPower2>NaN</MaxNetPower2>
+<Components>
+  <Engine>
+  <EnginePD>2777909</EnginePD>
+  <EngineStrokeVolume>16</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782198</GearBoxPD>
+  <AxleGearPD>2780026</AxleGearPD>
+  <RetarderPD>2714330</RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740181</AirDragPD>
+   <AirDragModel>A2R20H2553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Variable displacement mech. controlled</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + mech. clutch + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2722619</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2743397</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+</vehicles>

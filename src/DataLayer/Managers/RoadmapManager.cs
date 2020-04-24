@@ -32,7 +32,7 @@ namespace DataLayer.Manager
                     return true;
                 }
             }
-            catch
+            catch(Exception ex)
             {
 
             }
@@ -72,7 +72,7 @@ namespace DataLayer.Manager
                 }
                 return false;
             }
-            catch 
+            catch (Exception ex)
             {
 
             }
@@ -94,7 +94,7 @@ namespace DataLayer.Manager
                 }
                 return map;
             }
-            catch
+            catch(Exception ex)
             {
 
             }
@@ -111,7 +111,7 @@ namespace DataLayer.Manager
                                             .ToList();
                 return maps;
             }
-            catch
+            catch(Exception ex)
             {
             }
             return null;
@@ -137,7 +137,7 @@ namespace DataLayer.Manager
                 }
                 return true;
             }
-            catch 
+            catch (Exception ex)
             {
             }
             return false;
@@ -150,7 +150,7 @@ namespace DataLayer.Manager
                 List<Roadmap> maps = GetRoadmaps(group.RoadmapGroupId);
 
             }
-            catch 
+            catch (Exception ex)
             {
             }
             return false;
@@ -162,7 +162,7 @@ namespace DataLayer.Manager
             {
 
             }
-            catch
+            catch (Exception ex)
             {
             }
             return false;

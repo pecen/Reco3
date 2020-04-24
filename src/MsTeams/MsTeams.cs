@@ -30,23 +30,23 @@ namespace YDMC.Integration
 
                 PostMessage(uri, payload);
             }
-            catch 
+            catch (Exception ex)
             {
             }
         }
 
         //Post a message using a Payload object
-        public void PostMessage(string strUri, Payload payload)
+        public async void PostMessage(string strUri, Payload payload)
         {
             try
             {
-        return;
-                //string payloadJson = JsonConvert.SerializeObject(payload);
-                //var content = new StringContent(payloadJson);
-                //content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                //var client = new HttpClient();
-                //var uri = new Uri(strUri);
-                //await client.PostAsync(uri, content);
+                return;
+                string payloadJson = JsonConvert.SerializeObject(payload);
+                var content = new StringContent(payloadJson);
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var client = new HttpClient();
+                var uri = new Uri(strUri);
+                await client.PostAsync(uri, content);
             }
             catch (Exception e)
             {

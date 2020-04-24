@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+<vehicle>
+<VIN>2147512</VIN>
+<Date>2018-03-27</Date>
+<Model>R 580 A6x2NB</Model>
+<DevelopmentLevel>6</DevelopmentLevel>
+<LegislativeClass>N3</LegislativeClass>
+<VehicleCategory>Tractor</VehicleCategory>
+<AxleConfiguration>6x2</AxleConfiguration>
+<CurbMassChassis>9932</CurbMassChassis>
+<GrossVehicleMass>28000</GrossVehicleMass>
+<IdlingSpeed>500</IdlingSpeed>
+<RetarderType>None</RetarderType>
+<RetarderRatio>1.000</RetarderRatio>
+<AngledriveType>None</AngledriveType>
+<PTO>
+  <PTOShaftsGearWheels>none</PTOShaftsGearWheels>
+  <PTOOtherElements>none</PTOOtherElements>
+  </PTO>
+<Components>
+  <Engine>
+  <EnginePD>2777909</EnginePD>
+  <EngineStrokeVolume>16</EngineStrokeVolume>
+  </Engine>
+  <GearBoxPD>2782199</GearBoxPD>
+  <AxleGearPD>2780040</AxleGearPD>
+  <RetarderPD></RetarderPD>
+  <TorqueConverterPD></TorqueConverterPD>
+  <AirDrag>
+   <AirDragPD>2740187</AirDragPD>
+   <AirDragModel>A3R20H0553A</AirDragModel>
+  </AirDrag>
+<Auxiliaries>
+ <Data>
+  <Fan>
+    <Technology>Crankshaft mounted - Electronically controlled visco clutch</Technology>
+  </Fan>
+  <SteeringPump>
+     <Technology>Electric</Technology>
+  </SteeringPump>
+  <ElectricSystem>
+    <Technology>Standard technology - LED headlights, all</Technology>
+  </ElectricSystem>
+  <PneumaticSystem>
+    <Technology>Large Supply + ESS + AMS</Technology>
+  </PneumaticSystem>
+  <HVAC>
+    <Technology>Default</Technology>
+  </HVAC>
+ </Data>
+</Auxiliaries>
+ <AxleWheels>
+  <Data>
+    <Axles>
+      <Axle axleNumber="1">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>1</Steered>
+       <TyrePD>2723073</TyrePD>
+      </Axle>
+      <Axle axleNumber="2">
+       <AxleType>VehicleDriven</AxleType>
+       <TwinTyres>1</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722919</TyrePD>
+      </Axle>
+	  <Axle axleNumber="3">
+       <AxleType>VehicleNonDriven</AxleType>
+       <TwinTyres>0</TwinTyres>
+       <Steered>0</Steered>
+       <TyrePD>2722919</TyrePD>
+      </Axle>
+    </Axles>
+  </Data>
+ </AxleWheels>
+</Components>
+</vehicle>
+ </vehicles>

@@ -1,0 +1,4 @@
+﻿2020-03-26-13:37:57	-	Starting Session 2020-03-26 13:37:57
+2020-03-26-13:37:57	-	VECTO 3
+2020/03/26-13:38:13	Error	No job file selected!	
+2020/03/26-13:38:33	-	Closing Session 3/26/2020 1:38:33 PM

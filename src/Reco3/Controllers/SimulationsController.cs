@@ -111,9 +111,9 @@ namespace Reco3.Controllers
                     break;
             }
             */
-            //int pageSize = 3;
-            //int pageNumber = (page ?? 1);
-            //return View(simJobs.ToPagedList(pageNumber, pageSize));
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(simJobs.ToPagedList(pageNumber, pageSize));
         }
         /*
         [HttpPost]
@@ -271,7 +271,7 @@ namespace Reco3.Controllers
             }
             
 
-            //return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
         
@@ -520,7 +520,7 @@ namespace Reco3.Controllers
         {
             try
             {
-                //int nSimulationJobId = -1;
+                int nSimulationJobId = -1;
                 if (SimulationJobId.Contains("-1") == true)
                     return Json(new { success = false, message = "Failed to upload baseline. Internal error: SimulationJobId is invalid." }, JsonRequestBehavior.AllowGet);
                 /*
@@ -737,7 +737,7 @@ namespace Reco3.Controllers
                 return Json(new { fileName = fullPath, errorMessage = "" });
                 */
             }
-            catch 
+            catch (Exception e)
             {
             }
             return Json(new { success = false, message = "ooops" }, JsonRequestBehavior.AllowGet);
@@ -756,7 +756,7 @@ namespace Reco3.Controllers
                 //so I set the file content type to "application/vnd.ms-excel"
                 return File(fullPath, "application/vnd.ms-excel", file);
             }
-            catch 
+            catch (Exception e)
             {
             }
 
@@ -802,8 +802,7 @@ namespace Reco3.Controllers
             }
             catch (Exception e)
             {
-                //logger.Debug("DeveloperSupportController:Index {0}", e);
-        logger.Debug(e, "DeveloperSupportController:Index");
+                logger.Debug("DeveloperSupportController:Index {0}", e);
             }
 
             return Redirect("/HomeController");

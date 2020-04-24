@@ -191,7 +191,7 @@ namespace Reco3CoreServer
 
                 return pds;
             }
-            catch 
+            catch (Exception e)
             {
             }
 
@@ -216,10 +216,11 @@ namespace Reco3CoreServer
                 foreach (string vin in VINs)
                 {
                     Vehicle vehicle = dbx.Vehicle.Where(x => x.VIN == vin).First();
-                    Reco3Msg msg = new Reco3Msg();
-                    msg.MsgType = Reco3MsgType.PendingRoadmapSimulation;
-                    msg.RoadmapId = 6;
-                    msg.VehicleId = vehicle.VehicleId;
+                    Reco3Msg msg = new Reco3Msg {
+                      MsgType = Reco3MsgType.PendingRoadmapSimulation,
+                      RoadmapId = 6,
+                      VehicleId = vehicle.VehicleId
+                    };
                     queue.SendMsg(msg);
                 }
                 ConsoleHarness.WriteToConsole(ConsoleColor.Green, string.Format("QueueRoadmapFleet, Done! Processed {0} vehicles.", VINs.Count));

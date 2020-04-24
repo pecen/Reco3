@@ -24,7 +24,7 @@ namespace SimulationsLib.Agent
 
                 config.Save(ConfigurationSaveMode.Modified);
             }
-            catch
+            catch (Exception e)
             {
             }
         }
@@ -40,7 +40,7 @@ namespace SimulationsLib.Agent
                     return entry.Value;
                 }
             }
-            catch
+            catch (Exception e)
             {
             }
             return strDefault;

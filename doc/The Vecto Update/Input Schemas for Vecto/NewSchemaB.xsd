@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0" xmlns:mstns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0" xmlns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0">
+  <xs:import namespace="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0" schemaLocation="NewSchemaB_app1.xsd" />
+  <xs:element name="VectoInputDeclaration" msdata:Prefix="tns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="app1:Vehicle" />
+      </xs:sequence>
+      <xs:attribute name="schemaVersion" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="tns">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="VectoInputDeclaration" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

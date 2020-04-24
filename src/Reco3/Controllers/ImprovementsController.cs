@@ -209,7 +209,7 @@ namespace Reco3.Controllers
                 Console.WriteLine(e);
                 return Json(new { success = false, error = true, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
 
@@ -237,7 +237,7 @@ namespace Reco3.Controllers
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
         }
 
         [AcceptVerbs(HttpVerbs.Get)]
@@ -260,7 +260,7 @@ namespace Reco3.Controllers
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
         }
 
         
@@ -292,7 +292,7 @@ namespace Reco3.Controllers
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
         }
         
 
@@ -377,14 +377,14 @@ namespace Reco3.Controllers
                     dbx.SaveChanges();
                     return Json(new { success = true, message = "Successfully updated condition" }, JsonRequestBehavior.AllowGet);
                 }
-                //return Json(new { success = false, message = "Failed to find the improvement for the condition." }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = false, message = "Failed to find the improvement for the condition." }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
         }
 
         
@@ -436,7 +436,7 @@ namespace Reco3.Controllers
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
         }
 
 

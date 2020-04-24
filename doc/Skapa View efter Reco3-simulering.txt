@@ -1,0 +1,14 @@
+Steg för att skapa en View efter simulering i Reco3:
+
+- högerklicka på en tidigare view (sista viewn)
+
+- klicka på design
+
+- kopiera den select som finns där
+
+- högerklicka på Views och välj New
+
+- paste:a in select:en
+
+- ändra SimulationId till ditt nummer från din simulering
+

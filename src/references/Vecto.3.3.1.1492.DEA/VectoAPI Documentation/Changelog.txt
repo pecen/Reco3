@@ -1,0 +1,29 @@
+2019-01-03  VECTO DEA for VECTO 3.3.1.1463
+
+  -- adding access to Monitoring Report
+
+2017-10-19  VECTO DEA for VECTO 3.2.0.1022
+
+  -- no changes
+
+2017-10-02  VECTO DEA for VECTO 3.2.0.1005
+
+  -- no changes
+
+2017-07-31  VECTO DEA for VECTO 3.2.0.940
+
+  -- no changes
+
+2017-01-17  VECTO DEA for VECTO 3.1.1.472
+
+  * New Parameters in Engineering Mode: 
+      TorqueConverter MaxInputSpeed
+	  AT Gearbox: PowershiftShiftTime, PowershiftInertiaFactor,
+	              CLUpshiftMinAcceleration, CCUpshiftMinAcceleration
+
+2016-11-22
+   * BugFix: Correctly read retarder types
+   * BugFix: If the retarder is no separate component the 'Retarder' Element can be omitted
+
+2016-11-09
+   * First release of VECTO DEA

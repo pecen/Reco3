@@ -1,0 +1,21 @@
+﻿{
+  "Header": {
+    "Date": "2020-03-26T12:38:33.8465145Z",
+    "AppVersion": "3",
+    "FileVersion": 2
+  },
+  "Body": {
+    "ModOut": true,
+    "Mod1Hz": false,
+    "LogSize": 2.0,
+    "AirDensity": 1.188,
+    "FuelDensity": 836.0,
+    "CO2perFC": 3.13,
+    "OpenCmd": "notepad",
+    "OpenCmdName": "Notepad",
+    "FirstRun": false,
+    "DeclMode": true,
+    "ValidateRunData": true,
+    "OutputFolder": ""
+  }
+}

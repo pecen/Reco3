@@ -1,0 +1,9 @@
+2019-03-26 10:17:58.214 +01:00 [DBG] =>ConvertToTUGVehicles
+2019-03-26 10:18:00.667 +01:00 [DBG] =>ConvertToTUGVehicles.Initialize
+2019-03-26 10:18:03.247 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 vehicle-iteration
+2019-03-26 10:18:09.279 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 conversion: 1 VIN: 9249474
+2019-03-26 10:18:15.162 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 validating against schema.
+2019-03-26 10:18:21.733 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. Schema validated, with success, has changes so making a fresh vehicle.
+2019-03-26 10:18:29.695 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 conversion: 2 VIN: 5516610
+2019-03-26 10:18:30.545 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 validating against schema.
+2019-03-26 10:18:41.909 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. Schema validated, with success, no changes and we have a previous version, so making a copy.

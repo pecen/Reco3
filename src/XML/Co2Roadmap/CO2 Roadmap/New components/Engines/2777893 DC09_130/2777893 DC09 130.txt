@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<tns:VectoInputDeclaration xsi:schemaLocation="urn:tugraz:ivt:VectoAPI:DeclarationComponent:v1.0 https://webgate.ec.europa.eu/CITnet/svn/VECTO/trunk/Share/XML/XSD/VectoComponent.xsd" xmlns:tns="urn:tugraz:ivt:VectoAPI:DeclarationComponent:v1.0" xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0">
+
+
+-<tns:Engine>
+
+
+-<Data id="ENG-3ce1c9889dca402db28d">
+
+<Manufacturer>Scania CV AB</Manufacturer>
+
+<Model>DC09 130</Model>
+
+<CertificationNumber>e4*2017/2400*2017/2400*E*0012*00</CertificationNumber>
+
+<Date>2018-06-20T15:26:50.3599868Z</Date>
+
+<AppVersion>VECTO-Engine 1.4.3.1043</AppVersion>
+
+<Displacement>9291</Displacement>
+
+<IdlingSpeed>600</IdlingSpeed>
+
+<RatedSpeed>1900</RatedSpeed>
+
+<RatedPower>206000</RatedPower>
+
+<MaxEngineTorque>1423</MaxEngineTorque>
+
+<WHTCUrban>1.0833</WHTCUrban>
+
+<WHTCRural>1.0508</WHTCRural>
+
+<WHTCMotorway>1.0048</WHTCMotorway>
+
+<BFColdHot>1.0034</BFColdHot>
+
+<CFRegPer>1.0000</CFRegPer>
+
+<CFNCV>0.9963</CFNCV>
+
+<FuelType>Diesel CI</FuelType>
+
+
+-<FuelConsumptionMap>
+
+<Entry fuelConsumption="0.00" torque="-192.22" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="0.00" torque="-92.22" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="899.34" torque="-2.52" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="2476.06" torque="139.15" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="3952.93" torque="281.79" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="5710.17" torque="425.59" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="7554.66" torque="569.37" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="9569.76" torque="715.11" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="11410.38" torque="838.84" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="11598.70" torque="853.78" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="13632.75" torque="996.08" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="15666.79" torque="1138.38" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="17700.84" torque="1280.67" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="19734.89" torque="1422.97" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="21768.93" torque="1565.27" engineSpeed="500.00"/>
+
+<Entry fuelConsumption="0.00" torque="-192.22" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="0.00" torque="-92.22" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="899.34" torque="-2.52" engineSpeed="599.97"/>
+
+<Entry fuelConsumption="2476.06" torque="139.15" engineSpeed="599.97"/>
+
+<Entry fuelConsumption="3952.93" torque="281.79" engineSpeed="599.94"/>
+
+<Entry fuelConsumption="5710.17" torque="425.59" engineSpeed="599.94"/>
+
+<Entry fuelConsumption="7554.66" torque="569.37" engineSpeed="599.95"/>
+
+<Entry fuelConsumption="9569.76" torque="715.11" engineSpeed="599.99"/>
+
+<Entry fuelConsumption="11410.38" torque="838.84" engineSpeed="600.06"/>
+
+<Entry fuelConsumption="11598.70" torque="853.78" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="13632.75" torque="996.08" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="15666.79" torque="1138.38" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="17700.84" torque="1280.67" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="19734.89" torque="1422.97" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="21768.93" torque="1565.27" engineSpeed="600.00"/>
+
+<Entry fuelConsumption="0.00" torque="-197.43" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="0.00" torque="-97.43" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="1150.41" torque="-2.30" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="3001.19" torque="140.55" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="5032.99" torque="282.74" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="7145.46" torque="425.08" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="9342.40" torque="567.35" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="11585.54" torque="709.62" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="13990.97" torque="851.97" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="16612.94" torque="981.53" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="16802.56" torque="996.08" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="19429.81" torque="1138.38" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="22057.05" torque="1280.67" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="24684.30" torque="1422.97" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="27311.54" torque="1565.27" engineSpeed="766.00"/>
+
+<Entry fuelConsumption="0.00" torque="-206.13" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="0.00" torque="-106.13" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="1503.04" torque="-1.09" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="3680.81" torque="140.49" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="6115.23" torque="283.68" engineSpeed="930.99"/>
+
+<Entry fuelConsumption="8580.87" torque="425.99" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="11104.97" torque="568.18" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="13715.89" torque="710.91" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="16380.82" torque="853.37" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="19129.64" torque="996.06" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="22524.07" torque="1136.80" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="22442.79" torque="1138.38" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="25526.24" torque="1280.67" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="28609.68" torque="1422.97" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="31693.13" torque="1565.27" engineSpeed="931.00"/>
+
+<Entry fuelConsumption="0.00" torque="-216.93" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="0.00" torque="-116.93" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="1896.93" torque="-1.11" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="4483.51" torque="141.30" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="7279.55" torque="283.76" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="10139.64" torque="426.22" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="13017.63" torque="568.41" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="15967.50" torque="710.78" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="18943.10" torque="853.39" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="21881.17" torque="995.94" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="24858.10" torque="1138.28" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="27912.25" torque="1280.65" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="31331.87" torque="1418.99" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="31346.13" torque="1422.97" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="34626.69" torque="1565.27" engineSpeed="1097.00"/>
+
+<Entry fuelConsumption="0.00" torque="-228.41" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="0.00" torque="-128.41" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="2385.33" torque="-1.04" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="5359.27" torque="141.43" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="8585.26" torque="283.99" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="11834.10" torque="426.28" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="15133.75" torque="568.65" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="18433.35" torque="710.92" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="21756.02" torque="853.36" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="25037.71" torque="995.84" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="28420.62" torque="1138.26" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="31821.61" torque="1280.62" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="35283.59" torque="1419.98" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="35333.84" torque="1422.97" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="38800.09" torque="1565.27" engineSpeed="1262.00"/>
+
+<Entry fuelConsumption="0.00" torque="-239.36" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="0.00" torque="-139.36" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="3046.50" torque="-0.88" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="6407.27" torque="141.52" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="10161.99" torque="284.14" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="13829.11" torque="426.41" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="17552.31" torque="568.73" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="21290.51" torque="710.80" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="25071.16" torque="853.63" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="28875.14" torque="995.98" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="32719.79" torque="1138.40" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="36662.25" torque="1280.78" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="38687.76" torque="1352.51" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="40638.70" torque="1422.97" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="44601.31" torque="1565.27" engineSpeed="1438.00"/>
+
+<Entry fuelConsumption="0.00" torque="-249.77" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="0.00" torque="-149.77" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="3542.93" torque="-0.76" engineSpeed="1567.01"/>
+
+<Entry fuelConsumption="7249.87" torque="141.28" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="11357.09" torque="283.95" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="15433.71" torque="426.49" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="19441.12" torque="568.73" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="23543.04" torque="711.30" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="27643.24" torque="853.75" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="31870.93" torque="996.07" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="36163.82" torque="1138.36" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="39934.44" torque="1262.84" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="40470.59" torque="1280.67" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="44771.54" torque="1422.97" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="49072.48" torque="1565.27" engineSpeed="1567.00"/>
+
+<Entry fuelConsumption="0.00" torque="-260.27" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="0.00" torque="-160.27" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="4128.24" torque="-0.80" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="8134.99" torque="141.72" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="12563.69" torque="284.09" engineSpeed="1695.99"/>
+
+<Entry fuelConsumption="17018.23" torque="426.32" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="21479.49" torque="568.80" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="25947.41" torque="711.33" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="30480.90" torque="853.74" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="35098.40" torque="996.02" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="40558.67" torque="1161.68" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="44441.71" torque="1280.67" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="49099.48" torque="1422.97" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="53757.26" torque="1565.27" engineSpeed="1696.00"/>
+
+<Entry fuelConsumption="0.00" torque="-271.96" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="0.00" torque="-171.96" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="4731.31" torque="-0.71" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="9106.62" torque="141.67" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="13897.43" torque="284.16" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="18840.03" torque="426.42" engineSpeed="1826.01"/>
+
+<Entry fuelConsumption="23675.08" torque="568.80" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="28488.96" torque="711.24" engineSpeed="1826.01"/>
+
+<Entry fuelConsumption="33461.78" torque="853.72" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="38561.21" torque="996.21" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="41736.90" torque="1085.86" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="43617.70" torque="1138.38" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="48692.01" torque="1280.67" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="53766.32" torque="1422.97" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="58840.63" torque="1565.27" engineSpeed="1826.00"/>
+
+<Entry fuelConsumption="0.00" torque="-281.55" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="0.00" torque="-181.55" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="5529.48" torque="-0.65" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="10289.27" torque="141.80" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="15435.13" torque="284.38" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="20722.81" torque="426.61" engineSpeed="1955.01"/>
+
+<Entry fuelConsumption="25953.01" torque="569.00" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="31325.16" torque="711.12" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="36722.74" torque="853.67" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="40913.85" torque="962.00" engineSpeed="1954.99"/>
+
+<Entry fuelConsumption="42196.64" torque="996.08" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="47632.67" torque="1138.38" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="53068.69" torque="1280.67" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="58504.71" torque="1422.97" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="63940.74" torque="1565.27" engineSpeed="1955.00"/>
+
+<Entry fuelConsumption="0.00" torque="-281.55" engineSpeed="2455.00"/>
+
+<Entry fuelConsumption="0.00" torque="-181.55" engineSpeed="2455.00"/>
+
+<Entry fuelConsumption="5529.48" torque="-0.65" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="10289.27" torque="141.80" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="15435.13" torque="284.38" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="20722.81" torque="426.61" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="25953.01" torque="569.00" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="31325.16" torque="711.12" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="36722.74" torque="853.67" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="40913.85" torque="962.00" engineSpeed="2454.55"/>
+
+<Entry fuelConsumption="42196.64" torque="996.08" engineSpeed="2455.00"/>
+
+<Entry fuelConsumption="47632.67" torque="1138.38" engineSpeed="2455.00"/>
+
+<Entry fuelConsumption="53068.69" torque="1280.67" engineSpeed="2455.00"/>
+
+<Entry fuelConsumption="58504.71" torque="1422.97" engineSpeed="2455.00"/>
+
+<Entry fuelConsumption="63940.74" torque="1565.27" engineSpeed="2455.00"/>
+
+</FuelConsumptionMap>
+
+
+-<FullLoadAndDragCurve>
+
+<Entry engineSpeed="592.00" dragTorque="-92.22" maxTorque="825.44"/>
+
+<Entry engineSpeed="600.00" dragTorque="-92.22" maxTorque="825.44"/>
+
+<Entry engineSpeed="608.00" dragTorque="-92.47" maxTorque="830.32"/>
+
+<Entry engineSpeed="616.00" dragTorque="-92.72" maxTorque="837.14"/>
+
+<Entry engineSpeed="624.00" dragTorque="-92.97" maxTorque="844.42"/>
+
+<Entry engineSpeed="632.00" dragTorque="-93.23" maxTorque="851.86"/>
+
+<Entry engineSpeed="640.00" dragTorque="-93.48" maxTorque="859.62"/>
+
+<Entry engineSpeed="648.00" dragTorque="-93.73" maxTorque="868.17"/>
+
+<Entry engineSpeed="656.00" dragTorque="-93.98" maxTorque="876.15"/>
+
+<Entry engineSpeed="664.00" dragTorque="-94.23" maxTorque="883.09"/>
+
+<Entry engineSpeed="672.00" dragTorque="-94.48" maxTorque="889.16"/>
+
+<Entry engineSpeed="680.00" dragTorque="-94.74" maxTorque="894.45"/>
+
+<Entry engineSpeed="688.00" dragTorque="-94.99" maxTorque="902.17"/>
+
+<Entry engineSpeed="696.00" dragTorque="-95.24" maxTorque="909.03"/>
+
+<Entry engineSpeed="704.00" dragTorque="-95.49" maxTorque="916.34"/>
+
+<Entry engineSpeed="712.00" dragTorque="-95.74" maxTorque="924.55"/>
+
+<Entry engineSpeed="720.00" dragTorque="-95.99" maxTorque="933.81"/>
+
+<Entry engineSpeed="728.00" dragTorque="-96.24" maxTorque="943.01"/>
+
+<Entry engineSpeed="736.00" dragTorque="-96.50" maxTorque="949.69"/>
+
+<Entry engineSpeed="744.00" dragTorque="-96.75" maxTorque="956.91"/>
+
+<Entry engineSpeed="752.00" dragTorque="-97.00" maxTorque="964.31"/>
+
+<Entry engineSpeed="760.00" dragTorque="-97.25" maxTorque="971.38"/>
+
+<Entry engineSpeed="768.00" dragTorque="-97.55" maxTorque="978.20"/>
+
+<Entry engineSpeed="776.00" dragTorque="-97.97" maxTorque="987.07"/>
+
+<Entry engineSpeed="784.00" dragTorque="-98.39" maxTorque="992.85"/>
+
+<Entry engineSpeed="792.00" dragTorque="-98.82" maxTorque="999.49"/>
+
+<Entry engineSpeed="800.00" dragTorque="-99.24" maxTorque="1008.16"/>
+
+<Entry engineSpeed="808.00" dragTorque="-99.66" maxTorque="1018.20"/>
+
+<Entry engineSpeed="816.00" dragTorque="-100.08" maxTorque="1027.92"/>
+
+<Entry engineSpeed="824.00" dragTorque="-100.50" maxTorque="1035.76"/>
+
+<Entry engineSpeed="832.00" dragTorque="-100.92" maxTorque="1044.15"/>
+
+<Entry engineSpeed="840.00" dragTorque="-101.34" maxTorque="1051.77"/>
+
+<Entry engineSpeed="848.00" dragTorque="-101.76" maxTorque="1059.31"/>
+
+<Entry engineSpeed="856.00" dragTorque="-102.18" maxTorque="1068.84"/>
+
+<Entry engineSpeed="864.00" dragTorque="-102.60" maxTorque="1076.00"/>
+
+<Entry engineSpeed="872.00" dragTorque="-103.02" maxTorque="1080.88"/>
+
+<Entry engineSpeed="880.00" dragTorque="-103.44" maxTorque="1086.32"/>
+
+<Entry engineSpeed="888.00" dragTorque="-103.87" maxTorque="1093.93"/>
+
+<Entry engineSpeed="896.00" dragTorque="-104.29" maxTorque="1101.86"/>
+
+<Entry engineSpeed="904.00" dragTorque="-104.71" maxTorque="1108.91"/>
+
+<Entry engineSpeed="912.00" dragTorque="-105.13" maxTorque="1114.87"/>
+
+<Entry engineSpeed="920.00" dragTorque="-105.55" maxTorque="1123.90"/>
+
+<Entry engineSpeed="928.00" dragTorque="-105.97" maxTorque="1131.50"/>
+
+<Entry engineSpeed="936.00" dragTorque="-106.45" maxTorque="1137.45"/>
+
+<Entry engineSpeed="944.00" dragTorque="-106.97" maxTorque="1144.53"/>
+
+<Entry engineSpeed="952.00" dragTorque="-107.49" maxTorque="1160.53"/>
+
+<Entry engineSpeed="960.00" dragTorque="-108.02" maxTorque="1193.83"/>
+
+<Entry engineSpeed="968.00" dragTorque="-108.54" maxTorque="1235.43"/>
+
+<Entry engineSpeed="976.00" dragTorque="-109.06" maxTorque="1277.51"/>
+
+<Entry engineSpeed="984.00" dragTorque="-109.58" maxTorque="1319.11"/>
+
+<Entry engineSpeed="992.00" dragTorque="-110.10" maxTorque="1358.87"/>
+
+<Entry engineSpeed="1000.00" dragTorque="-110.62" maxTorque="1390.87"/>
+
+<Entry engineSpeed="1008.00" dragTorque="-111.14" maxTorque="1406.04"/>
+
+<Entry engineSpeed="1016.00" dragTorque="-111.67" maxTorque="1410.85"/>
+
+<Entry engineSpeed="1024.00" dragTorque="-112.19" maxTorque="1410.00"/>
+
+<Entry engineSpeed="1032.00" dragTorque="-112.71" maxTorque="1408.62"/>
+
+<Entry engineSpeed="1040.00" dragTorque="-113.23" maxTorque="1410.79"/>
+
+<Entry engineSpeed="1048.00" dragTorque="-113.75" maxTorque="1412.04"/>
+
+<Entry engineSpeed="1056.00" dragTorque="-114.27" maxTorque="1413.40"/>
+
+<Entry engineSpeed="1064.00" dragTorque="-114.79" maxTorque="1413.76"/>
+
+<Entry engineSpeed="1072.00" dragTorque="-115.32" maxTorque="1415.81"/>
+
+<Entry engineSpeed="1080.00" dragTorque="-115.84" maxTorque="1417.68"/>
+
+<Entry engineSpeed="1088.00" dragTorque="-116.36" maxTorque="1419.06"/>
+
+<Entry engineSpeed="1096.00" dragTorque="-116.88" maxTorque="1418.67"/>
+
+<Entry engineSpeed="1104.00" dragTorque="-117.43" maxTorque="1420.51"/>
+
+<Entry engineSpeed="1112.00" dragTorque="-117.99" maxTorque="1419.68"/>
+
+<Entry engineSpeed="1120.00" dragTorque="-118.54" maxTorque="1420.06"/>
+
+<Entry engineSpeed="1128.00" dragTorque="-119.10" maxTorque="1419.34"/>
+
+<Entry engineSpeed="1136.00" dragTorque="-119.65" maxTorque="1420.30"/>
+
+<Entry engineSpeed="1144.00" dragTorque="-120.21" maxTorque="1421.30"/>
+
+<Entry engineSpeed="1152.00" dragTorque="-120.76" maxTorque="1422.60"/>
+
+<Entry engineSpeed="1160.00" dragTorque="-121.32" maxTorque="1422.01"/>
+
+<Entry engineSpeed="1168.00" dragTorque="-121.87" maxTorque="1420.93"/>
+
+<Entry engineSpeed="1176.00" dragTorque="-122.43" maxTorque="1419.80"/>
+
+<Entry engineSpeed="1184.00" dragTorque="-122.98" maxTorque="1419.53"/>
+
+<Entry engineSpeed="1192.00" dragTorque="-123.54" maxTorque="1419.31"/>
+
+<Entry engineSpeed="1200.00" dragTorque="-124.09" maxTorque="1418.59"/>
+
+<Entry engineSpeed="1208.00" dragTorque="-124.65" maxTorque="1418.84"/>
+
+<Entry engineSpeed="1216.00" dragTorque="-125.20" maxTorque="1419.44"/>
+
+<Entry engineSpeed="1224.00" dragTorque="-125.76" maxTorque="1419.72"/>
+
+<Entry engineSpeed="1232.00" dragTorque="-126.31" maxTorque="1419.73"/>
+
+<Entry engineSpeed="1240.00" dragTorque="-126.87" maxTorque="1419.92"/>
+
+<Entry engineSpeed="1248.00" dragTorque="-127.42" maxTorque="1419.26"/>
+
+<Entry engineSpeed="1256.00" dragTorque="-127.98" maxTorque="1419.86"/>
+
+<Entry engineSpeed="1264.00" dragTorque="-128.52" maxTorque="1419.91"/>
+
+<Entry engineSpeed="1272.00" dragTorque="-129.02" maxTorque="1421.04"/>
+
+<Entry engineSpeed="1280.00" dragTorque="-129.52" maxTorque="1421.68"/>
+
+<Entry engineSpeed="1288.00" dragTorque="-130.01" maxTorque="1420.43"/>
+
+<Entry engineSpeed="1296.00" dragTorque="-130.51" maxTorque="1421.54"/>
+
+<Entry engineSpeed="1304.00" dragTorque="-131.01" maxTorque="1422.60"/>
+
+<Entry engineSpeed="1312.00" dragTorque="-131.51" maxTorque="1421.62"/>
+
+<Entry engineSpeed="1320.00" dragTorque="-132.00" maxTorque="1421.59"/>
+
+<Entry engineSpeed="1328.00" dragTorque="-132.50" maxTorque="1421.81"/>
+
+<Entry engineSpeed="1336.00" dragTorque="-133.00" maxTorque="1421.56"/>
+
+<Entry engineSpeed="1344.00" dragTorque="-133.49" maxTorque="1421.66"/>
+
+<Entry engineSpeed="1352.00" dragTorque="-133.99" maxTorque="1419.25"/>
+
+<Entry engineSpeed="1360.00" dragTorque="-134.49" maxTorque="1412.40"/>
+
+<Entry engineSpeed="1368.00" dragTorque="-134.99" maxTorque="1405.93"/>
+
+<Entry engineSpeed="1376.00" dragTorque="-135.48" maxTorque="1400.85"/>
+
+<Entry engineSpeed="1384.00" dragTorque="-135.98" maxTorque="1394.12"/>
+
+<Entry engineSpeed="1392.00" dragTorque="-136.48" maxTorque="1388.79"/>
+
+<Entry engineSpeed="1400.00" dragTorque="-136.98" maxTorque="1382.23"/>
+
+<Entry engineSpeed="1408.00" dragTorque="-137.47" maxTorque="1376.02"/>
+
+<Entry engineSpeed="1416.00" dragTorque="-137.97" maxTorque="1370.37"/>
+
+<Entry engineSpeed="1424.00" dragTorque="-138.47" maxTorque="1364.88"/>
+
+<Entry engineSpeed="1432.00" dragTorque="-138.97" maxTorque="1358.01"/>
+
+<Entry engineSpeed="1440.00" dragTorque="-139.49" maxTorque="1350.55"/>
+
+<Entry engineSpeed="1448.00" dragTorque="-140.14" maxTorque="1344.56"/>
+
+<Entry engineSpeed="1456.00" dragTorque="-140.78" maxTorque="1339.11"/>
+
+<Entry engineSpeed="1464.00" dragTorque="-141.43" maxTorque="1332.65"/>
+
+<Entry engineSpeed="1472.00" dragTorque="-142.08" maxTorque="1325.58"/>
+
+<Entry engineSpeed="1480.00" dragTorque="-142.72" maxTorque="1319.82"/>
+
+<Entry engineSpeed="1488.00" dragTorque="-143.37" maxTorque="1313.33"/>
+
+<Entry engineSpeed="1496.00" dragTorque="-144.01" maxTorque="1307.22"/>
+
+<Entry engineSpeed="1504.00" dragTorque="-144.66" maxTorque="1300.99"/>
+
+<Entry engineSpeed="1512.00" dragTorque="-145.30" maxTorque="1295.72"/>
+
+<Entry engineSpeed="1520.00" dragTorque="-145.95" maxTorque="1290.79"/>
+
+<Entry engineSpeed="1528.00" dragTorque="-146.59" maxTorque="1284.61"/>
+
+<Entry engineSpeed="1536.00" dragTorque="-147.24" maxTorque="1279.61"/>
+
+<Entry engineSpeed="1544.00" dragTorque="-147.88" maxTorque="1274.77"/>
+
+<Entry engineSpeed="1552.00" dragTorque="-148.53" maxTorque="1268.64"/>
+
+<Entry engineSpeed="1560.00" dragTorque="-149.18" maxTorque="1262.12"/>
+
+<Entry engineSpeed="1568.00" dragTorque="-149.82" maxTorque="1256.68"/>
+
+<Entry engineSpeed="1576.00" dragTorque="-150.47" maxTorque="1251.58"/>
+
+<Entry engineSpeed="1584.00" dragTorque="-151.12" maxTorque="1246.44"/>
+
+<Entry engineSpeed="1592.00" dragTorque="-151.77" maxTorque="1240.12"/>
+
+<Entry engineSpeed="1600.00" dragTorque="-152.42" maxTorque="1235.09"/>
+
+<Entry engineSpeed="1608.00" dragTorque="-153.08" maxTorque="1231.82"/>
+
+<Entry engineSpeed="1616.00" dragTorque="-153.73" maxTorque="1226.91"/>
+
+<Entry engineSpeed="1624.00" dragTorque="-154.38" maxTorque="1221.62"/>
+
+<Entry engineSpeed="1632.00" dragTorque="-155.03" maxTorque="1217.98"/>
+
+<Entry engineSpeed="1640.00" dragTorque="-155.68" maxTorque="1212.29"/>
+
+<Entry engineSpeed="1648.00" dragTorque="-156.33" maxTorque="1205.50"/>
+
+<Entry engineSpeed="1656.00" dragTorque="-156.98" maxTorque="1200.10"/>
+
+<Entry engineSpeed="1664.00" dragTorque="-157.63" maxTorque="1188.24"/>
+
+<Entry engineSpeed="1672.00" dragTorque="-158.28" maxTorque="1179.37"/>
+
+<Entry engineSpeed="1680.00" dragTorque="-158.93" maxTorque="1171.94"/>
+
+<Entry engineSpeed="1688.00" dragTorque="-159.58" maxTorque="1165.61"/>
+
+<Entry engineSpeed="1696.00" dragTorque="-160.24" maxTorque="1160.35"/>
+
+<Entry engineSpeed="1704.00" dragTorque="-160.95" maxTorque="1154.05"/>
+
+<Entry engineSpeed="1712.00" dragTorque="-161.68" maxTorque="1150.24"/>
+
+<Entry engineSpeed="1720.00" dragTorque="-162.40" maxTorque="1146.16"/>
+
+<Entry engineSpeed="1728.00" dragTorque="-163.13" maxTorque="1141.50"/>
+
+<Entry engineSpeed="1736.00" dragTorque="-163.85" maxTorque="1137.31"/>
+
+<Entry engineSpeed="1744.00" dragTorque="-164.58" maxTorque="1132.49"/>
+
+<Entry engineSpeed="1752.00" dragTorque="-165.30" maxTorque="1128.63"/>
+
+<Entry engineSpeed="1760.00" dragTorque="-166.03" maxTorque="1123.64"/>
+
+<Entry engineSpeed="1768.00" dragTorque="-166.75" maxTorque="1117.93"/>
+
+<Entry engineSpeed="1776.00" dragTorque="-167.48" maxTorque="1114.53"/>
+
+<Entry engineSpeed="1784.00" dragTorque="-168.20" maxTorque="1110.58"/>
+
+<Entry engineSpeed="1792.00" dragTorque="-168.93" maxTorque="1106.36"/>
+
+<Entry engineSpeed="1800.00" dragTorque="-169.65" maxTorque="1102.08"/>
+
+<Entry engineSpeed="1808.00" dragTorque="-170.38" maxTorque="1097.15"/>
+
+<Entry engineSpeed="1816.00" dragTorque="-171.10" maxTorque="1090.27"/>
+
+<Entry engineSpeed="1824.00" dragTorque="-171.83" maxTorque="1084.44"/>
+
+<Entry engineSpeed="1832.00" dragTorque="-172.45" maxTorque="1080.50"/>
+
+<Entry engineSpeed="1840.00" dragTorque="-173.04" maxTorque="1074.40"/>
+
+<Entry engineSpeed="1848.00" dragTorque="-173.64" maxTorque="1068.99"/>
+
+<Entry engineSpeed="1856.00" dragTorque="-174.23" maxTorque="1064.24"/>
+
+<Entry engineSpeed="1864.00" dragTorque="-174.83" maxTorque="1058.44"/>
+
+<Entry engineSpeed="1872.00" dragTorque="-175.42" maxTorque="1053.03"/>
+
+<Entry engineSpeed="1880.00" dragTorque="-176.01" maxTorque="1045.27"/>
+
+<Entry engineSpeed="1888.00" dragTorque="-176.61" maxTorque="1037.82"/>
+
+<Entry engineSpeed="1896.00" dragTorque="-177.20" maxTorque="1031.51"/>
+
+<Entry engineSpeed="1904.00" dragTorque="-177.80" maxTorque="1022.57"/>
+
+<Entry engineSpeed="1912.00" dragTorque="-178.39" maxTorque="1011.48"/>
+
+<Entry engineSpeed="1920.00" dragTorque="-178.99" maxTorque="1005.09"/>
+
+<Entry engineSpeed="1928.00" dragTorque="-179.58" maxTorque="995.64"/>
+
+<Entry engineSpeed="1936.00" dragTorque="-180.18" maxTorque="985.38"/>
+
+<Entry engineSpeed="1944.00" dragTorque="-180.77" maxTorque="977.69"/>
+
+<Entry engineSpeed="1952.00" dragTorque="-181.36" maxTorque="969.56"/>
+
+<Entry engineSpeed="1960.00" dragTorque="-181.55" maxTorque="959.25"/>
+
+<Entry engineSpeed="1968.00" dragTorque="-181.55" maxTorque="949.04"/>
+
+<Entry engineSpeed="1976.00" dragTorque="-181.55" maxTorque="938.75"/>
+
+<Entry engineSpeed="1984.00" dragTorque="-181.55" maxTorque="927.14"/>
+
+<Entry engineSpeed="1992.00" dragTorque="-181.55" maxTorque="918.67"/>
+
+<Entry engineSpeed="2000.00" dragTorque="-181.55" maxTorque="908.65"/>
+
+<Entry engineSpeed="2008.00" dragTorque="-181.55" maxTorque="898.93"/>
+
+<Entry engineSpeed="2016.00" dragTorque="-181.55" maxTorque="886.23"/>
+
+<Entry engineSpeed="2024.00" dragTorque="-181.55" maxTorque="873.78"/>
+
+<Entry engineSpeed="2032.00" dragTorque="-181.55" maxTorque="862.02"/>
+
+<Entry engineSpeed="2040.00" dragTorque="-181.55" maxTorque="850.68"/>
+
+<Entry engineSpeed="2048.00" dragTorque="-181.55" maxTorque="837.65"/>
+
+<Entry engineSpeed="2056.00" dragTorque="-181.55" maxTorque="827.85"/>
+
+<Entry engineSpeed="2064.00" dragTorque="-181.55" maxTorque="818.29"/>
+
+<Entry engineSpeed="2072.00" dragTorque="-181.55" maxTorque="807.81"/>
+
+<Entry engineSpeed="2080.00" dragTorque="-181.55" maxTorque="796.84"/>
+
+<Entry engineSpeed="2088.00" dragTorque="-181.55" maxTorque="784.72"/>
+
+<Entry engineSpeed="2096.00" dragTorque="-181.55" maxTorque="770.36"/>
+
+<Entry engineSpeed="2104.00" dragTorque="-181.55" maxTorque="759.69"/>
+
+<Entry engineSpeed="2112.00" dragTorque="-181.55" maxTorque="751.75"/>
+
+<Entry engineSpeed="2120.00" dragTorque="-181.55" maxTorque="742.91"/>
+
+<Entry engineSpeed="2128.00" dragTorque="-181.55" maxTorque="733.01"/>
+
+<Entry engineSpeed="2136.00" dragTorque="-181.55" maxTorque="725.23"/>
+
+<Entry engineSpeed="2144.00" dragTorque="-181.55" maxTorque="716.54"/>
+
+<Entry engineSpeed="2152.00" dragTorque="-181.55" maxTorque="707.24"/>
+
+<Entry engineSpeed="2160.00" dragTorque="-181.55" maxTorque="697.70"/>
+
+<Entry engineSpeed="2168.00" dragTorque="-181.55" maxTorque="689.62"/>
+
+<Entry engineSpeed="2176.00" dragTorque="-181.55" maxTorque="681.83"/>
+
+<Entry engineSpeed="2184.00" dragTorque="-181.55" maxTorque="674.63"/>
+
+<Entry engineSpeed="2192.00" dragTorque="-181.55" maxTorque="669.20"/>
+
+<Entry engineSpeed="2200.00" dragTorque="-181.55" maxTorque="661.59"/>
+
+<Entry engineSpeed="2208.00" dragTorque="-181.55" maxTorque="653.04"/>
+
+<Entry engineSpeed="2216.00" dragTorque="-181.55" maxTorque="645.51"/>
+
+<Entry engineSpeed="2224.00" dragTorque="-181.55" maxTorque="637.20"/>
+
+<Entry engineSpeed="2232.00" dragTorque="-181.55" maxTorque="630.11"/>
+
+<Entry engineSpeed="2240.00" dragTorque="-181.55" maxTorque="623.74"/>
+
+<Entry engineSpeed="2248.00" dragTorque="-181.55" maxTorque="618.06"/>
+
+<Entry engineSpeed="2256.00" dragTorque="-181.55" maxTorque="610.98"/>
+
+<Entry engineSpeed="2264.00" dragTorque="-181.55" maxTorque="604.16"/>
+
+<Entry engineSpeed="2272.00" dragTorque="-181.55" maxTorque="599.08"/>
+
+<Entry engineSpeed="2280.00" dragTorque="-181.55" maxTorque="592.52"/>
+
+<Entry engineSpeed="2288.00" dragTorque="-181.55" maxTorque="585.10"/>
+
+<Entry engineSpeed="2296.00" dragTorque="-181.55" maxTorque="576.77"/>
+
+<Entry engineSpeed="2304.00" dragTorque="-181.55" maxTorque="568.75"/>
+
+<Entry engineSpeed="2312.00" dragTorque="-181.55" maxTorque="561.02"/>
+
+<Entry engineSpeed="2320.00" dragTorque="-181.55" maxTorque="553.54"/>
+
+<Entry engineSpeed="2328.00" dragTorque="-181.55" maxTorque="546.52"/>
+
+<Entry engineSpeed="2336.00" dragTorque="-181.55" maxTorque="537.89"/>
+
+<Entry engineSpeed="2344.00" dragTorque="-181.55" maxTorque="530.83"/>
+
+<Entry engineSpeed="2352.00" dragTorque="-181.55" maxTorque="524.04"/>
+
+<Entry engineSpeed="2360.00" dragTorque="-181.55" maxTorque="516.99"/>
+
+<Entry engineSpeed="2368.00" dragTorque="-181.55" maxTorque="512.58"/>
+
+<Entry engineSpeed="2376.00" dragTorque="-181.55" maxTorque="509.39"/>
+
+<Entry engineSpeed="2384.00" dragTorque="-181.55" maxTorque="504.68"/>
+
+<Entry engineSpeed="2392.00" dragTorque="-181.55" maxTorque="502.32"/>
+
+<Entry engineSpeed="2400.00" dragTorque="-181.55" maxTorque="501.68"/>
+
+</FullLoadAndDragCurve>
+
+</Data>
+
+
+-<Signature>
+
+
+-<Reference xmlns="http://www.w3.org/2000/09/xmldsig#" URI="#ENG-3ce1c9889dca402db28d">
+
+
+-<Transforms>
+
+<Transform Algorithm="urn:vecto:xml:2017:canonicalization"/>
+
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+
+</Transforms>
+
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+
+<DigestValue>v889WFvi5AIE6wGVKZ4KaPAhNVe3iD7pTbhgft3HrW8=</DigestValue>
+
+</Reference>
+
+</Signature>
+
+</tns:Engine>
+
+</tns:VectoInputDeclaration>

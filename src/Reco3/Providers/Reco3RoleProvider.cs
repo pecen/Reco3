@@ -31,7 +31,7 @@ namespace Reco3.Providers
                 DatabaseContext dbx = new DatabaseContext();
                 roles.Add(dbx.UManager.GetRolesForUser(username));                
             }
-            catch //(Exception ex)
+            catch(Exception ex)
             {
                 roles.Clear();
                 roles.Add(EnumExtensions.GetDisplayName(UserRole.Role_Reco3_Unkown));     

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Alias></Alias>
+  <OwnerSss></OwnerSss>
+  <CreationTime></CreationTime>
+  <MSMQ>
+	<HostName></HostName>
+	<ConversionQueue></ConversionQueue>
+	<SimulationQueue></SimulationQueue>
+	<HealthQueueName></HealthQueueName>
+  </MSMQ>
+  <BackEnd>
+	<ConversionAreaBasePath></ConversionAreaBasePath>
+	<FileDropBasePathAlias></FileDropBasePathAlias>
+	<FileDropBasePath></FileDropBasePath>
+	<TemplatesBasePath></TemplatesBasePath>
+  </BackEnd>
+  <Client>
+	<MaxIterations></MaxIterations>
+	<MsSleepWhenEmptyQueue></MsSleepWhenEmptyQueue>
+  </Client>  
+</Config>

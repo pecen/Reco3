@@ -384,7 +384,7 @@ namespace SimulationsLib
                     return true;
                 }
             }
-            catch //(Exception ex)
+            catch (Exception ex)
             {
                 //Helper.ToConsole(ex.Message);
             }
@@ -480,7 +480,7 @@ namespace SimulationsLib
                 if (strAirdragValue.Length > 0)
                     return strAirdragValue;
             }
-            catch //(Exception ex)
+            catch (Exception ex)
             {
                 //Console.WriteLine(ex);
             }
@@ -502,6 +502,8 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return "";
         }
         protected bool UpdateAirdrag(ref XElement parent, Chassi chassi)
         {
@@ -578,7 +580,7 @@ namespace SimulationsLib
             {
                 return TyreMap[strTyreIdentifier];
             }
-            catch 
+            catch (Exception ex)
             {
             }
 
@@ -845,6 +847,9 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return false;
+
         }
 
         public bool CollectVSumToCollectiveCVS(string strDataPath)
@@ -930,6 +935,9 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return false;
+
         }
 
         public void FixEfProviderServicesProblem()
@@ -1026,6 +1034,9 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return false;
+
         }
 
         public bool SortVehicleFiles(string strDataPath)
@@ -1071,6 +1082,8 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return false;
         }
         public bool CollectVSumHeadersRecursive(string strDataPath)
         {
@@ -1116,6 +1129,9 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return false;
+
         }
 
         public bool CollectVSumsRecursiveReflection(string strDataPath)
@@ -1162,6 +1178,9 @@ namespace SimulationsLib
                 Console.WriteLine(ex);
                 throw;
             }
+
+            return false;
+
         }
 
         public bool CollectVSum(string strDataPath)
@@ -1380,7 +1399,7 @@ namespace SimulationsLib
                     chassi.Gearbox_CellData = chassi.Gearbox;
                 }
             }
-            catch
+            catch (Exception e)
             {
                 
             }

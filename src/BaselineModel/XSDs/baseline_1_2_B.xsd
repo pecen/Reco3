@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.1.2" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehicles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="vehicle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0"/>
+              <xs:element name="ManufacturerAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="VIN" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" type="xs:date" minOccurs="0" />
+              <xs:element name="LegislativeClass" type="xs:string" minOccurs="0" />
+              <xs:element name="VehicleCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="CurbMassChassis" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossVehicleMass" type="xs:string" minOccurs="0" />
+              <xs:element name="ZeroEmissionVehicle" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MaxNetPower1" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxNetPower2" type="xs:string" minOccurs="0" />
+              <xs:element name="HybridElectricHDV" type="xs:boolean" minOccurs="0"  />
+              <xs:element name="DualFuelVehicle" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="id" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

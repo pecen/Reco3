@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+	<vehicle>
+		<VIN>9249474</VIN>
+		<PDs>
+			<PD id="2777907" type="1"/>
+			<PD id="2777908" type="2"/>
+			<PD id="2777909" type="3"/>
+		</PDs>
+		<SchemaFailures>		
+			<SchemaFailure description="bla.bla..."/>
+			<SchemaFailure description="bla.bla..."/>
+			<SchemaFailure description="bla.bla..."/>
+		</SchemaFailures>
+	</vehicle>
+	<vehicle>
+		<VIN>5516610</VIN>
+		<PDs>
+			<PD id="2780038" type="3"/>
+		</PDs>
+		<SchemaFailures>
+			<SchemaFailure description="bla.bla..."/>
+			<SchemaFailure description="bla.bla..."/>
+			<SchemaFailure description="bla.bla..."/>
+		</SchemaFailures>		
+	</vehicle>
+</vehicles>

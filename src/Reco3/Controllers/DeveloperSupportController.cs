@@ -117,7 +117,7 @@ namespace Reco3.Controllers
                 }
                 
 
-                //return Json(new { success = false, message = "Failed to obtain MSMQ-status, check the logs for more info." }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = false, message = "Failed to obtain MSMQ-status, check the logs for more info." }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {

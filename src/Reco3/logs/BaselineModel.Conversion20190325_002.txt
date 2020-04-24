@@ -1,0 +1,11 @@
+2019-03-25 11:34:18.821 +01:00 [DBG] =>ConvertToTUGVehicles
+2019-03-25 11:34:20.686 +01:00 [DBG] =>ConvertToTUGVehicles.Initialize
+2019-03-25 11:34:27.304 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 vehicle-iteration
+2019-03-25 11:34:27.305 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 conversion: 1 VIN: 2147512
+2019-03-25 11:39:51.957 +01:00 [DBG] =>ConvertToTUGVehicles
+2019-03-25 11:39:53.332 +01:00 [DBG] =>ConvertToTUGVehicles.Initialize
+2019-03-25 11:39:53.343 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 vehicle-iteration
+2019-03-25 11:39:53.345 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 conversion: 1 VIN: 2147512
+2019-03-25 11:40:06.652 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. B4 validating against schema.
+2019-03-25 11:40:06.665 +01:00 [DBG] =>ConvertToTUGVehicles.Initialized. Schema validated, with success, stacking up vehicle.
+2019-03-25 11:40:06.754 +01:00 [DBG] <=ConvertToTUGVehicles

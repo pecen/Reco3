@@ -75,8 +75,8 @@ namespace DataLayer.Database
             {
                 return false;
                 // Need to add simulation-status, otherwise this will not be of any real use
-                //return ((Validation_Status == Reco3_Enums.ValidationStatus.ValidatedWithSuccess) &&
-                //        (ConvertToVehicleInput_Status == Reco3_Enums.ConvertToVehicleInputStatus.ConvertedWithSuccess));
+                return ((Validation_Status == Reco3_Enums.ValidationStatus.ValidatedWithSuccess) &&
+                        (ConvertToVehicleInput_Status == Reco3_Enums.ConvertToVehicleInputStatus.ConvertedWithSuccess));
             }
         }
 

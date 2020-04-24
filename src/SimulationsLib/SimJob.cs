@@ -46,7 +46,7 @@ namespace SimulationsLib
                 m_vStatus = VectoStatus.enProcessing;
                 return true;
             }
-            catch 
+            catch (Exception ex)
             {
 
             }
@@ -71,7 +71,7 @@ namespace SimulationsLib
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
             }
             return false;
@@ -94,7 +94,7 @@ namespace SimulationsLib
 
                 return builder.ToString();
             }
-            catch 
+            catch (Exception ex)
             {
             }
             return "";
@@ -109,7 +109,7 @@ namespace SimulationsLib
                 if (strManufacturerReportXML.Length > 0)
                     VectoApiRun.XMLManufacturerReport.Save(strManufacturerReportXML);
             }
-            catch
+            catch (Exception ex)
             {
             }
             return false;
@@ -132,7 +132,7 @@ namespace SimulationsLib
 
                 return false;
             }
-            catch
+            catch (Exception ex)
             {
             }
             return false;

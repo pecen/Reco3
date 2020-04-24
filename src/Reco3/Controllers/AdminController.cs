@@ -158,7 +158,7 @@ namespace Reco3.Controllers
                 Console.WriteLine(e);
                 return Json(new { success = false, message = e.Message }, JsonRequestBehavior.AllowGet);
             }
-            //return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
+            return Json(new { success = false, message = "Fatal" }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
@@ -193,7 +193,7 @@ namespace Reco3.Controllers
                 return Json(new { success = true, message = "User successfully saved." }, JsonRequestBehavior.AllowGet);
                 //return Json(new { success = false, message = "Failed to create simulation." }, JsonRequestBehavior.AllowGet);
             }
-            catch
+            catch (Exception e)
             {
             }
             return Json(new { success = false, message = "Failed" }, JsonRequestBehavior.AllowGet);
@@ -211,7 +211,7 @@ namespace Reco3.Controllers
                     return Json(new { success = true, message = "", data = json }, JsonRequestBehavior.AllowGet);
                 }
             }
-            catch
+            catch (Exception e)
             {
             }
             return Json(new { success = false, message = "Failed to retrieve the user." }, JsonRequestBehavior.AllowGet);

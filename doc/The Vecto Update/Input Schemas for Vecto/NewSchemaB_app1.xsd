@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0" xmlns:mstns="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0" xmlns="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:tugraz:ivt:VectoAPI:DeclarationDefinitions:v1.0">
+  <xs:import namespace="urn:tugraz:ivt:VectoAPI:DeclarationInput:v1.0" schemaLocation="NewSchemaB.xsd" />
+  <xs:element name="Vehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Manufacturer" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+        <xs:element name="ManufacturerAddress" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="Model" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+        <xs:element name="VIN" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+        <xs:element name="Date" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+        <xs:element name="LegislativeClass" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="VehicleCategory" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+        <xs:element name="CurbMassChassis" type="xs:string" minOccurs="0" msdata:Ordinal="7" />
+        <xs:element name="GrossVehicleMass" type="xs:string" minOccurs="0" msdata:Ordinal="8" />
+        <xs:element name="ZeroEmissionVehicle" type="xs:string" minOccurs="0" msdata:Ordinal="9" />
+        <xs:element name="MaxNetPower1" type="xs:string" minOccurs="0" msdata:Ordinal="10" />
+        <xs:element name="MaxNetPower2" type="xs:string" minOccurs="0" msdata:Ordinal="11" />
+        <xs:element name="HybridElectricHDV" type="xs:string" minOccurs="0" msdata:Ordinal="12" />
+        <xs:element name="DualFuelVehicle" type="xs:string" minOccurs="0" msdata:Ordinal="13" />
+      </xs:sequence>
+      <xs:attribute name="id" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
